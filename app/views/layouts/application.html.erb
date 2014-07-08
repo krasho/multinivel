@@ -2,13 +2,88 @@
 <html>
 <head>
   <title>Multinivel</title>
+  <link href="//netdna.bootstrapcdn.com/bootstrap/<%= bootstrap_version %>/css/bootstrap.min.css" rel="stylesheet">
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
 
-<%= yield %>
+<div id="header" class="navbar navbar-static">
+    <div class="container">
+      <a class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+        <span class="glyphicon glyphicon-chevron-down"></span>
+      </a>
+      <div class="nav-collapse collase">
+        <ul class="nav navbar-nav">  
+          <li><a href="#">Inicio</a></li>
+          <li><a href="#">Quienes Somos?</a></li>
+          <li><a href="#">Forma de trabajo</a></li>
+        </ul>
+        <ul class="nav pull-right navbar-nav">
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="glyphicon glyphicon-search"></i></a>
+            <ul class="dropdown-menu" style="padding:12px;">
+                <form class="form-inline">
+            <button type="submit" class="btn btn-default pull-right"><i class="glyphicon glyphicon-search"></i></button><input type="text" class="form-control pull-left" placeholder="Buscar en el sitio">
+                </form>
+              </ul>
+          </li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="glyphicon glyphicon-user"></i> <i class="glyphicon glyphicon-chevron-down"></i></a>
+            <ul class="dropdown-menu">
+              <li><a href="#">Iniciar sesion</a></li>
+              <li><a href="#">Mi perfil</a></li>
+              <li class="divider"></li>
+              <li><a href="#">Ayuda</a></li>
+             </ul>
+          </li>  
+        </ul>
+      </div>    
+    </div>
+</div><!-- /.navbar -->
 
+<div id="seccionContenido" class="container">
+  <div class="row">
+
+    <div class="col col-sm-6">
+      <%= yield %>
+    </div>
+
+  </div>
+</div>
+
+<!-- FOOTER-->
+<footer id="footer">
+<div class="container">
+  <div class="row">    
+    <div class="col-xs-6 col-md-4 column">          
+        <h4>Servicio al cliente</h4>
+        <ul class="nav">
+          <li><a href="#">Información de envío</a></li>
+          <li><a href="#">Política de privacidad</a></li>
+          <li><a href="#">Términos y condiciones</a></li>
+        </ul> 
+      </div>
+    <div class="col-xs-6 col-sm-6 col-md-4 column">          
+        <h4>Datos de la empresa</h4>
+        <ul class="nav">
+          <li><a href="about-us.html">Acerca de la empresa</a></li>
+          <li><a href="about-us.html">Historia</a></li>
+          <li><a href="about-us.html">Clientes</a></li>
+        </ul> 
+      </div>
+    <div class="col-xs-6 col-md-4 column">          
+        <h4>Redes sociales</h4>
+        <ul class="nav">
+           <li><a href="#">Twitter</a></li>
+          <li><a href="#">Facebook</a></li>
+          <li><a href="#">Google+</a></li>
+        </ul> 
+      </div>
+  </div>
+</div>
+</footer><!-- /Footer-->
+<script src="//netdna.bootstrapcdn.com/bootstrap/<%= bootstrap_version %>/js/bootstrap.min.js"></script>
 </body>
 </html>

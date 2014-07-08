@@ -13,3 +13,15 @@
  *= require_tree .
  *= require_self
  */
+
+#seccionContenido {
+  min-height: 300px;
+}
+
+#header {
+  border-bottom: 1px solid #ccccff;
+}
+
+#footer {
+  border-top: 1px solid #ccccff;
+}
