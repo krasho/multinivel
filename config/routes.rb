@@ -1,5 +1,13 @@
 Rails.application.routes.draw do
 
+  get 'bank/index'
+
+  get 'bank/create'
+
+  get 'bank/update'
+
+  get 'bank/delete'
+
   root 'site#index'
 
   # The priority is based upon order of creation: first created -> highest priority.
