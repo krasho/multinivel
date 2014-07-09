@@ -6,7 +6,7 @@ class CreateSupervisorCommissions < ActiveRecord::Migration
       t.date :end_date_comission
       t.float :comission
       t.boolean :paid
-      t.references :, index: true
+      t.references :supervisor, index: true
       t.string :supervisor
 
       t.timestamps
