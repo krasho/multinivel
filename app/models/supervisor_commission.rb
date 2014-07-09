@@ -1,3 +1,3 @@
 class SupervisorCommission < ActiveRecord::Base
-  belongs_to :
+  belongs_to :supervisor
 end
