@@ -1,21 +1,5 @@
 Rails.application.routes.draw do
 
-  #get 'bank/show'
-
-  #get 'bank/new'
-
-  #get 'bank/edit'
-
-  #get 'bank/destroy'
-
-  #get 'bank/index'
-
-  #get 'bank/create'
-
-  #get 'bank/update'
-
-  #get 'bank/delete'
-
   resources :banks
 
   root 'site#index'
