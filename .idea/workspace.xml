@@ -2,7 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fdbde985-7bda-4531-9569-88dd5e2724e1" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/models/company.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/db/migrate/20140709024108_create_companies.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test/fixtures/companies.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test/models/company_test.rb" afterPath="" />
     </list>
     <ignored path="multinivel.iws" />
     <ignored path=".idea/workspace.xml" />

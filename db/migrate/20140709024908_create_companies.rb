@@ -1,11 +1,11 @@
 class CreateCompanies < ActiveRecord::Migration
   def change
     create_table :companies do |t|
-      t.string :nombre
-      t.date :fecha_ingreso
+      t.string :name
+      t.date :creation_date
       t.string :rfc
-      t.string :direccion
-      t.string :telefono
+      t.string :address
+      t.string :telephone
       t.string :email
 
       t.timestamps
