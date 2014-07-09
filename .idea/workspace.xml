@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="fdbde985-7bda-4531-9569-88dd5e2724e1" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/migrate/20140709021656_create_supervisors.rb" afterPath="$PROJECT_DIR$/db/migrate/20140709021656_create_supervisors.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/supervisor.rb" afterPath="$PROJECT_DIR$/app/models/supervisor.rb" />
-    </list>
+    <list default="true" id="fdbde985-7bda-4531-9569-88dd5e2724e1" name="Default" comment="" />
     <ignored path="multinivel.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="TRACKING_ENABLED" value="true" />
