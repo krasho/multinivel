@@ -11,6 +11,91 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 0) do
+ActiveRecord::Schema.define(version: 20140709032410) do
+
+  create_table "banks", force: true do |t|
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "cities", force: true do |t|
+    t.string   "name"
+    t.integer  "state_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "cities", ["state_id"], name: "index_cities_on_state_id", using: :btree
+
+  create_table "colores", force: true do |t|
+    t.string   "descripcion"
+    t.string   "string"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "companies", force: true do |t|
+    t.string   "name"
+    t.date     "creation_date"
+    t.string   "rfc"
+    t.string   "address"
+    t.string   "telephone"
+    t.string   "email"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "payment_types", force: true do |t|
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "posts", force: true do |t|
+    t.string   "titulo"
+    t.text     "contenido"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "products", force: true do |t|
+    t.string   "name"
+    t.float    "price"
+    t.text     "description"
+    t.integer  "purchase_min_quantity"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "states", force: true do |t|
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "supervisor_commissions", force: true do |t|
+    t.float    "total"
+    t.date     "start_date_comission"
+    t.date     "end_date_comission"
+    t.float    "comission"
+    t.boolean  "paid"
+    t.integer  "supervisor_id"
+    t.string   "supervisor"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "supervisor_commissions", ["supervisor_id"], name: "index_supervisor_commissions_on_supervisor_id", using: :btree
+
+  create_table "supervisors", force: true do |t|
+    t.string   "name"
+    t.date     "entry_date"
+    t.integer  "company_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "supervisors", ["company_id"], name: "index_supervisors_on_company_id", using: :btree
 
 end

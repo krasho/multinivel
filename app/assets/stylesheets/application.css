@@ -14,14 +14,89 @@
  *= require_self
  */
 
+body {
+    font-family: arial, sans-serif;
+    font-size: 16px;
+}
+
+header {
+    overflow: hidden;
+    position: relative;
+}
+
+header #linea_superior_naranja {
+    background: #F69322;
+    height: 40px;
+}
+
+header #linea_superior_morada {
+    background: #48176D;
+    height: 10px;
+}
+
+header #contenido {
+    overflow: hidden;
+    padding: .5em;
+    position: relative;
+}
+
+header #contenido #logo img{
+    float: left;
+    height: 150px;
+    margin-right: 0.5em;
+    padding-right: 0.5em;
+    width: 200px;
+}
+
+header #contenido h1 {
+    font-size: 1.2em;
+    margin: 0 400px 0 250px;
+}
+
+header #contenido nav {
+    margin: 0.5em 0.5em 0 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+
+header #contenido nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+header #contenido nav ul li {
+    display: inline-block;
+    margin: 0 0.5em 0 0;
+}
+
+
+header #contenido nav ul li a{
+    color: #48176D;
+    display: block;
+    padding: 0.5em;
+    text-decoration: none;
+}
+
+
+header #loggeo {
+    height: 30px;
+    background: yellowgreen;
+    overflow: hidden;
+    display: block;
+}
+
+
 #seccionContenido {
-  min-height: 300px;
+    min-height: 300px;
 }
 
-#header {
-  border-bottom: 1px solid #ccccff;
-}
 
-#footer {
+footer {
   border-top: 1px solid #ccccff;
+  display: inline-block;
 }
+
+
