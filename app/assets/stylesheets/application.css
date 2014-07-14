@@ -97,8 +97,17 @@ header #loggeo {
 
 #seccionContenido {
     min-height: 300px;
+    margin-top: 20px;
 }
 
+thead th {
+  background-color: #006DCC;
+  color: white;
+}
+
+tbody td {
+  background-color: #EEEEEE;
+}
 
 footer {
     background: #F69322;
