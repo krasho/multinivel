@@ -24,7 +24,6 @@ header {
     margin: 0 auto;
     overflow: hidden;
     position: relative;
-
 }
 
 header #linea_superior_naranja {
@@ -43,10 +42,51 @@ header #contenido {
     padding: .5em;
     position: relative;
     max-width: 1000px;
+
+    border: 1px solid brown;
 }
 
+header #contenido #logo {
+    text-align: center;
+}
+
+header #contenido #menu {
+    display: none;
+    vertical-align: text-bottom;
+}
+
+
+header #contenido #menu nav {
+    margin: 0 auto;
+    right: 0;
+    top: 0;
+
+}
+
+header #contenido #menu nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+
+header #contenido #menu nav ul li {
+    font-size: 14px;
+    font-weight: 600;
+    display: inline-block;
+    height: 55px;
+    margin: 0 0.5em 0 0;
+    text-transform: uppercase;
+}
+
+
+#seccionContenido #contenido{
+    display: none;
+}
+
+
+/*
 header #contenido #logo img{
-    float: left;
     margin-right: 0.5em;
     padding-right: 0.5em;
     width: 100px;
@@ -87,13 +127,12 @@ header #contenido nav ul li a{
 }
 
 
-header #loggeo {
-    height: 30px;
-    background: yellowgreen;
-    overflow: hidden;
-    display: block;
-}
+*/
 
+header #loggeo {
+    display: block;
+    margin : 0 50px 0 50px;
+}
 
 #seccionContenido {
     min-height: 300px;
@@ -112,8 +151,10 @@ tbody td {
 footer {
     background: #F69322;
     border-top: 1px solid #48176D;;
-    color: #48176D;
+    color: #ffffff;
+    font-weight: bold;
     text-align: center;
+
 
 }
 
@@ -123,3 +164,48 @@ footer #pie {
 }
 
 
+/* Tablets */
+@media screen and (min-width: 768px) {
+
+    header #loggeo {
+        display: none;
+    }
+
+    header #contenido #logo {
+        float: left;
+        margin: 0 0px 0 30px;
+        position: relative;
+
+        border: 1px solid brown;
+    }
+
+
+    header #contenido #menu {
+        bottom: 0;
+        display: block;
+        margin: 0 0 0 230px;
+        position: absolute;
+        border: 1px solid brown;
+        vertical-align: text-bottom;
+
+    }
+
+    #seccionContenido #contenido{
+        display: block;
+    }
+
+
+}
+
+
+/* Desktop */
+@media screen and (min-width: 992px) {
+    body {
+        background: black;
+    }
+
+    header #loggeo {
+        display: none;
+    }
+
+}
