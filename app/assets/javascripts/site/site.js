@@ -6,7 +6,7 @@ $(document).ready(function(){
     //Acciones cuando presione uno de los elementos del menú
     $("#menuLogin").click(function(e){
         e.preventDefault();
-       $("#loggeo").toggle();
+       $("#loggeo").toggle("slow");
     });
 
 
