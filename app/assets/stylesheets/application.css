@@ -43,7 +43,7 @@ header #contenido {
     position: relative;
     max-width: 1000px;
 
-    border: 1px solid brown;
+    /*border: 1px solid brown;*/
 }
 
 header #contenido #logo {
@@ -176,7 +176,7 @@ footer #pie {
         margin: 0 0px 0 30px;
         position: relative;
 
-        border: 1px solid brown;
+        /*border: 1px solid brown;*/
     }
 
 
@@ -185,7 +185,6 @@ footer #pie {
         display: block;
         margin: 0 0 0 230px;
         position: absolute;
-        border: 1px solid brown;
         vertical-align: text-bottom;
 
     }
@@ -198,7 +197,7 @@ footer #pie {
 }
 
 
-/* Desktop */
+/* Desktop
 @media screen and (min-width: 992px) {
     body {
         background: black;
