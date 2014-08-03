@@ -1,5 +1,19 @@
 Rails.application.routes.draw do
 
+  get 'states/index'
+
+  get 'states/show'
+
+  get 'states/new'
+
+  get 'states/create'
+
+  get 'states/edit'
+
+  get 'states/update'
+
+  get 'states/destroy'
+
   resources :banks
 
   root 'site#index'
