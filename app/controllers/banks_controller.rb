@@ -1,5 +1,5 @@
 class BanksController < ApplicationController
-  #before_action :set_bank, only: [:show, :edit, :update, :destroy]
+  before_action :set_bank, only: [:show, :edit, :update, :destroy]
 
   def index
     @banks = Bank.all
