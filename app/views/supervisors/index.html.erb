@@ -1,0 +1,40 @@
+<p id="notice"><%= notice %></p>
+
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h1 class="panel-title">Catálogo de Supervisores</h1>
+  </div>
+
+  <div class="panel-body">
+
+    <p>
+      <%= link_to 'Agregar supervisor', new_supervisor_path %>
+    </p>
+
+    <table class="table table-striped table-bordered">
+      <thead>
+        <tr>
+          <th>Nombre</th>
+          <th>Empresa</th>
+          <th>Acciones</th>
+        </tr>
+      </thead>
+      <tbody>
+      <% @supervisors.each do |supervisor| %>
+        <tr>
+          <td>
+            <%= supervisor.name %>
+          </td>
+          <td>
+            <%= supervisor_company_name(supervisor) %>
+          </td>
+          <td>
+            <%= link_to 'Editar', {:action=>"edit", :controller=>"supervisors", :id=>supervisor.id} %>
+            <%= link_to 'Eliminar', supervisor, method: :delete, data: { confirm: 'Seguro que deseas eliminar el supervisor?' } %>
+          </td>
+        </tr>
+      <% end %>
+      </tbody>
+    </table>
+  </div>
+</div>

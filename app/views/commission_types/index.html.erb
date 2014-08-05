@@ -1,0 +1,36 @@
+<p id="notice"><%= notice %></p>
+
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h1 class="panel-title">Catálogo de Tipos de Comisión</h1>
+  </div>
+
+  <div class="panel-body">
+
+    <p>
+      <%= link_to 'Agregar tipo de comisión', new_commission_type_path %>
+    </p>
+
+    <table class="table table-striped table-bordered">
+      <thead>
+        <tr>
+          <th>Nombre</th>
+          <th>Acciones</th>
+        </tr>
+      </thead>
+      <tbody>
+      <% @commission_types.each do |commission_type| %>
+        <tr>
+          <td>
+            <%= commission_type.name %>
+          </td>
+          <td>
+            <%= link_to 'Editar', {:action=>"edit", :controller=>"commission_types", :id=>commission_type.id} %>
+            <%= link_to 'Eliminar', commission_type, method: :delete, data: { confirm: 'Seguro que deseas eliminar el tipo de comisión?' } %>
+          </td>
+        </tr>
+      <% end %>
+      </tbody>
+    </table>
+  </div>
+</div>

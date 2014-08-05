@@ -1,0 +1,30 @@
+<%= form_for @company do |f| %>
+  <div class="form-group">
+    <%= f.label :name, 'Nombre:' %>
+    <%= f.text_field :name, class: 'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :rfc, 'RFC:' %>
+    <%= f.text_field :rfc, class: 'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :address, 'Dirección:' %>
+    <%= f.text_field :address, class: 'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :telephone, 'Teléfono:' %>
+    <%= f.text_field :telephone, class: 'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :email, 'Email:' %>
+    <%= f.text_field :email, class: 'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= f.submit 'Guardar', class: 'btn btn-primary' %>
+  </div>
+<% end %>

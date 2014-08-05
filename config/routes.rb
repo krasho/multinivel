@@ -1,21 +1,14 @@
 Rails.application.routes.draw do
 
   devise_for :users
-  get 'states/index'
-
-  get 'states/show'
-
-  get 'states/new'
-
-  get 'states/create'
-
-  get 'states/edit'
-
-  get 'states/update'
-
-  get 'states/destroy'
 
   resources :banks
+  resources :cities
+  resources :commission_types
+  resources :companies
+  resources :payment_types
+  resources :states
+  resources :supervisors
 
   root 'site#index'
 

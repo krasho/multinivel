@@ -1,0 +1,2 @@
+module CommissionTypesHelper
+end

@@ -2,18 +2,23 @@
 
 <div class="panel panel-default">
   <div class="panel-heading">
-    <h1 class="panel-title">Datos del Estado</h1>
+    <h1 class="panel-title">Datos de la Ciudad</h1>
   </div>
 
   <div class="panel-body">
     <p>
-      <%= link_to 'Editar estado', edit_state_path(@state) %>
+      <%= link_to 'Editar ciudad', edit_city_path(@city) %>
       <%= link_to 'Regresar al listado', :action => "index" %>
     </p>
 
     <div>
       <strong>Nombre:</strong>
-      <%= @state.name %>
+      <%= @city.name %>
+    </div>
+
+    <div>
+      <strong>Estado:</strong>
+      <%= city_state_name(@city) %>
     </div>
 
   </div>

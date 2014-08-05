@@ -1,0 +1,40 @@
+<p id="notice"><%= notice %></p>
+
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h1 class="panel-title">Catálogo de Ciudades</h1>
+  </div>
+
+  <div class="panel-body">
+
+    <p>
+      <%= link_to 'Agregar ciudad', new_city_path %>
+    </p>
+
+    <table class="table table-striped table-bordered">
+      <thead>
+        <tr>
+          <th>Nombre</th>
+          <th>Estado</th>
+          <th>Acciones</th>
+        </tr>
+      </thead>
+      <tbody>
+      <% @cities.each do |city| %>
+        <tr>
+          <td>
+            <%= city.name %>
+          </td>
+          <td>
+            <%= city_state_name(city) %>
+          </td>
+          <td>
+            <%= link_to 'Editar', {:action=>"edit", :controller=>"cities", :id=>city.id} %>
+            <%= link_to 'Eliminar', city, method: :delete, data: { confirm: 'Seguro que deseas eliminar la ciudad?' } %>
+          </td>
+        </tr>
+      <% end %>
+      </tbody>
+    </table>
+  </div>
+</div>

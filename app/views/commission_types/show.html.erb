@@ -2,18 +2,18 @@
 
 <div class="panel panel-default">
   <div class="panel-heading">
-    <h1 class="panel-title">Datos del Estado</h1>
+    <h1 class="panel-title">Datos del Tipo de Comisión</h1>
   </div>
 
   <div class="panel-body">
     <p>
-      <%= link_to 'Editar estado', edit_state_path(@state) %>
+      <%= link_to 'Editar tipo de comisión', edit_commission_type_path(@commission_type) %>
       <%= link_to 'Regresar al listado', :action => "index" %>
     </p>
 
     <div>
       <strong>Nombre:</strong>
-      <%= @state.name %>
+      <%= @commission_type.name %>
     </div>
 
   </div>

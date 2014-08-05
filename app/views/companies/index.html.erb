@@ -1,0 +1,40 @@
+<p id="notice"><%= notice %></p>
+
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h1 class="panel-title">Catálogo de Empresas</h1>
+  </div>
+
+  <div class="panel-body">
+
+    <p>
+      <%= link_to 'Agregar empresa', new_company_path %>
+    </p>
+
+    <table class="table table-striped table-bordered">
+      <thead>
+        <tr>
+          <th>Nombre</th>
+          <th>RFC</th>
+          <th>Acciones</th>
+        </tr>
+      </thead>
+      <tbody>
+      <% @companies.each do |company| %>
+        <tr>
+          <td>
+            <%= company.name %>
+          </td>
+          <td>
+            <%= company.rfc %>
+          </td>
+          <td>
+            <%= link_to 'Editar', {:action=>"edit", :controller=>"companies", :id=>company.id} %>
+            <%= link_to 'Eliminar', company, method: :delete, data: { confirm: 'Seguro que deseas eliminar la empresa?' } %>
+          </td>
+        </tr>
+      <% end %>
+      </tbody>
+    </table>
+  </div>
+</div>
