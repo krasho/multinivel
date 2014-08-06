@@ -1,0 +1,2 @@
+class SitePrivatesController < ApplicationController
+end

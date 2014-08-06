@@ -10,6 +10,10 @@ Rails.application.routes.draw do
   resources :states
   resources :supervisors
 
+
+  get 'principals/index', to: 'principals#index'
+
+
   root 'site#index'
 
   # The priority is based upon order of creation: first created -> highest priority.

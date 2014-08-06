@@ -1,0 +1,2 @@
+module SitePrivatesHelper
+end
