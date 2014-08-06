@@ -196,16 +196,3 @@ footer #pie {
 
 
 }
-
-
-/* Desktop
-@media screen and (min-width: 992px) {
-    body {
-        background: black;
-    }
-
-    header #loggeo {
-        display: none;
-    }
-
-}

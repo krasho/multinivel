@@ -4,7 +4,7 @@ source 'https://rubygems.org'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.1'
 # Use mysql as the database for Active Record
-gem 'mysql2'
+gem 'pg'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.3'
 # Use Uglifier as compressor for JavaScript assets
@@ -41,3 +41,7 @@ gem 'spring',        group: :development
 gem 'normalize-rails'
 
 gem 'devise'
+
+gem 'rails_12factor', group: :production
+
+#ruby "2.1.1"
