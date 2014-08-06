@@ -15,3 +15,13 @@
 //= require turbolinks
 //= require_tree .
 
+/// Métodos para la parte pública
+
+$(document).ready(function(){
+
+    //Acciones cuando presione uno de los elementos del menú
+    $("#linkZonaEmpresarios").click(function(e){ //Zona de empresarios
+        e.preventDefault();
+        $(location).attr('href','users/sign_in');
+    });
+});
