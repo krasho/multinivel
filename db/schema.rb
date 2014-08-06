@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140803043738) do
+ActiveRecord::Schema.define(version: 20140805024357) do
 
   create_table "banks", force: true do |t|
     t.string   "name"
@@ -28,16 +28,14 @@ ActiveRecord::Schema.define(version: 20140803043738) do
 
   add_index "cities", ["state_id"], name: "index_cities_on_state_id", using: :btree
 
-  create_table "colores", force: true do |t|
-    t.string   "descripcion"
-    t.string   "string"
+  create_table "commission_types", force: true do |t|
+    t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
   create_table "companies", force: true do |t|
     t.string   "name"
-    t.date     "creation_date"
     t.string   "rfc"
     t.string   "address"
     t.string   "telephone"
@@ -48,13 +46,6 @@ ActiveRecord::Schema.define(version: 20140803043738) do
 
   create_table "payment_types", force: true do |t|
     t.string   "name"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "posts", force: true do |t|
-    t.string   "titulo"
-    t.text     "contenido"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

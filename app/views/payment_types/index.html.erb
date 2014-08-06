@@ -2,13 +2,13 @@
 
 <div class="panel panel-default">
   <div class="panel-heading">
-    <h1 class="panel-title">Catálogo de Estados</h1>
+    <h1 class="panel-title">Catálogo de Tipos de Pago</h1>
   </div>
 
   <div class="panel-body">
 
     <p>
-      <%= link_to 'Agregar estado', new_state_path %>
+      <%= link_to 'Agregar tipo de pago', new_payment_type_path %>
     </p>
 
     <table class="table table-striped table-bordered">
@@ -19,14 +19,14 @@
         </tr>
       </thead>
       <tbody>
-      <% @states.each do |state| %>
+      <% @payment_types.each do |payment_type| %>
         <tr>
           <td>
-            <%= state.name %>
+            <%= payment_type.name %>
           </td>
           <td>
-            <%= link_to 'Editar', {:action=>"edit", :controller=>"states", :id=>state.id} %>
-            <%= link_to 'Eliminar', state, method: :delete, data: { confirm: 'Seguro que deseas eliminar el estado?' } %>
+            <%= link_to 'Editar', {:action=>"edit", :controller=>"payment_types", :id=>payment_type.id} %>
+            <%= link_to 'Eliminar', payment_type, method: :delete, data: { confirm: 'Seguro que deseas eliminar el tipo de pago?' } %>
           </td>
         </tr>
       <% end %>

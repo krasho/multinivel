@@ -1,0 +1,40 @@
+<p id="notice"><%= notice %></p>
+
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h1 class="panel-title">Datos de la Empresa</h1>
+  </div>
+
+  <div class="panel-body">
+    <p>
+      <%= link_to 'Editar empresa', edit_company_path(@company) %>
+      <%= link_to 'Regresar al listado', :action => "index" %>
+    </p>
+
+    <div>
+      <strong>Nombre:</strong>
+      <%= @company.name %>
+    </div>
+
+    <div>
+      <strong>RFC:</strong>
+      <%= @company.rfc %>
+    </div>
+
+    <div>
+      <strong>Dirección:</strong>
+      <%= @company.address %>
+    </div>
+
+    <div>
+      <strong>Teléfono:</strong>
+      <%= @company.telephone %>
+    </div>
+
+    <div>
+      <strong>Email:</strong>
+      <%= @company.email %>
+    </div>
+
+  </div>
+</div>
