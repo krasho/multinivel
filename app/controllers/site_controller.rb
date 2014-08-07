@@ -1,6 +1,5 @@
 class SiteController < ApplicationController
-  #before_action :authenticate_user!
-
+  layout 'public'
   def index
   end
 

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <title>Multinivel</title>
+  <title>Multinivel PARTE PÚBLICA</title>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1" />
 
@@ -16,77 +16,77 @@
 <body>
 
 <header>
-    <div id="linea_superior_naranja">
-    </div>
-    <div id="linea_superior_morada">
-    </div>
-    <div id="contenido">
-      <figure id="logo">
-        <%= image_tag("logo_sanne_movil.png") %>
-      </figure>
+  <div id="linea_superior_naranja">
+  </div>
+  <div id="linea_superior_morada">
+  </div>
+  <div id="contenido">
+    <figure id="logo">
+      <%= image_tag("logo_sanne_movil.png") %>
+    </figure>
 
-      <div id="menu">
-        <nav>
-          <ul>
-            <li><a id="linkZonaEmpresarios" href="#">Zona de Empresarios</a></li>
-            <li><a id="menuLogin" href="#">Beneficios</a></li>
-            <li><a href="#">Preguntas Frecuentes</a></li>
-            <li><a href="#">Plan de trabajo</a></li>
-            <li><%= link_to "Logout", destroy_user_session_path, method: 'delete' %></li>
-          </ul>
-        </nav>
-      </div>
-
+    <div id="menu">
+      <nav>
+        <ul>
+          <li><a id="linkZonaEmpresarios" href="#">Zona de Empresarios</a></li>
+          <li><a id="menuLogin" href="#">Beneficios</a></li>
+          <li><a href="#">Preguntas Frecuentes</a></li>
+          <li><a href="#">Plan de trabajo</a></li>
+          <li><%= link_to "Logout", destroy_user_session_path, method: 'delete' %></li>
+        </ul>
+      </nav>
     </div>
 
-    <div id="loggeo">
-    </div>
+  </div>
+
+  <div id="loggeo">
+  </div>
 </header>
 
 <p class="notice"><%= notice %></p>
 <p class="alert"><%= alert %></p>
 
 <section id="seccionContenido" class="container">
-   <div id="contenido">
-     <%= yield %>
-   </div>
+  <div id="contenido">
+    <%= yield %>
+  </div>
 </section>
 
 
 
 <!-- FOOTER-->
 <footer id="footer">
-<div class="container">
-  <div class="row">    
-    <div class="col-xs-6 col-md-4 column">          
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-6 col-md-4 column">
         <h4>Servicio al cliente</h4>
         <ul class="nav">
           <li><a href="#">Información de envío</a></li>
           <li><a href="#">Política de privacidad</a></li>
           <li><a href="#">Términos y condiciones</a></li>
-        </ul> 
+        </ul>
       </div>
-    <div class="col-xs-6 col-sm-6 col-md-4 column">          
+      <div class="col-xs-6 col-sm-6 col-md-4 column">
         <h4>Datos de la empresa</h4>
         <ul class="nav">
           <li><a href="about-us.html">Acerca de la empresa</a></li>
           <li><a href="about-us.html">Historia</a></li>
           <li><a href="about-us.html">Clientes</a></li>
-        </ul> 
+        </ul>
       </div>
-    <div class="col-xs-6 col-md-4 column">          
+      <div class="col-xs-6 col-md-4 column">
         <h4>Redes sociales</h4>
         <ul class="nav">
-           <li><a href="#">Twitter</a></li>
-           <li><a href="#">Facebook</a></li>
-           <li><a href="#">Google+</a></li>
-        </ul> 
+          <li><a href="#">Twitter</a></li>
+          <li><a href="#">Facebook</a></li>
+          <li><a href="#">Google+</a></li>
+        </ul>
       </div>
+    </div>
   </div>
-</div>
-<div id = "pie">
-Grupo SANNE. Todos los derechos reservados
-</div>
+  <div id = "pie">
+    Grupo SANNE. Todos los derechos reservados
+  </div>
 </footer><!-- /Footer-->
 
 <script src="//netdna.bootstrapcdn.com/bootstrap/<%= bootstrap_version %>/js/bootstrap.min.js"></script>
