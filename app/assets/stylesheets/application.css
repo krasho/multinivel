@@ -81,9 +81,10 @@ header #contenido #menu nav ul li {
 }
 
 
-#seccionContenido #contenido{
+/*#seccionContenido #contenido{
     display: none;
 }
+*/
 
 
 /*
@@ -136,9 +137,19 @@ header #loggeo {
 }
 
 #seccionContenido {
-    min-height: 300px;
-    margin-top: 20px;
+    overflow: hidden;
+    position: relative;
+    margin: 0 0 10px 0;
 }
+
+#seccionContenido #imagenLoggeo{
+    display: none;
+}
+
+
+#seccionContenido #loggeo{
+}
+
 
 thead th {
   background-color: #006DCC;
@@ -176,8 +187,6 @@ footer #pie {
         float: left;
         margin: 0 0px 0 30px;
         position: relative;
-
-        /*border: 1px solid brown;*/
     }
 
 
@@ -190,9 +199,16 @@ footer #pie {
 
     }
 
-    #seccionContenido #contenido{
+    #seccionContenido #imagenLoggeo{
         display: block;
+        float: left;
     }
+
+    #seccionContenido #loggeo{
+        border: 1px solid brown;
+        float: left;
+    }
+
 
 
 }
