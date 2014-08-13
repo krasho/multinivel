@@ -10,7 +10,6 @@
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
  *
- *= require_tree .
  *= require normalize-rails
  *= require_self
  */
@@ -154,12 +153,12 @@ header #loggeo {
 
 
 thead th {
-  background-color: #006DCC;
-  color: white;
+    background-color: #006DCC;
+    color: white;
 }
 
 tbody td {
-  background-color: #EEEEEE;
+    background-color: #EEEEEE;
 }
 
 footer {
