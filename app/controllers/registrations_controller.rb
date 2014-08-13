@@ -1,5 +1,5 @@
 class RegistrationsController < Devise::RegistrationsController
-
+  layout 'public'
   def new
     super
   end
