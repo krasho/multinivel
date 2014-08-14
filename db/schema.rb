@@ -11,10 +11,27 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140805024357) do
+ActiveRecord::Schema.define(version: 20140814024217) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "associates", force: true do |t|
+    t.string   "name"
+    t.date     "admission_date"
+    t.string   "phone"
+    t.string   "address"
+    t.string   "zip_code"
+    t.string   "email"
+    t.string   "account_number"
+    t.string   "clabe"
+    t.boolean  "is_supervisor"
+    t.integer  "supervisor_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "associates", ["supervisor_id"], name: "index_associates_on_supervisor_id", using: :btree
 
   create_table "banks", force: true do |t|
     t.string   "name"

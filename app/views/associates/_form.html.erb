@@ -1,0 +1,52 @@
+<%= form_for @associate do |f| %>
+
+  <div class="form-group">
+    <%= f.label :name, 'Nombre:' %>
+    <%= f.text_field :name, class: 'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :admission_date, 'Fecha de ingreso:' %>
+    <%= f.date_field :admission_date, class: 'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :phone, 'Teléfono:' %>
+    <%= f.text_field :phone, class: 'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :address, 'Dirección:' %>
+    <%= f.text_field :address, class: 'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :zip_code, 'Código postal:' %>
+    <%= f.text_field :zip_code, class: 'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :email, 'Email:' %>
+    <%= f.text_field :email, class: 'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :account_number, 'Número de cuenta:' %>
+    <%= f.text_field :account_number, class: 'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :clabe, 'CLABE:' %>
+    <%= f.text_field :clabe, class: 'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :is_supervisor, '¿Es supervisor?:' %>
+    <%= f.check_box :is_supervisor, class: 'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= f.submit 'Guardar', class: 'btn btn-primary' %>
+  </div>
+
+<% end %>
