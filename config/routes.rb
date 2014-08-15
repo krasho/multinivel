@@ -2,14 +2,13 @@ Rails.application.routes.draw do
 
   devise_for :users
 
+  resources :associates
   resources :banks
   resources :cities
   resources :commission_types
   resources :companies
   resources :payment_types
   resources :states
-  resources :supervisors
-
 
   get 'principals/index', to: 'principals#index'
 

@@ -1,0 +1,60 @@
+<p id="notice"><%= notice %></p>
+
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h1 class="panel-title">Datos del Socio</h1>
+  </div>
+
+  <div class="panel-body">
+    <p>
+      <%= link_to 'Editar banco', edit_associate_path(@associate) %>
+      <%= link_to 'Regresar al listado', :action => "index" %>
+    </p>
+
+    <div>
+      <strong>Nombre:</strong>
+      <%= @associate.name %>
+    </div>
+
+    <div>
+      <strong>Fecha de ingreso:</strong>
+      <%= @associate.admission_date %>
+    </div>
+
+    <div>
+      <strong>Teléfono:</strong>
+      <%= @associate.phone %>
+    </div>
+
+    <div>
+      <strong>Dirección:</strong>
+      <%= @associate.address %>
+    </div>
+
+    <div>
+      <strong>Código postal:</strong>
+      <%= @associate.zip_code %>
+    </div>
+
+    <div>
+      <strong>Email:</strong>
+      <%= @associate.email %>
+    </div>
+
+    <div>
+      <strong>Número de cuenta:</strong>
+      <%= @associate.account_number %>
+    </div>
+
+    <div>
+      <strong>CLABE:</strong>
+      <%= @associate.clabe %>
+    </div>
+
+    <div>
+      <strong>¿Es supervisor?:</strong>
+      <%= @associate.is_supervisor %>
+    </div>
+
+  </div>
+</div>
