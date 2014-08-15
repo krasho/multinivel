@@ -25,8 +25,6 @@ header {
     margin: 0 auto;
     overflow: visible;
     position: relative;
-
-    border: 1px solid brown;
 }
 
 header #linea_superior_naranja {
@@ -36,7 +34,6 @@ header #linea_superior_naranja {
 
 header #linea_superior_morada {
     background: #48176D;
-    /*height: 10px;*/
     overflow: visible;
 }
 
