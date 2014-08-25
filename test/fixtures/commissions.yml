@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  purchase_amount: 9.99
+  calculation_start_date: 2014-08-14
+  calculation_end_date: 2014-08-14
+  amount: 9.99
+  type_id: 
+  payed: false
+
+two:
+  purchase_amount: 9.99
+  calculation_start_date: 2014-08-14
+  calculation_end_date: 2014-08-14
+  amount: 9.99
+  type_id: 
+  payed: false

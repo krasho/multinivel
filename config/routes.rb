@@ -5,12 +5,15 @@ Rails.application.routes.draw do
   resources :associates
   resources :banks
   resources :cities
+  resources :commissions
   resources :commission_types
   resources :companies
   resources :payment_types
   resources :states
 
   get 'principals/index', to: 'principals#index'
+
+  get 'site/:page' => 'site#pagina', as: :static_page
 
 
   root 'site#index'

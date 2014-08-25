@@ -11,6 +11,8 @@ class CreateAssociates < ActiveRecord::Migration
       t.string :clabe
       t.boolean :is_supervisor
       t.references :supervisor, index: true
+      t.references :city, index: true
+      t.references :bank, index: true
 
       t.timestamps
     end
