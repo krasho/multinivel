@@ -27,14 +27,10 @@ ActiveRecord::Schema.define(version: 20140814202738) do
     t.string   "clabe"
     t.boolean  "is_supervisor"
     t.integer  "supervisor_id"
-    t.integer  "city_id"
-    t.integer  "bank_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  add_index "associates", ["bank_id"], name: "index_associates_on_bank_id", using: :btree
-  add_index "associates", ["city_id"], name: "index_associates_on_city_id", using: :btree
   add_index "associates", ["supervisor_id"], name: "index_associates_on_supervisor_id", using: :btree
 
   create_table "banks", force: true do |t|
@@ -115,6 +111,16 @@ ActiveRecord::Schema.define(version: 20140814202738) do
   end
 
   add_index "supervisor_commissions", ["supervisor_id"], name: "index_supervisor_commissions_on_supervisor_id", using: :btree
+
+  create_table "supervisors", force: true do |t|
+    t.string   "name"
+    t.date     "entry_date"
+    t.integer  "company_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "supervisors", ["company_id"], name: "index_supervisors_on_company_id", using: :btree
 
   create_table "users", force: true do |t|
     t.string   "email",                  default: "", null: false

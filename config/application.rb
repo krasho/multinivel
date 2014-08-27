@@ -22,4 +22,3 @@ module Multinivel
   end
 end
 
-

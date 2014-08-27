@@ -21,7 +21,7 @@ body {
 }
 
 header {
-    margin: 0 auto;
+    margin: 0 0 0 0;
     overflow: hidden;
     position: relative;
 
@@ -82,73 +82,15 @@ header #contenido #menu nav ul li {
 }
 
 
-/*#seccionContenido #contenido{
-    display: none;
-}
-*/
 
-
-/*
-header #contenido #logo img{
-    margin-right: 0.5em;
-    padding-right: 0.5em;
-    width: 100px;
-}
-
-header #contenido nav {
-    margin: 0 auto;
-    position: absolute;
-    right: 0;
-    top: 0;
-    vertical-align: bottom;
-}
-
-
-header #contenido nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
-header #contenido nav ul li {
-    font-size: 14px;
-    font-weight: 600;
-    display: inline-block;
-    height: 55px;
-    margin: 0 0.5em 0 0;
-    text-align: center;
-    text-transform: uppercase;
-    vertical-align: top
-}
-
-
-header #contenido nav ul li a{
-    color: #48176D;
-    display: block;
-    padding: 0.5em;
-    text-decoration: none;
-}
-
-
-*/
-
-header #loggeo {
-    display: block;
-    margin : 0 50px 0 50px;
-}
-
-#seccionContenido {
+#seccionPrincipal {
     overflow: hidden;
     position: relative;
-    margin: 0 0 10px 0;
+    margin: 0 5px 5px 20px;
 }
 
-#seccionContenido #imagenLoggeo{
-    display: none;
-}
-
-
-#seccionContenido #loggeo{
+#seccionPrincipal #contenido {
+    /*border: brown solid;*/
 }
 
 

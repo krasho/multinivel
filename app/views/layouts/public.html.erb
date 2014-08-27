@@ -43,13 +43,12 @@
   </div>
 </header>
 
-<p class="notice"><%= notice %></p>
-<p class="alert"><%= alert %></p>
-
-
-
-<section id="seccionContenido">
-  <%= yield %>
+<section id="seccionPrincipal">
+  <section id="contenido">
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
+    <%= yield %>
+  </section>
 </section>
 
 
