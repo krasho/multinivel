@@ -1,4 +1,6 @@
 class SiteController < ApplicationController
+  include AssociatesLogic
+
   layout 'public'
   def index
   end

@@ -44,4 +44,6 @@ gem 'devise'
 
 gem 'rails_12factor', group: :production
 
+gem 'annotate', group: :development
+
 #ruby "2.1.1"
