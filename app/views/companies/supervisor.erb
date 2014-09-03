@@ -1,0 +1,32 @@
+<h1>Asignación de Supervisores</h1>
+<p id="notice"><%= notice %></p>
+
+<table class="table table-striped table-bordered">
+  <thead>
+  <tr>
+    <th>Nombre</th>
+    <th>Email</th>
+    <th>Supervisor</th>
+    <th>Acciones</th>
+  </tr>
+  </thead>
+  <tbody>
+  <% @associates.each do |associate| %>
+      <tr>
+        <td>
+          <%= associate.name %>
+        </td>
+        <td>
+          <%= associate.email %>
+        </td>
+        <td>
+          <%= associate.supervisor.associate.name%>
+        </td>
+        <td>
+          <%= link_to 'Editar', {:action=>"edit", :controller=>"associates", :id=>associate.id} %>
+          <%= link_to 'Eliminar', associate, method: :delete, data: { confirm: '¿Seguro que deseas eliminar el socio?' } %>
+        </td>
+      </tr>
+  <% end %>
+  </tbody>
+</table>

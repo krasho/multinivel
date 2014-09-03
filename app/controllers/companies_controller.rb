@@ -1,4 +1,5 @@
 class CompaniesController < ApplicationController
+  include CompaniesLogic
   before_action :set_company, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!
 
@@ -48,6 +49,11 @@ class CompaniesController < ApplicationController
       format.html { redirect_to company_url, notice: 'La empresa fue eliminada correctamente.' }
       format.json { head :no_content }
     end
+  end
+
+  #Metodo que se llama para dar de alta clientes
+  def supervisor
+    @associates = Associate.includes(:associate).where("is_supervisor = ?", false)
   end
 
   private

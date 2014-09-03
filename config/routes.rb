@@ -2,6 +2,8 @@ Rails.application.routes.draw do
 
   devise_for :users
 
+  get 'companies/supervisor', to: 'companies#supervisor'
+
   resources :associates
   resources :banks
   resources :cities
