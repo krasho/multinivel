@@ -24,4 +24,16 @@ class Associate < ActiveRecord::Base
   belongs_to :supervisor, class_name: 'Associate'
   belongs_to :city
   belongs_to :bank
+
+  SUPERVISOR_NO_DEFINIDO = "Sin definir"
+
+  def supervisor_name
+    if supervisor.nil?
+      SUPERVISOR_NO_DEFINIDO
+    else
+      supervisor.name
+    end
+  end
+
+
 end

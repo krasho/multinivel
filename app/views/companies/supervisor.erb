@@ -1,6 +1,36 @@
 <h1>Asignación de Supervisores</h1>
 <p id="notice"><%= notice %></p>
 
+<!--<form class="navbar-form" role="search">
+  <fieldset><legend>Búsqueda Avanzada</legend></fieldset>
+  <div class="form-group">
+    <input type="text" class="form-control" name="username" placeholder="Username">
+  </div>
+  <div class="form-group">
+    <input type="text" class="form-control" name="password" placeholder="Password">
+  </div>
+  <button type="submit" class="btn btn-default">Sign In</button>
+</form>
+-->
+<form class="form-horizontal">
+  <fieldset>
+
+    <!-- Form Name -->
+    <legend>Form Name</legend>
+
+    <!-- Text input-->
+    <div class="control-group">
+      <label class="control-label" for="textinput">Text Input</label>
+      <div class="controls">
+        <input id="textinput" name="textinput" type="text" placeholder="placeholder" class="input-xlarge">
+        <p class="help-block">help</p>
+      </div>
+    </div>
+
+  </fieldset>
+</form>
+
+<br />
 <table class="table table-striped table-bordered">
   <thead>
   <tr>
@@ -20,11 +50,9 @@
           <%= associate.email %>
         </td>
         <td>
-          <%= associate.supervisor.associate.name%>
+          <%= associate.supervisor_name %>
         </td>
         <td>
-          <%= link_to 'Editar', {:action=>"edit", :controller=>"associates", :id=>associate.id} %>
-          <%= link_to 'Eliminar', associate, method: :delete, data: { confirm: '¿Seguro que deseas eliminar el socio?' } %>
         </td>
       </tr>
   <% end %>

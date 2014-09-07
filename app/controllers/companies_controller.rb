@@ -53,7 +53,8 @@ class CompaniesController < ApplicationController
 
   #Metodo que se llama para dar de alta clientes
   def supervisor
-    @associates = Associate.includes(:associate).where("is_supervisor = ?", false)
+    @associates = Associate.where("is_supervisor = ?", false)
+    #@associates = Associate.joins(:Associate).where("is_supervisor = ?", false)
   end
 
   private
