@@ -2,6 +2,7 @@ Rails.application.routes.draw do
 
   devise_for :users
 
+  post 'companies/supervisor', to: 'companies#supervisor'
   get 'companies/supervisor', to: 'companies#supervisor'
 
   resources :associates

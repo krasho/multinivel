@@ -1,36 +1,13 @@
 <h1>Asignación de Supervisores</h1>
 <p id="notice"><%= notice %></p>
 
-<!--<form class="navbar-form" role="search">
-  <fieldset><legend>Búsqueda Avanzada</legend></fieldset>
-  <div class="form-group">
-    <input type="text" class="form-control" name="username" placeholder="Username">
-  </div>
-  <div class="form-group">
-    <input type="text" class="form-control" name="password" placeholder="Password">
-  </div>
-  <button type="submit" class="btn btn-default">Sign In</button>
-</form>
--->
-<form class="form-horizontal">
-  <fieldset>
 
-    <!-- Form Name -->
-    <legend>Form Name</legend>
+<div class="boton-buscar">
+  <a href="#" class="search-button"><span>Búsqueda Avanzada</span></a>
+</div>
 
-    <!-- Text input-->
-    <div class="control-group">
-      <label class="control-label" for="textinput">Text Input</label>
-      <div class="controls">
-        <input id="textinput" name="textinput" type="text" placeholder="placeholder" class="input-xlarge">
-        <p class="help-block">help</p>
-      </div>
-    </div>
+<%= render "search" %>
 
-  </fieldset>
-</form>
-
-<br />
 <table class="table table-striped table-bordered">
   <thead>
   <tr>
@@ -58,3 +35,13 @@
   <% end %>
   </tbody>
 </table>
+
+<script language="javascript">
+    $(function() {
+        $('.search-button').click(function(e){
+            e.preventDefault();
+            $('.search-form').toggle();
+
+        });
+    });
+</script>

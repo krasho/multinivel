@@ -53,8 +53,30 @@ class CompaniesController < ApplicationController
 
   #Metodo que se llama para dar de alta clientes
   def supervisor
+
     @associates = Associate.where("is_supervisor = ?", false)
-    #@associates = Associate.joins(:Associate).where("is_supervisor = ?", false)
+
+    #Validacion que verifica si hay algo en los inputs del formulario
+    if(params['nombre'])
+       nombre = params['nombre']
+
+       if(!nombre.blank?)
+          @associates = @associates.where("name like ?", "%#{params['nombre']}%")
+       end
+
+
+    end
+
+    if(params['email'])
+       email = params['email']
+
+       if(!email.blank?)
+          @associates = @associates.where("email like ?", "%#{params['email']}%")
+       end
+       #
+    end
+
+    logger.info  "nombre:#{params['nombre']}  mail:#{params['email']}"
   end
 
   private

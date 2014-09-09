@@ -21,6 +21,23 @@ body {
     font-size: 16px;
 }
 
+fieldset {
+    width: 100%;
+    overflow: hidden;
+}
+
+legend {
+    border: 0;
+    border-bottom: 1px solid #e5e5e5;
+    color: #333;
+    display: block;
+    font-size: 21px;
+    line-height: 40px;
+    margin-bottom: 20px;
+    padding: 0;
+    width: 100%;
+}
+
 header {
     margin: 0 auto;
     overflow: visible;
