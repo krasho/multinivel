@@ -1,23 +1,22 @@
-<div class="search-form" style="display: none">
+<div class="search-form" style="display: <%= @display %>">
   <%=form_tag({},{:class =>"form-horizontal"}) do |f| %>
     <fieldset>
       <div class="form-group">
         <label for="nombre" class="col-lg-2 control-label">Nombre</label>
         <div class="col-lg-10">
-          <input type="text" class="form-control" id="nombre" name="nombre"
-                 placeholder="Nombre del Asociado">
+          <%= text_field_tag(:nombre,@nombre, class:"form-control", placeholder:"Nombre del Asociado")%>
         </div>
       </div>
+
       <div class="form-group">
         <label for="email" class="col-lg-2 control-label">Email</label>
         <div class="col-lg-10">
-          <input type="email" class="form-control" id="email" name="email"
-                 placeholder="Email">
+            <%= text_field_tag(:email,@email, class:"form-control", placeholder:"Email del Asociado")%>
         </div>
       </div>
       <div class="form-group">
         <div class="col-lg-offset-2 col-lg-10">
-          <button type="submit" class="btn btn-default" id="search-form-btn-buscar">Buscar</button>
+          <%= button_tag("Buscar",class:"btn btn-default", id: "search-form-btn-buscar", name: "search-form-btn-buscar") %>
         </div>
       </div>
     </fieldset>

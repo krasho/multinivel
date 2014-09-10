@@ -55,12 +55,15 @@ class CompaniesController < ApplicationController
   def supervisor
 
     @associates = Associate.where("is_supervisor = ?", false)
+    @display = "none"
 
     #Validacion que verifica si hay algo en los inputs del formulario
     if(params['nombre'])
        nombre = params['nombre']
+       @nombre = nombre
+       @display = "block"
 
-       if(!nombre.blank?)
+       if(not nombre.blank?)
           @associates = @associates.where("name like ?", "%#{params['nombre']}%")
        end
 
@@ -69,14 +72,18 @@ class CompaniesController < ApplicationController
 
     if(params['email'])
        email = params['email']
+       @email = email
+       @display = "block"
 
-       if(!email.blank?)
+       if(not email.blank?)
           @associates = @associates.where("email like ?", "%#{params['email']}%")
        end
        #
     end
 
-    logger.info  "nombre:#{params['nombre']}  mail:#{params['email']}"
+
+
+    @listAssociates = Associate.where("is_supervisor = ?", true)
   end
 
   private

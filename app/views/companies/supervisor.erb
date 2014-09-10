@@ -8,6 +8,8 @@
 
 <%= render "search" %>
 
+<%= collection_select(:Associate, :Associate_id, @listAssociates, :id, :name, prompt: "Seleccionar") %>
+
 <table class="table table-striped table-bordered">
   <thead>
   <tr>
@@ -30,6 +32,9 @@
           <%= associate.supervisor_name %>
         </td>
         <td>
+            <a href="#" class="btn btn-default btn-sm" title="Asignar Supervisor">
+              <i class="glyphicon glyphicon-user"></i>
+            </a>
         </td>
       </tr>
   <% end %>

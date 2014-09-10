@@ -24,4 +24,8 @@ $(document).ready(function(){
         e.preventDefault();
         $(location).attr('href','users/sign_in');
     });
+
+
+    //Todos los select se ponen como Select2
+    $('select').select2();
 });

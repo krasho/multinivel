@@ -46,4 +46,5 @@ gem 'rails_12factor', group: :production
 
 gem 'annotate', group: :development
 
+gem 'select2-rails'
 #ruby "2.1.1"
