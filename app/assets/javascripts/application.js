@@ -14,7 +14,7 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
-
+//= require select2
 /// Métodos para la parte pública
 
 $(document).ready(function(){

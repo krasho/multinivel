@@ -13,6 +13,7 @@
  *= require_tree .
  *= require normalize-rails
  *= require_self
+ *= require select2
  */
 
 body {
