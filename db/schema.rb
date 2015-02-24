@@ -16,7 +16,7 @@ ActiveRecord::Schema.define(version: 20140814202738) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "associates", force: true do |t|
+  create_table "associates", force: :cascade do |t|
     t.string   "name"
     t.date     "admission_date"
     t.string   "phone"
@@ -27,19 +27,23 @@ ActiveRecord::Schema.define(version: 20140814202738) do
     t.string   "clabe"
     t.boolean  "is_supervisor"
     t.integer  "supervisor_id"
+    t.integer  "city_id"
+    t.integer  "bank_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
+  add_index "associates", ["bank_id"], name: "index_associates_on_bank_id", using: :btree
+  add_index "associates", ["city_id"], name: "index_associates_on_city_id", using: :btree
   add_index "associates", ["supervisor_id"], name: "index_associates_on_supervisor_id", using: :btree
 
-  create_table "banks", force: true do |t|
+  create_table "banks", force: :cascade do |t|
     t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  create_table "cities", force: true do |t|
+  create_table "cities", force: :cascade do |t|
     t.string   "name"
     t.integer  "state_id"
     t.datetime "created_at"
@@ -48,13 +52,13 @@ ActiveRecord::Schema.define(version: 20140814202738) do
 
   add_index "cities", ["state_id"], name: "index_cities_on_state_id", using: :btree
 
-  create_table "commission_types", force: true do |t|
+  create_table "commission_types", force: :cascade do |t|
     t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  create_table "commissions", force: true do |t|
+  create_table "commissions", force: :cascade do |t|
     t.decimal  "purchase_amount"
     t.date     "calculation_start_date"
     t.date     "calculation_end_date"
@@ -67,7 +71,7 @@ ActiveRecord::Schema.define(version: 20140814202738) do
 
   add_index "commissions", ["type_id"], name: "index_commissions_on_type_id", using: :btree
 
-  create_table "companies", force: true do |t|
+  create_table "companies", force: :cascade do |t|
     t.string   "name"
     t.string   "rfc"
     t.string   "address"
@@ -77,13 +81,13 @@ ActiveRecord::Schema.define(version: 20140814202738) do
     t.datetime "updated_at"
   end
 
-  create_table "payment_types", force: true do |t|
+  create_table "payment_types", force: :cascade do |t|
     t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  create_table "products", force: true do |t|
+  create_table "products", force: :cascade do |t|
     t.string   "name"
     t.float    "price"
     t.text     "description"
@@ -92,13 +96,13 @@ ActiveRecord::Schema.define(version: 20140814202738) do
     t.datetime "updated_at"
   end
 
-  create_table "states", force: true do |t|
+  create_table "states", force: :cascade do |t|
     t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  create_table "supervisor_commissions", force: true do |t|
+  create_table "supervisor_commissions", force: :cascade do |t|
     t.float    "total"
     t.date     "start_date_comission"
     t.date     "end_date_comission"
@@ -112,17 +116,7 @@ ActiveRecord::Schema.define(version: 20140814202738) do
 
   add_index "supervisor_commissions", ["supervisor_id"], name: "index_supervisor_commissions_on_supervisor_id", using: :btree
 
-  create_table "supervisors", force: true do |t|
-    t.string   "name"
-    t.date     "entry_date"
-    t.integer  "company_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  add_index "supervisors", ["company_id"], name: "index_supervisors_on_company_id", using: :btree
-
-  create_table "users", force: true do |t|
+  create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
     t.string   "encrypted_password",     default: "", null: false
     t.string   "reset_password_token"

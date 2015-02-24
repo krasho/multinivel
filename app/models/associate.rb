@@ -27,6 +27,9 @@ class Associate < ActiveRecord::Base
 
   SUPERVISOR_NO_DEFINIDO = "Sin definir"
 
+  attr_accessor :username
+  attr_accessor :password
+
   def supervisor_name
     if supervisor.nil?
       SUPERVISOR_NO_DEFINIDO
