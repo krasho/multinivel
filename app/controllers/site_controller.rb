@@ -17,4 +17,27 @@ class SiteController < ApplicationController
     end
   end
 
+  def registro
+    @socio = Associate.new
+    render 'registro'
+  end
+
+  def create
+    @socio = Associate.new(socio_params)
+
+    if @socio.save
+       #log_in @user
+       flash[:success] = "Promotor Creado Satisfactoriamente"
+       #redirect_to @user 
+       render 'registro'
+    else
+      render 'registro'
+    end    
+  end
+
+  private
+     def socio_params
+      params.require(:associate).permit(:name, :phone, :email, :address, :zip_code, :username, :password)
+     end
+
 end
