@@ -37,7 +37,7 @@ class SiteController < ApplicationController
 
   private
      def socio_params
-      params.require(:associate).permit(:name, :phone, :email, :address, :zip_code, :username, :password)
+      params.require(:associate).permit(:name, :phone, :email, :address, :zip_code, :username)
      end
 
 end

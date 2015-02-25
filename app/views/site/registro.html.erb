@@ -39,11 +39,12 @@
       <%= f.text_field :username, class: 'form-control' %>
 
       <%= f.label :password %>
-      <%= f.password_field :password %>
+      <%= f.password_field :password, class: 'form-control'%>
 
-      <%= f.label :password_confirmation, "Confirmation" %>
-      <%= f.password_field :password_confirmation %>
-     <br />
+      <%= f.label :password_confirmation, "Confirmación" %>
+      <%= f.password_field :password_confirmation, class: 'form-control' %>
+     
+      <br />
       <%= f.submit "Registrar", class: "btn btn-primary" %>
     <% end %>
   </div>

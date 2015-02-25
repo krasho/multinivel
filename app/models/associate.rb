@@ -28,10 +28,11 @@ class Associate < ActiveRecord::Base
   belongs_to :city
   belongs_to :bank
 
+  has_one    :user
+  accepts_nested_attributes_for :user
+
   before_save { self.email = email.downcase }
   validates :name, presence:  true, length: { maximum: 100 }
-  validates :username, presence: true
-  validates :password, presence: true
 
   VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
   validates :email, presence: true, length: { maximum: 255 },
@@ -40,9 +41,8 @@ class Associate < ActiveRecord::Base
 
 
   SUPERVISOR_NO_DEFINIDO = "Sin definir"
+  validates :password, length: { minimum: 6 }
 
-
-  has_secure_password
   def supervisor_name
     if supervisor.nil?
       SUPERVISOR_NO_DEFINIDO
