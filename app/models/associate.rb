@@ -41,8 +41,7 @@ class Associate < ActiveRecord::Base
 
 
   SUPERVISOR_NO_DEFINIDO = "Sin definir"
-  validates :password, length: { minimum: 6 }
-
+  
   def supervisor_name
     if supervisor.nil?
       SUPERVISOR_NO_DEFINIDO
