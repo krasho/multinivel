@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  devise_for :usernames
   devise_for :users
 
   post 'companies/supervisor', to: 'companies#supervisor'
@@ -21,9 +22,11 @@ Rails.application.routes.draw do
   root 'site#index'
 
   #Ruta para el registro de un nuevo promotor
-  get  'registro/:promotor' => 'site#registro'
-  post 'registro/create'    => 'site#create'
+  get  'registro/new/:promotor' => 'site#registro'
+  get  'site/:socio/acceso'    => 'site#acceso'
 
+  post 'registro/create'    => 'site#create'
+  
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
