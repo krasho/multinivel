@@ -1,0 +1,26 @@
+<h1>Confirmacion</h1>
+
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <%= form_for(@socio, url: :root) do |f| %>
+      <h2>Datos Generales</h2>
+      <%= f.label :name, 'Nombre Completo'  %>
+      <%= f.text_field :name, class: 'form-control' %>
+
+      <%= f.label :phone, 'Teléfono'  %>
+      <%= f.text_field :phone, class: 'form-control' %>
+
+      <%= f.label :email, 'Correo Electrónico'  %>
+      <%= f.text_field :email, class: 'form-control' %>
+
+      <%= f.label :address, 'Dirección'  %>
+      <%= f.text_field :address, class: 'form-control' %>
+
+      <%= f.label :zip_code, 'Código Postal'  %>
+      <%= f.text_field :zip_code, class: 'form-control' %>
+     
+      <br />
+    <% end %>       
+       <%= link_to "Salir", :root, :class => "btn btn-primary" %>
+  </div>
+</div>

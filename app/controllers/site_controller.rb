@@ -39,9 +39,32 @@ class SiteController < ApplicationController
     render 'acceso'
   end
 
+  def createUser
+    @user = User.new(user_params)
+    @socio = Associate.find(params[:socio])
+
+    @user.email = @socio.email 
+     
+
+    if @user.save
+       flash[:success] = "Promotor Creado Satisfactoriamente"       
+       redirect_to  :action => 'confirmacion', :socio => params[:socio]             
+    else
+      render 'acceso'
+    end
+  end
+
+  def confirmacion
+    @socio = Associate.find(params[:socio])
+    render 'confirmacion'
+  end
+
   private
      def socio_params
       params.require(:associate).permit(:name, :phone, :email, :address, :zip_code)
      end
 
+     def user_params
+      params.require(:user).permit(:username, :password, :password_confirmation)
+     end
 end
