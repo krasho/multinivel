@@ -18,8 +18,11 @@ Rails.application.routes.draw do
 
   get 'site/:page' => 'site#pagina', as: :static_page
 
-
   root 'site#index'
+
+  #Ruta para el registro de un nuevo promotor
+  get  'registro/:promotor' => 'site#registro'
+  post 'registro/create'    => 'site#create'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
