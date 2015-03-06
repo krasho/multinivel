@@ -24,6 +24,8 @@ gem 'select2-rails'
 gem 'will_paginate'
 gem 'simple_form'
 
+gem "awesome_print", require:"ap"
+
 group :development, :test do
   gem 'spring'
   gem 'byebug'
@@ -34,6 +36,10 @@ end
 
 group :development do
   gem 'annotate'
+  gem 'meta_request'
+  gem 'quiet_assets'
+  gem 'better_errors'
+  gem 'pry-rails'
 end
 
 group :test do
@@ -48,4 +54,3 @@ group :production do
   gem 'rails_12factor'
   gem 'unicorn',        '4.8.3'
 end
-

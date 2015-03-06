@@ -3,7 +3,7 @@
 # Table name: products
 #
 #  id                    :integer          not null, primary key
-#  name                  :string(255)
+#  name                  :string
 #  price                 :float
 #  description           :text
 #  purchase_min_quantity :integer
