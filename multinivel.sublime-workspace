@@ -1,0 +1,264 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"cre",
+				"create_list"
+			],
+			[
+				"con",
+				"configure"
+			],
+			[
+				"ass",
+				"assert_not"
+			],
+			[
+				"ase",
+				"assert_select"
+			],
+			[
+				"asse",
+				"assert_response"
+			],
+			[
+				"pa",
+				"page_title"
+			],
+			[
+				"assert",
+				"assert_select"
+			],
+			[
+				"su",
+				"success"
+			],
+			[
+				"web",
+				"web-console"
+			],
+			[
+				"by",
+				"byebug"
+			],
+			[
+				"jq",
+				"jquery-rails"
+			],
+			[
+				"cof",
+				"coffee-rails"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 227.0,
+		"selected_items":
+		[
+			[
+				"rails",
+				"Set Syntax: Ruby on Rails"
+			],
+			[
+				"R",
+				"Set Syntax: Ruby on Rails"
+			],
+			[
+				"p",
+				"Package Control: Install Package"
+			],
+			[
+				"",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: ",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 504.0
+	},
+	"console":
+	{
+		"height": 125.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Users/joseluis/Documents/Balisoft/sistemas/ror/rspec-example/Gemfile",
+		"/Users/joseluis/Documents/Balisoft/sistemas/ror/rspec.sublime-project",
+		"/Users/joseluis/Documents/Balisoft/sistemas/ror/rspec-example/spec/requests/posts_pages_spec.rb",
+		"/Users/joseluis/Documents/Balisoft/sistemas/ror/rspec-example/config/routes.rb",
+		"/Users/joseluis/Documents/Balisoft/sistemas/ror/rspec-example/spec/rails_helper.rb",
+		"/Users/joseluis/Documents/Balisoft/sistemas/ror/rspec-example/app/controllers/posts_controller.rb",
+		"/Users/joseluis/Documents/Balisoft/sistemas/php/atencion/src/protected/views/adscripcion/archivosUnidad.php",
+		"/Users/joseluis/Documents/Balisoft/sistemas/php/atencion/src/protected/views/adscripcion/archivos_x_unidad.php",
+		"/Users/joseluis/Documents/Balisoft/sistemas/php/atencion/src/protected/controllers/AdscripcionController.php",
+		"/Users/joseluis/Documents/Balisoft/sistemas/php/atencion/src/protected/controllers/adscripcion/ArchivosunidadAction.php",
+		"/Users/joseluis/Documents/Balisoft/sistemas/php/atencion/src/protected/views/notasAdscripcion/_notas.php",
+		"/Users/joseluis/Documents/Balisoft/sistemas/php/atencion/src/protected/controllers/notasAdscripcion/GuardarAction.php",
+		"/Users/joseluis/Documents/Balisoft/sistemas/ror/multinivel/app/assets/stylesheets/application.css",
+		"/Users/joseluis/Documents/Balisoft/sistemas/ror/multinivel/app/assets/stylesheets/custom.css.scss",
+		"/Users/joseluis/Documents/Balisoft/sistemas/ror/multinivel/app/controllers/associates_controller.rb",
+		"/Users/joseluis/Documents/Balisoft/sistemas/ror/multinivel/app/controllers/site_controller.rb",
+		"/Users/joseluis/Documents/Balisoft/sistemas/ror/multinivel/app/views/site/registro.html.erb",
+		"/Users/joseluis/Documents/Balisoft/sistemas/ror/workspace/sample_app/app/controllers/users_controller.rb",
+		"/Users/joseluis/Documents/Balisoft/sistemas/ror/multinivel/app/models/associate.rb",
+		"/Users/joseluis/Documents/Balisoft/sistemas/ror/multinivel/config/routes.rb",
+		"/Users/joseluis/Documents/Balisoft/sistemas/ror/multinivel/Gemfile",
+		"/Users/joseluis/Documents/Balisoft/sistemas/ror/workspace/sample_app/app/views/shared/_error_messages.html.erb",
+		"/Users/joseluis/Documents/Balisoft/sistemas/ror/workspace/sample_app/app/assets/stylesheets/custom.css.scss",
+		"/Users/joseluis/Documents/Balisoft/sistemas/ror/workspace/sample_app/app/views/users/new.html.erb",
+		"/Users/joseluis/Documents/Balisoft/sistemas/ror/workspace/sample_app/config/routes.rb",
+		"/Users/joseluis/Documents/Balisoft/sistemas/ror/multinivel/config/database.yml",
+		"/Users/joseluis/Documents/Balisoft/sistemas/ror/workspace/sample_app/config/database.yml",
+		"/Users/joseluis/Documents/Balisoft/sistemas/ror/workspace/sample_app/Gemfile",
+		"/Users/joseluis/Documents/Balisoft/sistemas/ror/workspace/sample_app/test/helpers/application_helper_test.rb",
+		"/Users/joseluis/Documents/Balisoft/sistemas/ror/workspace/sample_app/.gitignore",
+		"/Users/joseluis/Documents/Balisoft/sistemas/ror/workspace/sample_app/test/integration/site_layout_test.rb",
+		"/Users/joseluis/Documents/Balisoft/sistemas/ror/workspace/sample_app/test/test_helper.rb",
+		"/Users/joseluis/Documents/Balisoft/sistemas/ror/workspace/sample_app/app/views/layouts/_footer.html.erb",
+		"/Users/joseluis/Documents/Balisoft/sistemas/ror/workspace/sample_app/app/views/static_pages/home.html.erb",
+		"/Users/joseluis/Documents/Balisoft/sistemas/ror/workspace/sample_app/test/controllers/users_controller_test.rb",
+		"/Users/joseluis/Documents/Balisoft/sistemas/ror/workspace/sample_app/app/views/layouts/application.html.erb",
+		"/Users/joseluis/Documents/Balisoft/sistemas/ror/workspace/sample_app/test/helpers/untitled",
+		"/Users/joseluis/Documents/Balisoft/sistemas/ror/workspace/sample_app/app/controllers/static_pages_controller.rb",
+		"/Users/joseluis/Documents/Balisoft/sistemas/ror/workspace/sample_app/test/controllers/static_pages_controller_test.rb",
+		"/Users/joseluis/Documents/Balisoft/sistemas/ror/workspace/sample_app/app/views/layouts/_header.html.erb",
+		"/Users/joseluis/Documents/Balisoft/sistemas/ror/workspace/sample_app/app/views/layouts/_shim.html.erb",
+		"/Users/joseluis/Documents/Balisoft/sistemas/ror/workspace/sample_app/app/helpers/application_helper.rb",
+		"/Users/joseluis/Documents/Balisoft/sistemas/ror/workspace/sample_app/config/initializers/backtrace_silencers.rb",
+		"/Users/joseluis/Documents/Balisoft/sistemas/ror/workspace/sample_app/Guardfile",
+		"/private/var/folders/sb/1dmxpxsx1yz0rhlpt58rj45c0000gn/T/fz3temp-1/header_inicial.inc",
+		"/Users/joseluis/Documents/Balisoft/sistemas/ror/workspace/sample_app/app/controllers/application_controller.rb",
+		"/Users/joseluis/Documents/Balisoft/sistemas/ror/workspace/sample_app/app/views/static_pages/about.html.erb",
+		"/Users/joseluis/Documents/Balisoft/sistemas/ror/workspace/sample_app/app/helpers/static_pages_helper.rb",
+		"/Users/joseluis/Documents/Balisoft/sistemas/ror/workspace/sample_app/app/views/static_pages/help.html.erb",
+		"/Users/joseluis/Documents/Balisoft/sistemas/ror/workspace/sample_app/app/views/static_pages/contact.html.erb",
+		"/Users/joseluis/Documents/Balisoft/sistemas/ror/workspace/sample_app/app/views/static_pages/untitled",
+		"/Users/joseluis/Documents/Balisoft/sistemas/ror/workspace/sample_app/README.md",
+		"/Users/joseluis/Documents/Balisoft/sistemas/ror/workspace/hello_app/config/routes.rb",
+		"/Users/joseluis/Documents/Balisoft/sistemas/ror/workspace/hello_app/app/controllers/application_controller.rb",
+		"/Users/joseluis/Documents/Balisoft/sistemas/ror/workspace/hello_app/Gemfile"
+	],
+	"find":
+	{
+		"height": 35.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+			"/Users/joseluis/Documents/Balisoft/sistemas/ror/workspace/sample_app"
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"$state-danger-text",
+			"test",
+			"<% provide(:title, \"Home\") %>",
+			"end"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 0.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 112.0
+	},
+	"replace":
+	{
+		"height": 0.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 236.0,
+	"status_bar_visible": true
+}
