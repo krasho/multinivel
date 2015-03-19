@@ -32,7 +32,11 @@ class Associate < ActiveRecord::Base
   #accepts_nested_attributes_for :user
 
   #before_save { self.email = email.downcase }
-  #validates :name, presence:  true, length: { maximum: 100 }
+  validates :name, presence:  true, length: { maximum: 100 }
+  validates :phone, presence: true
+  validates :email, presence: true
+
+  validates :supervisor_id, numericality: { only_integer: true }
 
   #VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
   #validates :email, presence: true, length: { maximum: 255 },
