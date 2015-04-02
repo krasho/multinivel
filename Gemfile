@@ -25,7 +25,7 @@ gem 'will_paginate'
 gem 'simple_form'
 
 group :development, :test do
-  gem 'spring'
+  gem 'spring', '1.3.3'
   gem 'byebug'
   gem 'web-console', '~> 2.0'
   gem 'rspec-rails'

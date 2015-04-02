@@ -4,6 +4,18 @@
 		"selected_items":
 		[
 			[
+				"super",
+				"supervisor_id"
+			],
+			[
+				"ci",
+				"city_id"
+			],
+			[
+				"su",
+				"supervisor_id"
+			],
+			[
 				"A",
 				"Associate"
 			],
@@ -36,10 +48,6 @@
 				"assert_select"
 			],
 			[
-				"su",
-				"success"
-			],
-			[
 				"web",
 				"web-console"
 			],
@@ -60,29 +68,10 @@
 	"buffers":
 	[
 		{
-			"contents": "require 'rails_helper'\n\ndescribe Contact do\n  it \"has a valid factory\" do\n    expect(build(:contact)).to be_valid\n  end\n\n  it { is_expected.to validate_presence_of :firstname }\n  it { is_expected.to validate_presence_of :lastname }\n  it { is_expected.to validate_presence_of :email }\n  it { is_expected.to validate_uniqueness_of(:email) }\n\n  it \"returns a contact's full name as a string\" do\n    contact = build_stubbed(:contact,\n      firstname: 'Jane',\n      lastname: 'Smith'\n    )\n    expect(contact.name).to eq 'Jane Smith'\n  end\n\n  it \"has three phone numbers\" do\n    expect(create(:contact).phones.count).to eq 3\n  end\n\n  describe \"filter last name by letter\" do\n    before :each do\n      @smith = create(:contact,\n        firstname: 'John',\n        lastname: 'Smith',\n        email: 'jsmith@example.com'\n      )\n      @jones = create(:contact,\n        firstname: 'Tim',\n        lastname: 'Jones',\n        email: 'tjones@example.com'\n      )\n      @johnson = create(:contact,\n        firstname: 'John',\n        lastname: 'Johnson',\n        email: 'jjohnson@example.com'\n      )\n    end\n\n    context \"with matching letters\" do\n      it \"returns a sorted array of results that match\" do\n        expect(Contact.by_letter(\"J\")).to eq [@johnson, @jones]\n      end\n    end\n\n    context \"with non-matching letters\" do\n      it \"omits results that do not match\" do\n        expect(Contact.by_letter(\"J\")).not_to include @smith\n      end\n    end\n  end\nend\n",
-			"file": "/Users/joseluis/Documents/Balisoft/sistemas/ror/rails-4-1-rspec-3-0/spec/models/contact_spec.rb",
-			"file_size": 1453,
-			"file_write_time": 1421351394000000,
+			"file": "app/models/associate.rb",
 			"settings":
 			{
-				"buffer_size": 1453,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": ".rspec",
-			"settings":
-			{
-				"buffer_size": 52,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "config/application.rb",
-			"settings":
-			{
-				"buffer_size": 1037,
+				"buffer_size": 1447,
 				"line_ending": "Unix"
 			}
 		},
@@ -90,15 +79,7 @@
 			"file": "spec/models/associate_spec.rb",
 			"settings":
 			{
-				"buffer_size": 377,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "app/models/associate.rb",
-			"settings":
-			{
-				"buffer_size": 1372,
+				"buffer_size": 2628,
 				"line_ending": "Unix"
 			}
 		}
@@ -147,6 +128,13 @@
 	},
 	"file_history":
 	[
+		"/Users/Krasho/Documents/Balisoft/sistemas/ror/multinivel/test/models/associate_test.rb",
+		"/Users/Krasho/Documents/Balisoft/sistemas/ror/multinivel/Gemfile",
+		"/Users/Krasho/Documents/Balisoft/sistemas/ror/multinivel/app/models/associate.rb",
+		"/Users/Krasho/Documents/Balisoft/sistemas/ror/multinivel/spec/models/associate_spec.rb",
+		"/Users/Krasho/Documents/Balisoft/sistemas/ror/multinivel/config/application.rb",
+		"/Users/Krasho/Documents/Balisoft/sistemas/ror/multinivel/.rspec",
+		"/Users/joseluis/Documents/Balisoft/sistemas/ror/rails-4-1-rspec-3-0/spec/models/contact_spec.rb",
 		"/Users/joseluis/Documents/Balisoft/sistemas/ror/rspec-example/Gemfile",
 		"/Users/joseluis/Documents/Balisoft/sistemas/ror/rspec.sublime-project",
 		"/Users/joseluis/Documents/Balisoft/sistemas/ror/rspec-example/spec/requests/posts_pages_spec.rb",
@@ -220,6 +208,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"true",
 			"$state-danger-text",
 			"test",
 			"<% provide(:title, \"Home\") %>",
@@ -241,15 +230,15 @@
 	"groups":
 	[
 		{
-			"selected": 3,
+			"selected": 0,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "/Users/joseluis/Documents/Balisoft/sistemas/ror/rails-4-1-rspec-3-0/spec/models/contact_spec.rb",
+					"file": "app/models/associate.rb",
 					"settings":
 					{
-						"buffer_size": 1453,
+						"buffer_size": 1447,
 						"regions":
 						{
 						},
@@ -257,125 +246,44 @@
 						[
 							[
 								0,
-								0
+								1447
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Ruby/Ruby.tmLanguage",
+							"syntax": "Packages/RSpec/RSpec.tmLanguage",
 							"tab_size": 2,
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 5.0,
+						"translation.y": 240.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 1,
-					"file": ".rspec",
-					"settings":
-					{
-						"buffer_size": 52,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								52,
-								52
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Text/Plain text.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "config/application.rb",
-					"settings":
-					{
-						"buffer_size": 1037,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1025,
-								1025
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Ruby/Ruby.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 3,
 					"file": "spec/models/associate_spec.rb",
 					"settings":
 					{
-						"buffer_size": 377,
+						"buffer_size": 2628,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								176,
-								176
+								0,
+								2628
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Ruby/Ruby.tmLanguage"
+							"syntax": "Packages/RSpec/RSpec.tmLanguage",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "app/models/associate.rb",
-					"settings":
-					{
-						"buffer_size": 1372,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								892,
-								892
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Ruby/Ruby.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 7.0,
-						"translation.y": 180.0,
+						"translation.y": 945.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"

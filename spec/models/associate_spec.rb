@@ -58,10 +58,22 @@ describe Associate do
 
 		end
 
-		it "Email inválido"
+		it "Email inválido" do
+            invalid_addresses = %w[user@example,com user_at_foo.org user.name@example.
+                                foo@bar_baz.com foo@bar+baz.com]
+            
+            invalid_addresses.each do |invalid_address|
+               socio = Associate.new
+               socio.email = invalid_address
+               socio.valid?
+            
+               expect(socio).to_not be_valid
+             
+            end			
+		end
    end	
 
-   context "Situaciones válidaz" do
+   context "Situaciones válidas" do
    	   it "Supervisor válido si es número" do
 			socio = Associate.new
 			socio.supervisor_id = 1
@@ -69,6 +81,24 @@ describe Associate do
 
 			expect(socio.errors[:supervisor_id]).not_to include("is not a number")
    	   end
+
+		it "Email válido" do
+            valid_addresses = %w[user@example.com USER@foo.COM A_US-ER@foo.bar.org
+                         first.last@foo.jp alice+bob@baz.cn]            
+            valid_addresses.each do |valid_address|
+               socio = Associate.new
+               socio.name  = "Jose"
+               socio.supervisor_id = 1
+               socio.city_id = 1
+               socio.email = valid_address
+               socio.phone = "1111"
+               socio.valid?
+            
+               expect(socio).to be_valid
+             
+            end			
+		end
+
    end
 
 end
