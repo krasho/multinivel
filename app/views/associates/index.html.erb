@@ -30,7 +30,7 @@
             <%= associate.email %>
           </td>
           <td>
-            <%= check_box_tag 'is_supervisor', 'is_supervisor', associate.is_supervisor, disabled: trueLKKMKI %>
+            <%= check_box_tag 'is_supervisor', 'is_supervisor', associate.is_supervisor, disabled: true %>
           </td>
           <td>
             <%= link_to 'Editar', {:action=>"edit", :controller=>"associates", :id=>associate.id} %>

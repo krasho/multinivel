@@ -6,7 +6,7 @@ FactoryGirl.define do
    	   address "Conocida"
 
    	   sequence(:email) {|n| "joseluis#{n}@yumalitas.com"}
-   	   supervisor_id "10"
-   	   city_id "23"
+   	   supervisor_id 10
+   	   city_id 23
    end
 end
