@@ -1,21 +1,12 @@
 require 'rails_helper'
 
 describe "AssociatePages", :type => :requests do
+    subject { page }
 
-    subject {
-    	page
-    }
+	let!(:socios) { FactoryGirl.create_list(:associate, 3) }
 
 	describe "Home Page" do 
 		context "List all associates" do 
-			#let!(:associate1) {FactoryGirl.create(:associate)}
-			#let!(:associate2) {FactoryGirl.create(:associate)}
-			#let!(:associate3) {FactoryGirl.create(:associate)}
-
-			#let (:socios){Associate.all}
-
-			let!(:socios) { FactoryGirl.create_list(:associate, 3) }
-
             before do 
             	visit associates_path
             end 
@@ -40,13 +31,12 @@ describe "AssociatePages", :type => :requests do
 	end
 
 	describe "show associate" do 
-       let!(:socios) { FactoryGirl.create_list(:associate, 3) }
        let!(:associate) {socios.first}
 
        before do 
           visit associates_path
           click_link associate.email
-          save_and_open_page	
+          #save_and_open_page	
        end
 
        it "should have associate info" do 
