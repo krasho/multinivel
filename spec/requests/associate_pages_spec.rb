@@ -31,21 +31,37 @@ describe "AssociatePages", :type => :requests do
 	end
 
 	describe "show associate" do 
-       let!(:associate) {socios.first}
+		context "Valid Associate"  do
+	       let!(:associate) {socios.first}
 
-       before do 
-          visit associates_path
-          click_link associate.email
-          #save_and_open_page	
-       end
+	       before do 
+	          visit associates_path
+	          click_link associate.email
+	          #save_and_open_page	
+	       end
 
-       it "should have associate info" do 
-          expect(page).to have_content associate.email
-          expect(page).to have_content associate.phone	
-       end
+	       #it "should have associate info" do 
+	       #   expect(page).to have_content associate.email
+	       #   expect(page).to have_content associate.phone	
+	       #end
 
-       it "should be on the associate page" do 
-       	   expect(page).to have_selector "h1", :text => "#{associate.name} - #{associate.email}"
-       end
+	       it "should be on the associate page" do 
+	       	   expect(page).to have_selector "h1", :text => "#{associate.name} - #{associate.email}"
+	       end
+	    end
+
+	    context "Invalid Associate" do
+	    	before do 
+	    		visit edit_associate_path(-1)
+	    	end
+
+	    	it "Redirecting to home page" do
+	    		expect(page).to have_selector "h1", :text => "Listado de Socios"
+	    	end
+
+	    	it "Error of Associate" do
+	    		expect(page).to have_content "El socio no existe"
+	    	end
+	    end 
 	end
 end

@@ -6,6 +6,10 @@ class AssociatesController < ApplicationController
 
   def edit
   	@associate = Associate.find(params[:id])
+
+  rescue ActiveRecord::RecordNotFound 
+      flash[:error] = "El socio no existe"
+      redirect_to associates_path
   end
 
   def delete
