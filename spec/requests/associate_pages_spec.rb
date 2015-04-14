@@ -37,13 +37,7 @@ describe "AssociatePages", :type => :requests do
 	       before do 
 	          visit associates_path
 	          click_link associate.email
-	          #save_and_open_page	
 	       end
-
-	       #it "should have associate info" do 
-	       #   expect(page).to have_content associate.email
-	       #   expect(page).to have_content associate.phone	
-	       #end
 
 	       it "should be on the associate page" do 
 	       	   expect(page).to have_selector "h1", :text => "#{associate.name} - #{associate.email}"

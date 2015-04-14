@@ -3,7 +3,6 @@ require 'rails_helper'
 describe Associate do 
    context "Situaciones de invalidez" do
 		it "Es inválido sin el nombre" do 
-			#socio = Associate.new(name: nil)
 			socio = FactoryGirl.build(:associate, name: nil)
 	        socio.valid?
 	        
@@ -12,7 +11,6 @@ describe Associate do
 
 
 		it "Es inválido sin el teléfono" do 
-			#socio = Associate.new(phone: nil)
 			socio = FactoryGirl.build(:associate, phone: nil)
 			socio.valid?
 
@@ -20,7 +18,6 @@ describe Associate do
 		end 
 
 		it "Es inválido sin el correo" do 
-			#socio = Associate.new(email: nil)
 			socio = FactoryGirl.build(:associate, email: nil)
 			socio.valid?
 
@@ -28,7 +25,6 @@ describe Associate do
 		end
 
 		it "Es inválido sin el supervisor" do 
-			#socio = Associate.new(supervisor_id: nil)
 			socio = FactoryGirl.build(:associate, supervisor_id: nil)
 			socio.valid?
 
@@ -36,9 +32,6 @@ describe Associate do
 		end
 
 		it "Supervisor es inválido sino es número" do 
-			#socio = Associate.new
-			#socio.supervisor_id = "uno"
-
             socio = FactoryGirl.build(:associate, supervisor_id: "uno")
 
 			socio.valid?
@@ -48,7 +41,6 @@ describe Associate do
 
 
 		it "Es inválido sin la ciudad" do 
-			#socio = Associate.new(city_id: nil)
 			socio = FactoryGirl.build(:associate, city_id: nil)
 			socio.valid?
 
@@ -56,14 +48,10 @@ describe Associate do
 		end
 
 		it "Ciudad es invália sino es un número" do 
-			#socio = Associate.new
-			#socio.city_id = "uno"
 			socio = FactoryGirl.build(:associate, city_id: "uno")
             socio.valid?
 
             expect(socio.errors[:city_id]).to include("is not a number")
-
-
 		end
 
 		it "Email inválido" do
@@ -71,7 +59,6 @@ describe Associate do
                                 foo@bar_baz.com foo@bar+baz.com]
             
             invalid_addresses.each do |invalid_address|
-               #socio = Associate.new
                socio = FactoryGirl.build(:associate)
                socio.email = invalid_address
                socio.valid?
@@ -84,7 +71,6 @@ describe Associate do
 
    context "Situaciones válidas" do
    	   it "Supervisor válido si es número" do
-			#socio = Associate.new
 			socio = FactoryGirl.build(:associate)
 			socio.supervisor_id = 1
 			socio.valid?
@@ -96,13 +82,8 @@ describe Associate do
             valid_addresses = %w[user@example.com USER@foo.COM A_US-ER@foo.bar.org
                          first.last@foo.jp alice+bob@baz.cn]            
             valid_addresses.each do |valid_address|
-               #socio = Associate.new
                socio = FactoryGirl.build(:associate)
-               #socio.name  = "Jose"
-               #socio.supervisor_id = 1
-               #socio.city_id = 1
                socio.email = valid_address
-               #socio.phone = "1111"
                socio.valid?
             
                expect(socio).to be_valid
