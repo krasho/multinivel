@@ -17,6 +17,10 @@ class AssociatesController < ApplicationController
 
   def show
   	@associate = Associate.find(params[:id])
+
+  rescue ActiveRecord::RecordNotFound 
+      flash[:error] = "El socio no existe"
+      redirect_to associates_path    
   end
 
 end

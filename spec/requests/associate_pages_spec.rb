@@ -15,14 +15,12 @@ describe "AssociatePages", :type => :requests do
 			it "should list all available associates names" do 
 				socios.each do |socio|
 					expect have_content socio.name
-					#expect(page).to have_content socio.name
 				end 
 			end
 
 			it "should list all available associates email" do 
 				socios.each do |socio|
 					expect have_content socio.email
-					#expect(page).to have_content socio.email
 				end 
 
 			end
@@ -46,7 +44,7 @@ describe "AssociatePages", :type => :requests do
 
 	    context "Invalid Associate" do
 	    	before do 
-	    		visit edit_associate_path(-1)
+	    		visit associate_path(-1)
 	    	end
 
 	    	it "Redirecting to home page" do
