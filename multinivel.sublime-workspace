@@ -4,8 +4,12 @@
 		"selected_items":
 		[
 			[
+				"ass",
+				"associate"
+			],
+			[
 				"asso",
-				"associates_path"
+				"associate"
 			],
 			[
 				"aso",
@@ -14,10 +18,6 @@
 			[
 				"expe",
 				"expect"
-			],
-			[
-				"ass",
-				"associates"
 			],
 			[
 				"super",
@@ -91,7 +91,7 @@
 			"file": "spec/models/associate_spec.rb",
 			"settings":
 			{
-				"buffer_size": 3283,
+				"buffer_size": 2721,
 				"line_ending": "Unix"
 			}
 		},
@@ -99,7 +99,7 @@
 			"file": "spec/requests/associate_pages_spec.rb",
 			"settings":
 			{
-				"buffer_size": 1594,
+				"buffer_size": 1923,
 				"line_ending": "Unix"
 			}
 		},
@@ -107,15 +107,7 @@
 			"file": "spec/controllers/associates_controller_spec.rb",
 			"settings":
 			{
-				"buffer_size": 373,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "app/views/associates/index.html.erb",
-			"settings":
-			{
-				"buffer_size": 1526,
+				"buffer_size": 685,
 				"line_ending": "Unix"
 			}
 		},
@@ -123,7 +115,7 @@
 			"file": "app/controllers/associates_controller.rb",
 			"settings":
 			{
-				"buffer_size": 368,
+				"buffer_size": 489,
 				"line_ending": "Unix"
 			}
 		},
@@ -180,11 +172,11 @@
 	},
 	"file_history":
 	[
+		"/Users/Krasho/Documents/Balisoft/sistemas/ror/multinivel/app/views/associates/index.html.erb",
 		"/Users/Krasho/Documents/Balisoft/sistemas/ror/multinivel/app/views/associates/show.html.erb",
 		"/Users/Krasho/Documents/Balisoft/sistemas/ror/multinivel/spec/factories/associate.rb",
 		"/Users/Krasho/Documents/Balisoft/sistemas/ror/multinivel/config/routes.rb",
 		"/Users/Krasho/Documents/Balisoft/sistemas/ror/multinivel/app/controllers/associates_controller.rb",
-		"/Users/Krasho/Documents/Balisoft/sistemas/ror/multinivel/app/views/associates/index.html.erb",
 		"/Users/Krasho/Documents/Balisoft/sistemas/ror/multinivel/spec/rails_helper.rb",
 		"/Users/Krasho/Documents/Balisoft/sistemas/ror/multinivel/spec/spec_helper.rb",
 		"/Users/Krasho/Documents/Balisoft/sistemas/ror/multinivel/app/controllers/associates_controller_.rb",
@@ -270,6 +262,10 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"\n			",
+			"\n               ",
+			"\n		",
+			"\n            ",
 			"true",
 			"$state-danger-text",
 			"test",
@@ -318,7 +314,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 214.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -328,15 +324,15 @@
 					"file": "spec/models/associate_spec.rb",
 					"settings":
 					{
-						"buffer_size": 3283,
+						"buffer_size": 2721,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								173,
-								213
+								2000,
+								2004
 							]
 						],
 						"settings":
@@ -345,7 +341,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 755.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -355,23 +351,24 @@
 					"file": "spec/requests/associate_pages_spec.rb",
 					"settings":
 					{
-						"buffer_size": 1594,
+						"buffer_size": 1923,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1078,
-								1078
+								1677,
+								1677
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/RSpec/RSpec.tmLanguage"
+							"syntax": "Packages/RSpec/RSpec.tmLanguage",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 396.0,
+						"translation.y": 773.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -381,20 +378,22 @@
 					"file": "spec/controllers/associates_controller_spec.rb",
 					"settings":
 					{
-						"buffer_size": 373,
+						"buffer_size": 685,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								243,
-								243
+								448,
+								448
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/RSpec/RSpec.tmLanguage"
+							"syntax": "Packages/RSpec/RSpec.tmLanguage",
+							"tab_size": 3,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -404,23 +403,23 @@
 				},
 				{
 					"buffer": 4,
-					"file": "app/views/associates/index.html.erb",
+					"file": "app/controllers/associates_controller.rb",
 					"settings":
 					{
-						"buffer_size": 1526,
+						"buffer_size": 489,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								309,
-								309
+								473,
+								473
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Rails/HTML (Rails).tmLanguage",
+							"syntax": "Packages/RSpec/RSpec.tmLanguage",
 							"tab_size": 2,
 							"translate_tabs_to_spaces": true
 						},
@@ -432,34 +431,6 @@
 				},
 				{
 					"buffer": 5,
-					"file": "app/controllers/associates_controller.rb",
-					"settings":
-					{
-						"buffer_size": 368,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								274,
-								274
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/RSpec/RSpec.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 6,
 					"file": "app/views/associates/edit.html.erb",
 					"settings":
 					{
