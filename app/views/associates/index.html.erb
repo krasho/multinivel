@@ -1,8 +1,16 @@
 <p id="notice"><%= notice %></p>
+<div class="span9">
+  <% flash.each do |key, value| %>
+      <div class="flash alert alert-<%= key %>">
+  <%= value %>
+      </div>
+  <% end %>
+  <%= yield %>
+</div>
 
 <div class="panel panel-default">
   <div class="panel-heading">
-    <h1 class="panel-title">Socios</h1>
+    <h1 class="panel-title">Listado de Socios</h1>
   </div>
 
   <div class="panel-body">
@@ -16,6 +24,7 @@
         <tr>
           <th>Nombre</th>
           <th>Email</th>
+          <th>Teléfono</th>
           <th>¿Es supervisor?</th>
           <th>Acciones</th>
         </tr>
@@ -24,18 +33,23 @@
       <% @associates.each do |associate| %>
         <tr>
           <td>
-            <%= associate.name %>
+            <%= link_to associate.email, edit_associate_path(associate) %>
+            <!--<%= associate.name %>-->
           </td>
           <td>
             <%= associate.email %>
           </td>
           <td>
-            <%= check_box_tag 'is_supervisor', 'is_supervisor', associate.is_supervisor, disabled: trueLKKMKI %>
-          </td>
+            <%= associate.phone %>
+          </td>          
           <td>
+            <%= check_box_tag 'is_supervisor', 'is_supervisor', associate.is_supervisor, disabled: true %>
+          </td>
+          <!--<td>
             <%= link_to 'Editar', {:action=>"edit", :controller=>"associates", :id=>associate.id} %>
             <%= link_to 'Eliminar', associate, method: :delete, data: { confirm: '¿Seguro que deseas eliminar el socio?' } %>
           </td>
+        -->
         </tr>
       <% end %>
       </tbody>

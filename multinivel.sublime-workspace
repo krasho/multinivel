@@ -4,6 +4,34 @@
 		"selected_items":
 		[
 			[
+				"asso",
+				"associates_path"
+			],
+			[
+				"aso",
+				"associate"
+			],
+			[
+				"expe",
+				"expect"
+			],
+			[
+				"ass",
+				"associates"
+			],
+			[
+				"super",
+				"supervisor_id"
+			],
+			[
+				"ci",
+				"city_id"
+			],
+			[
+				"su",
+				"supervisor_id"
+			],
+			[
 				"A",
 				"Associate"
 			],
@@ -14,10 +42,6 @@
 			[
 				"con",
 				"configure"
-			],
-			[
-				"ass",
-				"assert_not"
 			],
 			[
 				"ase",
@@ -34,10 +58,6 @@
 			[
 				"assert",
 				"assert_select"
-			],
-			[
-				"su",
-				"success"
 			],
 			[
 				"web",
@@ -60,29 +80,10 @@
 	"buffers":
 	[
 		{
-			"contents": "require 'rails_helper'\n\ndescribe Contact do\n  it \"has a valid factory\" do\n    expect(build(:contact)).to be_valid\n  end\n\n  it { is_expected.to validate_presence_of :firstname }\n  it { is_expected.to validate_presence_of :lastname }\n  it { is_expected.to validate_presence_of :email }\n  it { is_expected.to validate_uniqueness_of(:email) }\n\n  it \"returns a contact's full name as a string\" do\n    contact = build_stubbed(:contact,\n      firstname: 'Jane',\n      lastname: 'Smith'\n    )\n    expect(contact.name).to eq 'Jane Smith'\n  end\n\n  it \"has three phone numbers\" do\n    expect(create(:contact).phones.count).to eq 3\n  end\n\n  describe \"filter last name by letter\" do\n    before :each do\n      @smith = create(:contact,\n        firstname: 'John',\n        lastname: 'Smith',\n        email: 'jsmith@example.com'\n      )\n      @jones = create(:contact,\n        firstname: 'Tim',\n        lastname: 'Jones',\n        email: 'tjones@example.com'\n      )\n      @johnson = create(:contact,\n        firstname: 'John',\n        lastname: 'Johnson',\n        email: 'jjohnson@example.com'\n      )\n    end\n\n    context \"with matching letters\" do\n      it \"returns a sorted array of results that match\" do\n        expect(Contact.by_letter(\"J\")).to eq [@johnson, @jones]\n      end\n    end\n\n    context \"with non-matching letters\" do\n      it \"omits results that do not match\" do\n        expect(Contact.by_letter(\"J\")).not_to include @smith\n      end\n    end\n  end\nend\n",
-			"file": "/Users/joseluis/Documents/Balisoft/sistemas/ror/rails-4-1-rspec-3-0/spec/models/contact_spec.rb",
-			"file_size": 1453,
-			"file_write_time": 1421351394000000,
+			"file": "app/models/associate.rb",
 			"settings":
 			{
-				"buffer_size": 1453,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": ".rspec",
-			"settings":
-			{
-				"buffer_size": 52,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "config/application.rb",
-			"settings":
-			{
-				"buffer_size": 1037,
+				"buffer_size": 1447,
 				"line_ending": "Unix"
 			}
 		},
@@ -90,15 +91,47 @@
 			"file": "spec/models/associate_spec.rb",
 			"settings":
 			{
-				"buffer_size": 377,
+				"buffer_size": 3283,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "app/models/associate.rb",
+			"file": "spec/requests/associate_pages_spec.rb",
 			"settings":
 			{
-				"buffer_size": 1372,
+				"buffer_size": 1594,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "spec/controllers/associates_controller_spec.rb",
+			"settings":
+			{
+				"buffer_size": 373,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/views/associates/index.html.erb",
+			"settings":
+			{
+				"buffer_size": 1526,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/controllers/associates_controller.rb",
+			"settings":
+			{
+				"buffer_size": 368,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/views/associates/edit.html.erb",
+			"settings":
+			{
+				"buffer_size": 307,
 				"line_ending": "Unix"
 			}
 		}
@@ -147,6 +180,23 @@
 	},
 	"file_history":
 	[
+		"/Users/Krasho/Documents/Balisoft/sistemas/ror/multinivel/app/views/associates/show.html.erb",
+		"/Users/Krasho/Documents/Balisoft/sistemas/ror/multinivel/spec/factories/associate.rb",
+		"/Users/Krasho/Documents/Balisoft/sistemas/ror/multinivel/config/routes.rb",
+		"/Users/Krasho/Documents/Balisoft/sistemas/ror/multinivel/app/controllers/associates_controller.rb",
+		"/Users/Krasho/Documents/Balisoft/sistemas/ror/multinivel/app/views/associates/index.html.erb",
+		"/Users/Krasho/Documents/Balisoft/sistemas/ror/multinivel/spec/rails_helper.rb",
+		"/Users/Krasho/Documents/Balisoft/sistemas/ror/multinivel/spec/spec_helper.rb",
+		"/Users/Krasho/Documents/Balisoft/sistemas/ror/multinivel/app/controllers/associates_controller_.rb",
+		"/Users/Krasho/Documents/Balisoft/sistemas/ror/multinivel/app/views/associates/new.html.erb",
+		"/Users/Krasho/Documents/Balisoft/sistemas/ror/multinivel/spec/factories/associate",
+		"/Users/Krasho/Documents/Balisoft/sistemas/ror/multinivel/test/models/associate_test.rb",
+		"/Users/Krasho/Documents/Balisoft/sistemas/ror/multinivel/Gemfile",
+		"/Users/Krasho/Documents/Balisoft/sistemas/ror/multinivel/app/models/associate.rb",
+		"/Users/Krasho/Documents/Balisoft/sistemas/ror/multinivel/spec/models/associate_spec.rb",
+		"/Users/Krasho/Documents/Balisoft/sistemas/ror/multinivel/config/application.rb",
+		"/Users/Krasho/Documents/Balisoft/sistemas/ror/multinivel/.rspec",
+		"/Users/joseluis/Documents/Balisoft/sistemas/ror/rails-4-1-rspec-3-0/spec/models/contact_spec.rb",
 		"/Users/joseluis/Documents/Balisoft/sistemas/ror/rspec-example/Gemfile",
 		"/Users/joseluis/Documents/Balisoft/sistemas/ror/rspec.sublime-project",
 		"/Users/joseluis/Documents/Balisoft/sistemas/ror/rspec-example/spec/requests/posts_pages_spec.rb",
@@ -220,6 +270,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"true",
 			"$state-danger-text",
 			"test",
 			"<% provide(:title, \"Home\") %>",
@@ -241,56 +292,57 @@
 	"groups":
 	[
 		{
-			"selected": 3,
+			"selected": 2,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "/Users/joseluis/Documents/Balisoft/sistemas/ror/rails-4-1-rspec-3-0/spec/models/contact_spec.rb",
+					"file": "app/models/associate.rb",
 					"settings":
 					{
-						"buffer_size": 1453,
+						"buffer_size": 1447,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
+								169,
+								174
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Ruby/Ruby.tmLanguage",
+							"syntax": "Packages/RSpec/RSpec.tmLanguage",
 							"tab_size": 2,
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 5.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 1,
-					"file": ".rspec",
+					"file": "spec/models/associate_spec.rb",
 					"settings":
 					{
-						"buffer_size": 52,
+						"buffer_size": 3283,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								52,
-								52
+								173,
+								213
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Text/Plain text.tmLanguage"
+							"syntax": "Packages/RSpec/RSpec.tmLanguage",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -300,51 +352,49 @@
 				},
 				{
 					"buffer": 2,
-					"file": "config/application.rb",
+					"file": "spec/requests/associate_pages_spec.rb",
 					"settings":
 					{
-						"buffer_size": 1037,
+						"buffer_size": 1594,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1025,
-								1025
+								1078,
+								1078
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Ruby/Ruby.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
+							"syntax": "Packages/RSpec/RSpec.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 396.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 3,
-					"file": "spec/models/associate_spec.rb",
+					"file": "spec/controllers/associates_controller_spec.rb",
 					"settings":
 					{
-						"buffer_size": 377,
+						"buffer_size": 373,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								176,
-								176
+								243,
+								243
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Ruby/Ruby.tmLanguage"
+							"syntax": "Packages/RSpec/RSpec.tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -354,28 +404,82 @@
 				},
 				{
 					"buffer": 4,
-					"file": "app/models/associate.rb",
+					"file": "app/views/associates/index.html.erb",
 					"settings":
 					{
-						"buffer_size": 1372,
+						"buffer_size": 1526,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								892,
-								892
+								309,
+								309
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Ruby/Ruby.tmLanguage",
+							"syntax": "Packages/Rails/HTML (Rails).tmLanguage",
 							"tab_size": 2,
 							"translate_tabs_to_spaces": true
 						},
-						"translation.x": 7.0,
-						"translation.y": 180.0,
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "app/controllers/associates_controller.rb",
+					"settings":
+					{
+						"buffer_size": 368,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								274,
+								274
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/RSpec/RSpec.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "app/views/associates/edit.html.erb",
+					"settings":
+					{
+						"buffer_size": 307,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								281,
+								285
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Rails/HTML (Rails).tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
