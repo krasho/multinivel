@@ -9,7 +9,7 @@
 #  comission            :float
 #  paid                 :boolean
 #  supervisor_id        :integer
-#  supervisor           :string(255)
+#  supervisor           :string
 #  created_at           :datetime
 #  updated_at           :datetime
 #

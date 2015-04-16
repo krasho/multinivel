@@ -1,17 +1,16 @@
 # == Schema Information
 #
-# Table name: cities
+# Table name: banks
 #
 #  id         :integer          not null, primary key
 #  name       :string
-#  state_id   :integer
 #  created_at :datetime
 #  updated_at :datetime
 #
 
 require 'test_helper'
 
-class CityTest < ActiveSupport::TestCase
+class BankTest < ActiveSupport::TestCase
   # test "the truth" do
   #   assert true
   # end
