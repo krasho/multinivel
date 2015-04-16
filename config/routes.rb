@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   post 'companies/supervisor', to: 'companies#supervisor'
   get 'companies/supervisor', to: 'companies#supervisor'
 
-  resources :associates
+  resources :associates  
   resources :banks
   resources :cities
   resources :commissions
