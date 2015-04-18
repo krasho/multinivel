@@ -83,7 +83,7 @@
 			"file": "spec/requests/bank_pages_spec.rb",
 			"settings":
 			{
-				"buffer_size": 253,
+				"buffer_size": 719,
 				"line_ending": "Unix"
 			}
 		},
@@ -92,6 +92,22 @@
 			"settings":
 			{
 				"buffer_size": 1923,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "spec/factories/bank.rb",
+			"settings":
+			{
+				"buffer_size": 85,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "spec/factories/associate.rb",
+			"settings":
+			{
+				"buffer_size": 322,
 				"line_ending": "Unix"
 			}
 		}
@@ -261,7 +277,7 @@
 	"groups":
 	[
 		{
-			"selected": 1,
+			"selected": 0,
 			"sheets":
 			[
 				{
@@ -269,20 +285,21 @@
 					"file": "spec/requests/bank_pages_spec.rb",
 					"settings":
 					{
-						"buffer_size": 253,
+						"buffer_size": 719,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								133,
-								133
+								281,
+								281
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/RSpec/RSpec.tmLanguage"
+							"syntax": "Packages/RSpec/RSpec.tmLanguage",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -302,14 +319,66 @@
 						"selection":
 						[
 							[
-								49,
-								72
+								96,
+								152
 							]
 						],
 						"settings":
 						{
 							"syntax": "Packages/RSpec/RSpec.tmLanguage",
 							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 12.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "spec/factories/bank.rb",
+					"settings":
+					{
+						"buffer_size": 85,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								75,
+								75
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/RSpec/RSpec.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "spec/factories/associate.rb",
+					"settings":
+					{
+						"buffer_size": 322,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								322
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/RSpec/RSpec.tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -380,6 +449,6 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 236.0,
+	"side_bar_width": 345.0,
 	"status_bar_visible": true
 }
