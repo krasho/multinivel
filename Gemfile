@@ -28,8 +28,7 @@ gem "awesome_print", require:"ap"
 
 group :development, :test do
   gem 'spring', '1.3.3'
-  gem 'byebug'
-  gem 'web-console', '~> 2.0'
+  gem 'byebug'  
   gem 'rspec-rails'
   gem 'factory_girl_rails'
 end
@@ -40,6 +39,7 @@ group :development do
   gem 'quiet_assets'
   gem 'better_errors'
   gem 'pry-rails'
+  gem 'web-console', '~> 2.0'
 end
 
 group :test do
