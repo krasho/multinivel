@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   get 'companies/supervisor', to: 'companies#supervisor'
 
   resources :associates  
-  #resources :banks
+  resources :banks
   resources :cities
   resources :commissions
   resources :commission_types
@@ -18,7 +18,7 @@ Rails.application.routes.draw do
 
   get 'site/:page' => 'site#pagina', as: :static_page
 
-  root 'banks#index'
+  root 'site#index'
 
   #Ruta para el registro de un nuevo promotor
   get  'registro/new/:promotor' => 'site#registro'
