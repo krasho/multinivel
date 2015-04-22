@@ -53,4 +53,10 @@ RSpec.configure do |config|
 
   #Esta instrucción es para poder usar las rutas del archivo routes
   config.include Rails.application.routes.url_helpers
+
+  #Código para agregar los test de Devise
+  config.include Warden::Test::Helpers
+  config.before :suite do
+    Warden.test_mode!
+  end
 end

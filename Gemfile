@@ -40,6 +40,7 @@ group :development do
   gem 'better_errors'
   gem 'pry-rails'
   gem 'web-console', '~> 2.0'
+  gem 'guard-rspec', require: false
 end
 
 group :test do
