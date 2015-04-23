@@ -4,6 +4,6 @@ class BanksController < ApplicationController
 	end
 
 	def edit
-		@bank = Associate.find(params[:id])
+		@bank = Bank.find(params[:id])
 	end
 end
