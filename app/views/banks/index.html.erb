@@ -22,7 +22,7 @@
       <% @banks.each do |bank| %>
         <tr>
           <td>
-            <%= bank.name %>
+            <%= link_to bank.name, {:action=>"edit", :controller=>"banks", :id=>bank.id} %>
           </td>
           <td>
             <%= link_to 'Editar', {:action=>"edit", :controller=>"banks", :id=>bank.id} %>

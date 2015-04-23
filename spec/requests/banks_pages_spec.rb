@@ -1,9 +1,8 @@
 require 'rails_helper'
 
 RSpec.describe "BanksPages", type: :requests do
-	
-	describe "Index Page" do 
-		let!(:banks) { FactoryGirl.create_list(:bank, 4) }	
+	let!(:banks) {FactoryGirl.create_list(:bank, 4) }
+	describe "Index Page" do 		
 		before do 
 		   visit banks_path
 		end
@@ -18,18 +17,19 @@ RSpec.describe "BanksPages", type: :requests do
 	end
 
 
-	describe "Edit Page" do
-		let!(:banks) { FactoryGirl.create_list(:bank, 4) }	
-        let!(:bank) {banks.first}
+	describe "Edit Page" do		
+        context "Correct Bank" do 
+	        let!(:bank) {banks.first}
+			before do 
+				visit banks_path
+				click_link bank.name
+				save_and_open_page 
+			end
 
+			it "Should appear the name of the bank" do 
+				expect(page).to have_content bank.name
+			end 
+        end
 
-		before do 
-			visit banks_path
-			click_link bank.name
-		end
-
-		it "Should appear the name of the bank" do 
-			expect(page).to have_content bank.name
-		end 
 	end
 end
