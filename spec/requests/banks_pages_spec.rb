@@ -50,8 +50,9 @@ RSpec.describe "BanksPages", type: :requests do
 	describe " Insert bank" do 
 		let!(:bank) {banks.first}
 		before do 	        
-			visit edit_bank_path bank.id
+			visit edit_bank_path bank.id		
 			fill_in "name", :with=>"Banco Patito"
+			save_and_open_page
 		end
 
 
