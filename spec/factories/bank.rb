@@ -1,5 +1,6 @@
 FactoryGirl.define do 
    factory :bank do 
-   	   name {Faker::Name.name}
+   	   #name "prueba" #{Faker::Name.name}
+   	   sequence(:name) { |n| "Post number #{n}" }
    end
 end

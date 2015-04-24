@@ -80,34 +80,15 @@
 			}
 		},
 		{
-			"file": "app/views/cities/update.html.erb",
-			"settings":
-			{
-				"buffer_size": 74,
-				"line_ending": "Unix"
-			}
-		},
-		{
 			"file": "app/views/banks/edit.html.erb",
 			"settings":
 			{
-				"buffer_size": 260,
+				"buffer_size": 248,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "app/views/cities/index.html.erb",
-			"settings":
-			{
-				"buffer_size": 963,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"contents": "class BanksController < ApplicationController\n	def index\n		@banks = Bank.all\n	end\n\n	def edit\n		@bank = Bank.find(params[:id])\n	end\nend\n",
 			"file": "app/controllers/banks_controller.rb",
-			"file_size": 140,
-			"file_write_time": 1429737218000000,
 			"settings":
 			{
 				"buffer_size": 135,
@@ -115,18 +96,34 @@
 			}
 		},
 		{
-			"file": "spec/requests/associate_pages_spec.rb",
+			"file": "spec/requests/banks_pages_spec.rb",
 			"settings":
 			{
-				"buffer_size": 1923,
+				"buffer_size": 683,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "spec/requests/banks_pages_spec.rb",
+			"file": "app/views/banks/index.html.erb",
 			"settings":
 			{
-				"buffer_size": 661,
+				"buffer_size": 922,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "spec/factories/bank.rb",
+			"settings":
+			{
+				"buffer_size": 146,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/models/bank.rb",
+			"settings":
+			{
+				"buffer_size": 36,
 				"line_ending": "Unix"
 			}
 		}
@@ -175,13 +172,15 @@
 	},
 	"file_history":
 	[
+		"/Users/joseluis/Documents/Balisoft/sistemas/ror/multinivel/app/views/cities/index.html.erb",
+		"/Users/joseluis/Documents/Balisoft/sistemas/ror/multinivel/app/views/cities/update.html.erb",
+		"/Users/joseluis/Documents/Balisoft/sistemas/ror/multinivel/spec/requests/associate_pages_spec.rb",
 		"/Users/joseluis/Documents/Balisoft/sistemas/ror/multinivel/spec/requests/banks_pages_spec.rb",
 		"/Users/joseluis/Documents/Balisoft/sistemas/ror/multinivel/app/views/cities/edit.html.erb",
 		"/Users/joseluis/Documents/Balisoft/sistemas/ror/multinivel/spec/rails_helper.rb",
 		"/Users/joseluis/Documents/Balisoft/sistemas/ror/multinivel/Gemfile",
 		"/Users/joseluis/Documents/Balisoft/sistemas/ror/multinivel/untitled.sublime-project",
 		"/Users/joseluis/Documents/Balisoft/sistemas/ror/multinivel/spec/requests/bank_pages_spec.rb",
-		"/Users/joseluis/Documents/Balisoft/sistemas/ror/multinivel/spec/requests/associate_pages_spec.rb",
 		"/Users/joseluis/Documents/Balisoft/sistemas/ror/multinivel/app/models/associate.rb",
 		"/Users/joseluis/Documents/Balisoft/sistemas/ror/multinivel/db/schema.rb",
 		"/Users/joseluis/Documents/Balisoft/sistemas/ror/multinivel/db/migrate/20150415181200_create_banks.rb",
@@ -261,6 +260,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"Associate",
 			"\n",
 			"Bank",
 			"$state-danger-text",
@@ -284,7 +284,7 @@
 	"groups":
 	[
 		{
-			"selected": 6,
+			"selected": 1,
 			"sheets":
 			[
 				{
@@ -315,18 +315,18 @@
 				},
 				{
 					"buffer": 1,
-					"file": "app/views/cities/update.html.erb",
+					"file": "app/views/banks/edit.html.erb",
 					"settings":
 					{
-						"buffer_size": 74,
+						"buffer_size": 248,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
+								92,
+								92
 							]
 						],
 						"settings":
@@ -341,23 +341,23 @@
 				},
 				{
 					"buffer": 2,
-					"file": "app/views/banks/edit.html.erb",
+					"file": "app/controllers/banks_controller.rb",
 					"settings":
 					{
-						"buffer_size": 260,
+						"buffer_size": 135,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								118,
-								118
+								135,
+								135
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Rails/HTML (Rails).tmLanguage"
+							"syntax": "Packages/Ruby/Ruby.tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -367,18 +367,45 @@
 				},
 				{
 					"buffer": 3,
-					"file": "app/views/cities/index.html.erb",
+					"file": "spec/requests/banks_pages_spec.rb",
 					"settings":
 					{
-						"buffer_size": 963,
+						"buffer_size": 683,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
+								496,
+								496
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby/Ruby.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "app/views/banks/index.html.erb",
+					"settings":
+					{
+						"buffer_size": 922,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								532,
+								532
 							]
 						],
 						"settings":
@@ -394,19 +421,19 @@
 					"type": "text"
 				},
 				{
-					"buffer": 4,
-					"file": "app/controllers/banks_controller.rb",
+					"buffer": 5,
+					"file": "spec/factories/bank.rb",
 					"settings":
 					{
-						"buffer_size": 135,
+						"buffer_size": 146,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								134,
-								135
+								107,
+								107
 							]
 						],
 						"settings":
@@ -420,38 +447,11 @@
 					"type": "text"
 				},
 				{
-					"buffer": 5,
-					"file": "spec/requests/associate_pages_spec.rb",
-					"settings":
-					{
-						"buffer_size": 1923,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Ruby/Ruby.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 226.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
 					"buffer": 6,
-					"file": "spec/requests/banks_pages_spec.rb",
+					"file": "app/models/bank.rb",
 					"settings":
 					{
-						"buffer_size": 661,
+						"buffer_size": 36,
 						"regions":
 						{
 						},
@@ -464,8 +464,7 @@
 						],
 						"settings":
 						{
-							"syntax": "Packages/Ruby/Ruby.tmLanguage",
-							"translate_tabs_to_spaces": false
+							"syntax": "Packages/Ruby/Ruby.tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,

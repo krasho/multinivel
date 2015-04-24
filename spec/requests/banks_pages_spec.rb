@@ -23,7 +23,6 @@ RSpec.describe "BanksPages", type: :requests do
 			before do 
 				visit banks_path
 				click_link bank.name
-				save_and_open_page 
 			end
 
 			it "Should appear the name of the bank" do 
@@ -31,5 +30,33 @@ RSpec.describe "BanksPages", type: :requests do
 			end 
         end
 
+        context "Incorrect Bank" do 
+        	before do
+        		visit edit_bank_path -1
+        	end
+
+
+        	it "Redirecting to Home Page" do
+        		expect(page).to have_content "Listado de Bancos"
+        	end
+
+        	it "Showing error message" do 
+        		expect(page).to have_content "El banco no existe"        		
+        	end
+        end
+
+	end
+
+	describe " Insert bank" do 
+		let!(:bank) {banks.first}
+		before do 	        
+			visit edit_bank_path bank.id
+			fill_in "name", :with=>"Banco Patito"
+		end
+
+
+		it "Checking if the record saves " do
+			expect(page).to have_content "Registro Creado Satisfactoriamente"
+		end 
 	end
 end
