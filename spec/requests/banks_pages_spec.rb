@@ -47,17 +47,33 @@ RSpec.describe "BanksPages", type: :requests do
 
 	end
 
-	describe " Insert bank" do 
+	describe " Update bank" do 
 		let!(:bank) {banks.first}
-		before do 	        
-			visit edit_bank_path bank.id		
-			fill_in "name", :with=>"Banco Patito"
-			save_and_open_page
-		end
+
+        context "With valid data" do
+			before do 	        
+				visit edit_bank_path bank.id		
+				fill_in "bank_name", :with=>"Banco Patito"
+				click_button "Guardar"
+			end
 
 
-		it "Checking if the record saves " do
-			expect(page).to have_content "Registro Creado Satisfactoriamente"
-		end 
+			it "Checking if the record saves " do
+				expect(page).to have_content "Registro Guardado Satisfactoriamente"
+			end         	
+        end
+
+        context "With Invalid data" do 
+			before do 	        
+				visit edit_bank_path bank.id		
+				click_button "Guardar"
+			end
+
+
+			it "Showing error without name" do				
+				expect(page).to have_content "Name can't be blank"
+			end         	
+
+        end 
 	end
 end
