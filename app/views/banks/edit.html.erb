@@ -3,6 +3,13 @@
     <h1 class="panel-title"><%= @bank.name %></h1>
   </div>
 
+  <% flash.each do |key, value| %>
+    <div class="flash alert alert-<%= key %>">
+    <%= value %>
+    </div>
+    <% end %>
+  <%= yield %>
+
    <% if @bank.errors.any? %>
     <div class='error_messages'>
       <h2>Form is invalid</h2>

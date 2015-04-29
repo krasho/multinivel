@@ -17,7 +17,7 @@ RSpec.describe "BanksPages", type: :requests do
 	end
 
 
-	describe "Edit Page" do		
+	describe "Edit Bank" do		
         context "Correct Bank" do 
 	        let!(:bank) {banks.first}
 			before do 
@@ -34,7 +34,6 @@ RSpec.describe "BanksPages", type: :requests do
         	before do
         		visit edit_bank_path -1
         	end
-
 
         	it "Redirecting to Home Page" do
         		expect(page).to have_content "Listado de Bancos"
@@ -53,7 +52,7 @@ RSpec.describe "BanksPages", type: :requests do
         context "With valid data" do
 			before do 	        
 				visit edit_bank_path bank.id		
-				fill_in "bank_name", :with=>"Banco Patito"
+				fill_in "bank_name", :with=>"Banco Patito"				
 				click_button "Guardar"
 			end
 
@@ -65,7 +64,8 @@ RSpec.describe "BanksPages", type: :requests do
 
         context "With Invalid data" do 
 			before do 	        
-				visit edit_bank_path bank.id		
+				visit edit_bank_path bank.id
+				fill_in "bank_name", :with=>""		
 				click_button "Guardar"
 			end
 
@@ -73,7 +73,55 @@ RSpec.describe "BanksPages", type: :requests do
 			it "Showing error without name" do				
 				expect(page).to have_content "Name can't be blank"
 			end         	
-
         end 
+	end
+
+    describe "new bank" do 
+    	before do 
+    		visit banks_path
+    		click_link "Agregar banco"
+    	end
+
+    	it "Should appear the text 'Agregar un banco'" do
+    		expect(page).to have_content "Agregar un banco"
+    	end 
+    end
+
+	describe "Create bank" do 
+		context "With valid data" do
+			before do
+				visit new_bank_path
+				fill_in "bank_name", :with=>"Banco del Sureste"
+				click_button "Guardar"				
+			end
+
+			it "Checking if the record saves" do 
+				expect(page).to have_content "Registro Guardado Satisfactoriamente"
+			end
+		end
+
+		context "With invalid data" do 
+			before do
+				visit new_bank_path
+				click_button "Guardar"				
+			end
+
+			it "Showing error without name" do				
+				expect(page).to have_content "Name can't be blank"
+			end         	
+		end
+	end
+
+
+	describe "Delete a bank" do 
+		before do 
+			visit banks_path
+			#click_link "Eliminar"
+			find('.item').first(:link, "Eliminar").click
+		end
+
+		it "Showing confirmation of error" do 
+			expect(page).to have_content "Registro Borrado Satisfactoriamente"
+		end 
 	end
 end
