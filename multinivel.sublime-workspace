@@ -4,6 +4,14 @@
 		"selected_items":
 		[
 			[
+				"cli",
+				"click_link"
+			],
+			[
+				"banks",
+				"banks_path"
+			],
+			[
 				"bank",
 				"banks_path"
 			],
@@ -79,7 +87,15 @@
 			"file": "app/controllers/banks_controller.rb",
 			"settings":
 			{
-				"buffer_size": 813,
+				"buffer_size": 1379,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/views/banks/new.html.erb",
+			"settings":
+			{
+				"buffer_size": 486,
 				"line_ending": "Unix"
 			}
 		},
@@ -87,7 +103,7 @@
 			"file": "spec/requests/banks_pages_spec.rb",
 			"settings":
 			{
-				"buffer_size": 1663,
+				"buffer_size": 2757,
 				"line_ending": "Unix"
 			}
 		},
@@ -100,18 +116,34 @@
 			}
 		},
 		{
-			"file": "app/views/banks/edit.html.erb",
+			"file": "app/views/banks/_form.html.erb",
 			"settings":
 			{
-				"buffer_size": 524,
+				"buffer_size": 258,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "app/views/banks/_form.html.erb",
+			"file": "app/views/banks/index.html.erb",
 			"settings":
 			{
-				"buffer_size": 257,
+				"buffer_size": 1046,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/views/banks/edit.html.erb",
+			"settings":
+			{
+				"buffer_size": 664,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/controllers/cities_controller.rb",
+			"settings":
+			{
+				"buffer_size": 1566,
 				"line_ending": "Unix"
 			}
 		}
@@ -161,12 +193,12 @@
 	"file_history":
 	[
 		"/Users/joseluis/Documents/Balisoft/sistemas/ror/multinivel/app/controllers/cities_controller.rb",
+		"/Users/joseluis/Documents/Balisoft/sistemas/ror/multinivel/app/views/banks/edit.html.erb",
 		"/Users/joseluis/Documents/Balisoft/sistemas/ror/multinivel/app/views/banks/index.html.erb",
 		"/Users/joseluis/Documents/Balisoft/sistemas/ror/multinivel/Gemfile",
 		"/Users/joseluis/Documents/Balisoft/sistemas/ror/multinivel/app/views/banks/_form.html.erb",
 		"/Users/joseluis/Documents/Balisoft/sistemas/ror/multinivel/db/schema.rb",
 		"/Users/joseluis/Documents/Balisoft/sistemas/ror/multinivel/spec/controllers/banks_controller_spec.rb",
-		"/Users/joseluis/Documents/Balisoft/sistemas/ror/multinivel/app/views/banks/edit.html.erb",
 		"/Users/joseluis/Documents/Balisoft/sistemas/ror/multinivel/spec/factories/user.rb",
 		"/Users/joseluis/Documents/Balisoft/sistemas/ror/multinivel/spec/factories/bank.rb",
 		"/Users/joseluis/Documents/Balisoft/sistemas/ror/multinivel/app/models/bank.rb",
@@ -256,6 +288,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"<div class=\"flash alert alert-<%= key %>\">\n  <%= value %>\n  </div>\n  <% end %>\n",
 			"\n			",
 			"Associate",
 			"\n",
@@ -281,7 +314,7 @@
 	"groups":
 	[
 		{
-			"selected": 3,
+			"selected": 2,
 			"sheets":
 			[
 				{
@@ -289,15 +322,15 @@
 					"file": "app/controllers/banks_controller.rb",
 					"settings":
 					{
-						"buffer_size": 813,
+						"buffer_size": 1379,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								566,
-								566
+								340,
+								340
 							]
 						],
 						"settings":
@@ -312,18 +345,44 @@
 				},
 				{
 					"buffer": 1,
-					"file": "spec/requests/banks_pages_spec.rb",
+					"file": "app/views/banks/new.html.erb",
 					"settings":
 					{
-						"buffer_size": 1663,
+						"buffer_size": 486,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1523,
-								1523
+								338,
+								338
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Rails/HTML (Rails).tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "spec/requests/banks_pages_spec.rb",
+					"settings":
+					{
+						"buffer_size": 2757,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2614,
+								2614
 							]
 						],
 						"settings":
@@ -332,13 +391,13 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 644.0,
+						"translation.y": 1443.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
-					"buffer": 2,
+					"buffer": 3,
 					"file": "app/models/bank.rb",
 					"settings":
 					{
@@ -364,19 +423,19 @@
 					"type": "text"
 				},
 				{
-					"buffer": 3,
-					"file": "app/views/banks/edit.html.erb",
+					"buffer": 4,
+					"file": "app/views/banks/_form.html.erb",
 					"settings":
 					{
-						"buffer_size": 524,
+						"buffer_size": 258,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								128,
-								375
+								0,
+								0
 							]
 						],
 						"settings":
@@ -390,27 +449,85 @@
 					"type": "text"
 				},
 				{
-					"buffer": 4,
-					"file": "app/views/banks/_form.html.erb",
+					"buffer": 5,
+					"file": "app/views/banks/index.html.erb",
 					"settings":
 					{
-						"buffer_size": 257,
+						"buffer_size": 1046,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								200,
-								207
+								743,
+								743
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Rails/HTML (Rails).tmLanguage"
+							"syntax": "Packages/Rails/HTML (Rails).tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "app/views/banks/edit.html.erb",
+					"settings":
+					{
+						"buffer_size": 664,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								264,
+								125
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Rails/HTML (Rails).tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "app/controllers/cities_controller.rb",
+					"settings":
+					{
+						"buffer_size": 1566,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby/Ruby.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 393.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"

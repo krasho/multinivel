@@ -113,15 +113,22 @@ RSpec.describe "BanksPages", type: :requests do
 	end
 
 
-	describe "Delete a bank" do 
+	describe "Delete a bank" do
+	    let!(:bank) {banks.first}
 		before do 
 			visit banks_path
-			#click_link "Eliminar"
-			find('.item').first(:link, "Eliminar").click
+			#find(:xpath, '//link[@href="/banks/1"]').click
 		end
 
 		it "Showing confirmation of error" do 
-			expect(page).to have_content "Registro Borrado Satisfactoriamente"
+			#expect(page).to have_content "Registro Borrado Satisfactoriamente"
+			#expect { alert.accept }.to change(Bank, :count).by(-1)
+			expect{ within "#bank#{bank.id}" do click_link 'Eliminar' end 
+			alert = page.driver.browser.switch_to.alert alert.accept }.to change(Bank,:count).by(-1) 
+
+            expect(page).to have_content "Listado de Bancos"
+            expect(page).to_not have_content @bank.name
+			#page.should have_content "Listing contacts" page.should_not have_content "Aaron Sumner" - See more at: http://everydayrails.com/2012/04/24/testing-series-rspec-requests.html#sthash.tX26hdrC.dpuf
 		end 
 	end
 end
