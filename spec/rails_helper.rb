@@ -59,4 +59,19 @@ RSpec.configure do |config|
   config.before :suite do
     Warden.test_mode!
   end
+
+  #Cambiando el Driver de Capybara y estableciendo Chrome como Navegador
+  Capybara.register_driver :selenium do |app|
+     Capybara::Selenium::Driver.new(app, :browser => :chrome)
+  end
+
+  config.infer_base_class_for_anonymous_controllers = false
+
+  #Este código es para que Selenium no abra muchos hilos, y falle cuando algún IT use Javascript 
+  ActiveRecord::ConnectionAdapters::ConnectionPool.class_eval do
+     def current_connection_id
+        Thread.main.object_id
+     end
+end
+
 end

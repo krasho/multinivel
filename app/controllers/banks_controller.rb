@@ -52,6 +52,16 @@ class BanksController < ApplicationController
     end
 
 
+	def destroy
+	   @bank = Bank.find(params[:id])
+	   @bank.destroy
+	   respond_to do |format|
+	      format.html { redirect_to banks_path, notice: 'El banco fue eliminado correctamente.' }
+	      format.json { head :no_content }
+	   end
+	end
+
+
 	private
     def bank_params
       params.require(:bank).permit(:name, :state_id)

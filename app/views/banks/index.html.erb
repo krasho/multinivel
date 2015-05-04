@@ -31,7 +31,7 @@
           </td>
           <td class="item">
             <%= link_to 'Editar', {:action=>"edit", :controller=>"banks", :id=>bank.id} %>
-            <%= link_to 'Eliminar', bank, method: :delete, data: { confirm: 'Seguro que deseas eliminar el banco?' }, {:id=>"del #{@bank.id}"} %>
+            <%= link_to 'Eliminar', bank, method: :delete, data: { confirm: 'Seguro que deseas eliminar el banco?' }, :id => "del" + bank.id.to_s %>
           </td>
         </tr>
       <% end %>
