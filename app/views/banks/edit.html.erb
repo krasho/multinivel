@@ -3,24 +3,8 @@
     <h1 class="panel-title"><%= @bank.name %></h1>
   </div>
 
-  <% flash.each do |key, value| %>
-    <div class="flash alert alert-<%= key %>">
-    <%= value %>
-    </div>
-    <% end %>
-  <%= yield %>
-
-   <% if @bank.errors.any? %>
-    <div class='error_messages'>
-      <h2>Form is invalid</h2>
-      <ul>
-        <% @bank.errors.full_messages.each do |message| %>
-          <li><%= message %></li>
-        <% end %>
-      </ul>
-    </div>
-  <% end %>
-
+  <%= render 'shared/flash_messages'%>
+  
   <div class="panel-body">
     <p>
       <%= link_to "Regresar al listado", :action => "index" %>

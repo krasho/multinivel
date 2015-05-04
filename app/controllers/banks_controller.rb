@@ -11,8 +11,6 @@ class BanksController < ApplicationController
 		@bank = Bank.find(params[:id])
  
     rescue ActiveRecord::RecordNotFound
-		#@bank.errors.add(:id, "El banco no existe")
-		#@bank.errors[:id] << "El banco no existe"
 		flash[:error] = "El banco no existe"
 		redirect_to banks_path		
 	end

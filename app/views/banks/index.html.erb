@@ -5,13 +5,7 @@
     <h1 class="panel-title">Listado de Bancos</h1>
   </div>
 
-  <% flash.each do |key, value| %>
-    <div class="flash alert alert-<%= key %>">
-    <%= value %>
-    </div>
-    <% end %>
-  <%= yield %>
-
+    <%= render 'shared/flash_messages'%>
     <p>
       <%= link_to 'Agregar banco', new_bank_path %>
     </p>
@@ -31,7 +25,7 @@
           </td>
           <td class="item">
             <%= link_to 'Editar', {:action=>"edit", :controller=>"banks", :id=>bank.id} %>
-            <%= link_to 'Eliminar', bank, method: :delete, data: { confirm: 'Seguro que deseas eliminar el banco?' }, :id => "del" + bank.id.to_s %>
+            <%= link_to 'Eliminar', bank, method: :delete, :id => "del" + bank.id.to_s %>
           </td>
         </tr>
       <% end %>

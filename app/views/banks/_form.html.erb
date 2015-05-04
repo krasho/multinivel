@@ -1,5 +1,5 @@
-
 <%= form_for @bank do |f| %>
+<%= render 'shared/error_messages', object: @bank %>
   <div class="form-group">
     <%= f.label :name, 'Nombre:' %>
     <%= f.text_field :name, class: 'form-control' %>
