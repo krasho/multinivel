@@ -14,7 +14,7 @@ RSpec.describe "BanksPages", type: :requests  do
             sleep 1.seconds
             alert = page.driver.browser.switch_to.alert
 
-            expect { alert.accept }.to change(banks, :count).by(-1)
+            expect { alert.accept }.to change(Bank, :count).by(-1)
 		end 
 	end
 end
