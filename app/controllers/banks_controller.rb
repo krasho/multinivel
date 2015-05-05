@@ -1,4 +1,7 @@
 class BanksController < ApplicationController
+	before_action :set_bank, only: [:edit, :update, :destroy]
+	#before_action :authenticate_user!
+
 	def index
 		@banks = Bank.all
 	end
@@ -8,11 +11,6 @@ class BanksController < ApplicationController
     end
 
 	def edit
-		@bank = Bank.find(params[:id])
- 
-    rescue ActiveRecord::RecordNotFound
-		flash[:error] = "El banco no existe"
-		redirect_to banks_path		
 	end
 
 
@@ -63,6 +61,14 @@ class BanksController < ApplicationController
 	private
     def bank_params
       params.require(:bank).permit(:name, :state_id)
+    end
+
+    def set_bank 
+		@bank = Bank.find(params[:id])
+ 
+    rescue ActiveRecord::RecordNotFound
+		flash[:error] = "El banco no existe"
+		redirect_to banks_path		    	
     end
 
 end
