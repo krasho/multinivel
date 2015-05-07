@@ -1,7 +1,7 @@
 FactoryGirl.define do
   factory :user do
-    email 'test@example.com'
-    password 'f4k3p455w0rd'
+  	email 'tigrillo34@hotmail.com'
+    password 'holakrasho'
 
     # if needed
     # is_active true

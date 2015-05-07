@@ -3,6 +3,10 @@ require 'rails_helper'
 RSpec.describe "BanksPages", type: :requests  do	
 	let!(:banks) {FactoryGirl.create_list(:bank, 4) }
 
+    before do 
+    	sign_in_as_valid_user_driver
+    end
+ 
 
 	describe "Index Page" do 		
 		before do 

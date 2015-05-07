@@ -55,10 +55,10 @@ RSpec.configure do |config|
   config.include Rails.application.routes.url_helpers
 
   #Código para agregar los test de Devise
-  config.include Warden::Test::Helpers
-  config.before :suite do
-    Warden.test_mode!
-  end
+#  config.include Warden::Test::Helpers
+#  config.before :suite do
+#    Warden.test_mode!
+#  end
 
   #Cambiando el Driver de Capybara y estableciendo Chrome como Navegador
   Capybara.register_driver :selenium do |app|
@@ -67,7 +67,7 @@ RSpec.configure do |config|
 
   config.infer_base_class_for_anonymous_controllers = false
 
-  #Este código es para que Selenium no abra muchos hilos, y falle cuando algún IT use Javascript 
+  #Este código es para que Selenium no abra muchos hilos, y no falle cuando algún IT use Javascript 
   ActiveRecord::ConnectionAdapters::ConnectionPool.class_eval do
      def current_connection_id
         Thread.main.object_id
