@@ -27,7 +27,7 @@ gem 'simple_form'
 gem "awesome_print", require:"ap"
 
 group :development, :test do
-  gem 'spring', '1.3.3'
+  gem 'spring'
   gem 'byebug'  
   gem 'rspec-rails'
   gem 'factory_girl_rails'
