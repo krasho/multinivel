@@ -55,10 +55,15 @@ RSpec.configure do |config|
   config.include Rails.application.routes.url_helpers
 
   #Código para agregar los test de Devise
-#  config.include Warden::Test::Helpers
-#  config.before :suite do
-#    Warden.test_mode!
-#  end
+  config.include Warden::Test::Helpers
+  config.before :suite do
+    Warden.test_mode!
+  end
+
+  #Código para reiniciar los test de warden
+  config.after :each do
+    Warden.test_reset!
+  end
 
   #Cambiando el Driver de Capybara y estableciendo Chrome como Navegador
   Capybara.register_driver :selenium do |app|
