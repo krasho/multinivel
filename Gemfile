@@ -25,16 +25,16 @@ gem 'will_paginate'
 gem 'simple_form'
 
 gem "awesome_print", require:"ap"
-
+gem 'rack-cors', :require => 'rack/cors'
 group :development, :test do
+  gem 'annotate'
   gem 'spring'
   gem 'byebug'  
   gem 'rspec-rails'
   gem 'factory_girl_rails'
 end
 
-group :development do
-  gem 'annotate'
+group :development do  
   gem 'meta_request'
   gem 'quiet_assets'
   gem 'better_errors'

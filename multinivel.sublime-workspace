@@ -88,35 +88,53 @@
 	"buffers":
 	[
 		{
+			"contents": "require 'rails_helper'\n\nRSpec.describe \"CitiesPages\", type: :request do\n   let!(:cities) {FactoryGirl.create_list(:city, 4)}\n\n\n    before do \n      user = FactoryGirl.create(:user)\n        login_as(user, :scope => :user)\n    end\n\n\n   describe \"Index Pages\" do \n   	before do \n   	      visit cities_path\n            save_and_open_page\n   	end\n   	   \n      context \"Listing all cities\" do\n   	      it \"Should List all available cities name\" do \n   	         cities.each do |city|\n                  expect(page).to have_content city.name\n   	         	expect(page).to have_content city.state.name\n   	         end	\n   	      end\n   	end\n\n      context \"Title of the page\" do\n         \n      end\n   end\n\nend\n",
+			"file": "spec/requests/cities_pages_spec.rb",
+			"file_size": 659,
+			"file_write_time": 1431629889000000,
+			"settings":
+			{
+				"buffer_size": 707,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/controllers/cities_controller.rb",
+			"settings":
+			{
+				"buffer_size": 124,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/controllers/banks_controller.rb",
+			"settings":
+			{
+				"buffer_size": 1657,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/views/cities/index.html.erb",
+			"settings":
+			{
+				"buffer_size": 961,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/views/banks/index.html.erb",
+			"settings":
+			{
+				"buffer_size": 917,
+				"line_ending": "Unix"
+			}
+		},
+		{
 			"file": "spec/requests/banks_pages_spec.rb",
 			"settings":
 			{
 				"buffer_size": 2881,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "spec/support/devisesupport.rb",
-			"settings":
-			{
-				"buffer_size": 501,
-				"line_ending": "Unix",
-				"name": "# Module for authenticating users for request spec"
-			}
-		},
-		{
-			"file": "spec/rails_helper.rb",
-			"settings":
-			{
-				"buffer_size": 3290,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "spec/factories/user.rb",
-			"settings":
-			{
-				"buffer_size": 148,
 				"line_ending": "Unix"
 			}
 		}
@@ -165,6 +183,22 @@
 	},
 	"file_history":
 	[
+		"/Users/Krasho/Documents/Balisoft/sistemas/ror/multinivel/app/models/city.rb",
+		"/Users/Krasho/Documents/Balisoft/sistemas/ror/multinivel/app/models/state.rb",
+		"/Users/Krasho/Documents/Balisoft/sistemas/ror/multinivel/spec/factories/city.rb",
+		"/Users/Krasho/Documents/Balisoft/sistemas/ror/multinivel/spec/requests/states_pages_spec.rb",
+		"/Users/Krasho/Documents/Balisoft/sistemas/ror/multinivel/app/views/cities/index.html.erb",
+		"/Users/Krasho/Documents/Balisoft/sistemas/ror/multinivel/config/routes.rb",
+		"/Users/Krasho/Documents/Balisoft/sistemas/ror/multinivel/spec/requests/banks_pages_spec.rb",
+		"/Users/Krasho/Documents/Balisoft/sistemas/ror/multinivel/spec/requests/cities_pages_spec.rb",
+		"/Users/Krasho/Documents/Balisoft/sistemas/ror/multinivel/spec/factories/bank.rb",
+		"/Users/Krasho/Documents/Balisoft/sistemas/ror/multinivel/spec/factories/estate.rb",
+		"/Users/Krasho/Documents/Balisoft/sistemas/ror/multinivel/app/models/associate.rb",
+		"/Users/Krasho/Documents/Balisoft/sistemas/ror/multinivel/app/controllers/cities_controller.rb",
+		"/Users/Krasho/Documents/Balisoft/sistemas/ror/multinivel/spec/support/devisesupport.rb",
+		"/Users/Krasho/Documents/Balisoft/sistemas/ror/multinivel/spec/rails_helper.rb",
+		"/Users/Krasho/Documents/Balisoft/sistemas/ror/multinivel/spec/factories/user.rb",
+		"/Users/Krasho/Documents/Balisoft/sistemas/ror/multinivel/Gemfile",
 		"/Users/Krasho/Documents/Balisoft/sistemas/ror/multinivel/app/controllers/banks_controller.rb",
 		"/Users/Krasho/Documents/Balisoft/sistemas/ror/multinivel/app/views/banks/index.html.erb",
 		"/Users/Krasho/Documents/Balisoft/sistemas/ror/multinivel/app/views/banks/_form.html.erb",
@@ -172,26 +206,18 @@
 		"/Users/Krasho/Documents/Balisoft/sistemas/ror/multinivel/app/views/shared/_flash_messages.html.erb",
 		"/Users/Krasho/Documents/Balisoft/sistemas/ror/multinivel/app/views/banks/new.html.erb",
 		"/Users/Krasho/Documents/Balisoft/sistemas/ror/multinivel/app/views/banks/edit.html.erb",
-		"/Users/Krasho/Documents/Balisoft/sistemas/ror/multinivel/spec/factories/user.rb",
-		"/Users/Krasho/Documents/Balisoft/sistemas/ror/multinivel/spec/rails_helper.rb",
 		"/Users/Krasho/Documents/Balisoft/sistemas/ror/multinivel/app/views/layouts/application.html.erb",
-		"/Users/Krasho/Documents/Balisoft/sistemas/ror/multinivel/spec/factories/bank.rb",
-		"/Users/Krasho/Documents/Balisoft/sistemas/ror/multinivel/app/controllers/cities_controller.rb",
-		"/Users/Krasho/Documents/Balisoft/sistemas/ror/multinivel/Gemfile",
 		"/Users/Krasho/Documents/Balisoft/sistemas/ror/multinivel_test/config/routes.rb",
 		"/Users/Krasho/Documents/Balisoft/sistemas/ror/multinivel/spec/spec_helper.rb",
 		"/Users/Krasho/Documents/Balisoft/sistemas/ror/multinivel/spec/requests/associate_pages_spec.rb",
-		"/Users/Krasho/Documents/Balisoft/sistemas/ror/multinivel/config/routes.rb",
 		"/Users/Krasho/Documents/Balisoft/sistemas/ror/multinivel_test/Gemfile",
 		"/Users/Krasho/Documents/Balisoft/sistemas/ror/multinivel_test/spec/requests/banks_pages_spec.rb",
-		"/Users/Krasho/Documents/Balisoft/sistemas/ror/multinivel/spec/requests/banks_pages_spec.rb",
 		"/Users/Krasho/Documents/Balisoft/sistemas/ror/multinivel_test/spec/rails_helper.rb",
 		"/Users/Krasho/Documents/Balisoft/sistemas/ror/multinivel_test/config/database.yml",
 		"/Users/Krasho/Documents/Balisoft/sistemas/ror/multinivel/spec/requests/bank_pages_spec.rb",
 		"/Users/Krasho/Documents/Balisoft/sistemas/ror/multinivel/app/controllers/principals_controller.rb",
 		"/Users/Krasho/Documents/Balisoft/sistemas/ror/multinivel/spec/factories/associate.rb",
 		"/Users/Krasho/Documents/Balisoft/sistemas/ror/multinivel/config/environments/test.rb",
-		"/Users/Krasho/Documents/Balisoft/sistemas/ror/multinivel/app/models/associate.rb",
 		"/Users/Krasho/Documents/Balisoft/sistemas/ror/multinivel/spec/models/associate_spec.rb",
 		"/Users/Krasho/Documents/Balisoft/sistemas/ror/multinivel/spec/controllers/associates_controller_spec.rb",
 		"/Users/Krasho/Documents/Balisoft/sistemas/ror/multinivel/app/controllers/associates_controller.rb",
@@ -307,55 +333,55 @@
 	"groups":
 	[
 		{
-			"selected": 3,
+			"selected": 0,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "spec/requests/banks_pages_spec.rb",
+					"file": "spec/requests/cities_pages_spec.rb",
 					"settings":
 					{
-						"buffer_size": 2881,
+						"buffer_size": 707,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								187,
-								187
+								684,
+								684
 							]
 						],
 						"settings":
 						{
 							"syntax": "Packages/RSpec/RSpec.tmLanguage",
-							"translate_tabs_to_spaces": false
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 1417.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 1,
-					"file": "spec/support/devisesupport.rb",
+					"file": "app/controllers/cities_controller.rb",
 					"settings":
 					{
-						"buffer_size": 501,
+						"buffer_size": 124,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								481,
-								481
+								114,
+								114
 							]
 						],
 						"settings":
 						{
-							"auto_name": "# Module for authenticating users for request spec",
 							"syntax": "Packages/RSpec/RSpec.tmLanguage"
 						},
 						"translation.x": 0.0,
@@ -366,46 +392,100 @@
 				},
 				{
 					"buffer": 2,
-					"file": "spec/rails_helper.rb",
+					"file": "app/controllers/banks_controller.rb",
 					"settings":
 					{
-						"buffer_size": 3290,
+						"buffer_size": 1657,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2794,
-								2794
+								105,
+								140
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/RSpec/RSpec.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
+							"syntax": "Packages/RSpec/RSpec.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 622.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 3,
-					"file": "spec/factories/user.rb",
+					"file": "app/views/cities/index.html.erb",
 					"settings":
 					{
-						"buffer_size": 148,
+						"buffer_size": 961,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								73,
-								73
+								525,
+								525
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Rails/HTML (Rails).tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "app/views/banks/index.html.erb",
+					"settings":
+					{
+						"buffer_size": 917,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								917
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Rails/HTML (Rails).tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "spec/requests/banks_pages_spec.rb",
+					"settings":
+					{
+						"buffer_size": 2881,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								126,
+								227
 							]
 						],
 						"settings":
@@ -481,6 +561,6 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 198.0,
+	"side_bar_width": 273.0,
 	"status_bar_visible": true
 }

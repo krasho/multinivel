@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h1 class="panel-title">Listado de Ciudades</h1>
+  </div>
+
+    <%= render 'shared/flash_messages'%>
+    <p>
+      <%= link_to 'Agregar Ciudad', new_city_path %>
+    </p>
+
+    <table class="table table-striped table-bordered">
+      <thead>
+        <tr>
+          <th>Nombre</th>
+          <th>Estado</th>
+          <th>Acciones</th>
+        </tr>
+      </thead>
+      <tbody>
+      <% @cities.each do |city| %>
+        <tr>
+          <td>
+            <%= city.name %>
+          </td>
+          <td>
+            <%= city.state.name %>
+          </td>          
+          <td class="item">
+            <%= link_to 'Editar', {:action=>"edit", :controller=>"cities", :id=>city.id} %>
+            <%= link_to 'Eliminar', city, method: :delete, :id => "del" + city.id.to_s %>
+          </td>
+        </tr>
+      <% end %>
+      </tbody>
+    </table>
+  </div>
+</div>
