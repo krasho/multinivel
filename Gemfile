@@ -26,6 +26,7 @@ gem 'simple_form'
 
 gem "awesome_print", require:"ap"
 gem 'rack-cors', :require => 'rack/cors'
+gem "responders"
 group :development, :test do
   gem 'annotate'
   gem 'spring'
