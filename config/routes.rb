@@ -27,4 +27,9 @@ Rails.application.routes.draw do
   get  'site/:socio/confirmacion' => 'site#confirmacion'
   post 'registro/create'    => 'site#create'
   
+
+  # Api definition
+  namespace :api, defaults: { format: :json }, constraints: { subdomain: 'api' }, path: '/' do
+    # We are going to list our resources here
+  end  
 end
