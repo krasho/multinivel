@@ -3,6 +3,12 @@
 	[
 		{
 			"path": "/Users/Krasho/Documents/Balisoft/sistemas/ror/multinivel"
+		},
+		{
+			"path": "/Users/Krasho/Documents/Balisoft/sistemas/web/multinivel-frontend"
+		},
+		{
+			"path": "/Users/Krasho/Documents/Balisoft/sistemas/ror/market_place_api"
 		}
 	]
 }
