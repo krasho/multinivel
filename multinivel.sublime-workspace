@@ -88,53 +88,60 @@
 	"buffers":
 	[
 		{
-			"contents": "require 'rails_helper'\n\nRSpec.describe \"CitiesPages\", type: :request do\n   let!(:cities) {FactoryGirl.create_list(:city, 4)}\n\n\n    before do \n      user = FactoryGirl.create(:user)\n        login_as(user, :scope => :user)\n    end\n\n\n   describe \"Index Pages\" do \n   	before do \n   	      visit cities_path\n            save_and_open_page\n   	end\n   	   \n      context \"Listing all cities\" do\n   	      it \"Should List all available cities name\" do \n   	         cities.each do |city|\n                  expect(page).to have_content city.name\n   	         	expect(page).to have_content city.state.name\n   	         end	\n   	      end\n   	end\n\n      context \"Title of the page\" do\n         \n      end\n   end\n\nend\n",
-			"file": "spec/requests/cities_pages_spec.rb",
-			"file_size": 659,
-			"file_write_time": 1431629889000000,
+			"contents": "Searching 65 files for \"market_place_api\"\n\n/Users/joseluis/Documents/Balisoft/sistemas/ror/market_place_api/config/initializers/session_store.rb:\n    1  # Be sure to restart your server when you modify this file.\n    2  \n    3: MarketPlaceApi::Application.config.session_store :cookie_store, key: '_market_place_api_session'\n    4  \n\n/Users/joseluis/Documents/Balisoft/sistemas/ror/market_place_api/README.md:\n    1: # market_place_api\n    2: [![Gitter](https://badges.gitter.im/Join Chat.svg)](https://gitter.im/kurenn/market_place_api?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)\n\n3 matches across 2 files\n\n\nSearching 65 files for \"MarketPlaceApi\"\n\n/Users/joseluis/Documents/Balisoft/sistemas/ror/market_place_api/app/views/layouts/application.html.erb:\n    2  <html>\n    3  <head>\n    4:   <title>MarketPlaceApi</title>\n    5    <%= stylesheet_link_tag    \"application\", media: \"all\", \"data-turbolinks-track\" => true %>\n    6    <%= javascript_include_tag \"application\", \"data-turbolinks-track\" => true %>\n\n/Users/joseluis/Documents/Balisoft/sistemas/ror/market_place_api/config/application.rb:\n   12  Bundler.require(:default, Rails.env)\n   13  \n   14: module MarketPlaceApi\n   15    class Application < Rails::Application\n   16      # Settings in config/environments/* take precedence over those specified here.\n\n/Users/joseluis/Documents/Balisoft/sistemas/ror/market_place_api/config/environment.rb:\n    3  \n    4  # Initialize the Rails application.\n    5: MarketPlaceApi::Application.initialize!\n    6  \n\n/Users/joseluis/Documents/Balisoft/sistemas/ror/market_place_api/config/environments/development.rb:\n    1: MarketPlaceApi::Application.configure do\n    2    # Settings specified here will take precedence over those in config/application.rb.\n    3  \n\n/Users/joseluis/Documents/Balisoft/sistemas/ror/market_place_api/config/environments/production.rb:\n    1: MarketPlaceApi::Application.configure do\n    2    # Settings specified here will take precedence over those in config/application.rb.\n    3  \n\n/Users/joseluis/Documents/Balisoft/sistemas/ror/market_place_api/config/environments/test.rb:\n    1: MarketPlaceApi::Application.configure do\n    2    # Settings specified here will take precedence over those in config/application.rb.\n    3  \n\n/Users/joseluis/Documents/Balisoft/sistemas/ror/market_place_api/config/initializers/sabisu_rails.rb:\n    4  \n    5    # Base uri for posting the \n    6:   config.base_api_uri = 'api.marketplaceapi.dev'\n    7  \n    8    # Ignored attributes for building the forms\n\n/Users/joseluis/Documents/Balisoft/sistemas/ror/market_place_api/config/initializers/secret_token.rb:\n   10  # Make sure your secret_key_base is kept private\n   11  # if you're sharing your code publicly.\n   12: MarketPlaceApi::Application.config.secret_key_base = '502f250e5e7e8581b8dd715e0fec8e0691ac4b56039ecb4906a0a83c614e6e8bedb4b08d984bade8028a469d2f3278437d72320f282141e10fa1ddafdddaf3fe'\n   13  \n\n/Users/joseluis/Documents/Balisoft/sistemas/ror/market_place_api/config/initializers/session_store.rb:\n    1  # Be sure to restart your server when you modify this file.\n    2  \n    3: MarketPlaceApi::Application.config.session_store :cookie_store, key: '_market_place_api_session'\n    4  \n\n/Users/joseluis/Documents/Balisoft/sistemas/ror/market_place_api/config/routes.rb:\n    1  require 'api_constraints'\n    2  \n    3: MarketPlaceApi::Application.routes.draw do\n    4    mount SabisuRails::Engine => \"/sabisu_rails\"\n    5    devise_for :users\n\n/Users/joseluis/Documents/Balisoft/sistemas/ror/market_place_api/Rakefile:\n    4  require File.expand_path('../config/application', __FILE__)\n    5  \n    6: MarketPlaceApi::Application.load_tasks\n    7  \n\n11 matches across 11 files\n",
 			"settings":
 			{
-				"buffer_size": 707,
+				"buffer_size": 3737,
+				"line_ending": "Unix",
+				"name": "Find Results",
+				"scratch": true
+			}
+		},
+		{
+			"file": "/Users/joseluis/Documents/Balisoft/sistemas/ror/market_place_api/config/initializers/session_store.rb",
+			"settings":
+			{
+				"buffer_size": 158,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "app/controllers/cities_controller.rb",
+			"file": "/Users/joseluis/Documents/Balisoft/sistemas/ror/market_place_api/config/environments/development.rb",
 			"settings":
 			{
-				"buffer_size": 124,
+				"buffer_size": 1122,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "app/controllers/banks_controller.rb",
+			"file": "config/environments/development.rb",
 			"settings":
 			{
-				"buffer_size": 1657,
+				"buffer_size": 1439,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "app/views/cities/index.html.erb",
+			"file": "config/environments/production.rb",
 			"settings":
 			{
-				"buffer_size": 961,
+				"buffer_size": 3367,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "app/views/banks/index.html.erb",
+			"file": "config/environments/test.rb",
 			"settings":
 			{
-				"buffer_size": 917,
+				"buffer_size": 1677,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "spec/requests/banks_pages_spec.rb",
+			"file": "config/initializers/session_store.rb",
 			"settings":
 			{
-				"buffer_size": 2881,
+				"buffer_size": 159,
 				"line_ending": "Unix"
 			}
 		}
@@ -183,6 +190,16 @@
 	},
 	"file_history":
 	[
+		"/Users/joseluis/Documents/Balisoft/sistemas/ror/multinivel/config/application.rb",
+		"/Users/joseluis/Documents/Balisoft/sistemas/ror/multinivel/config/environment.rb",
+		"/Users/joseluis/Documents/Balisoft/sistemas/ror/market_place_api/config/application.rb",
+		"/Users/joseluis/Documents/Balisoft/sistemas/ror/market_place_api/config/environment.rb",
+		"/Users/joseluis/Documents/Balisoft/sistemas/ror/multinivel/spec/requests/cities_pages_spec.rb",
+		"/Users/joseluis/Documents/Balisoft/sistemas/ror/multinivel/app/controllers/cities_controller.rb",
+		"/Users/joseluis/Documents/Balisoft/sistemas/ror/multinivel/app/controllers/banks_controller.rb",
+		"/Users/joseluis/Documents/Balisoft/sistemas/ror/multinivel/app/views/cities/index.html.erb",
+		"/Users/joseluis/Documents/Balisoft/sistemas/ror/multinivel/app/views/banks/index.html.erb",
+		"/Users/joseluis/Documents/Balisoft/sistemas/ror/multinivel/spec/requests/banks_pages_spec.rb",
 		"/Users/Krasho/Documents/Balisoft/sistemas/ror/multinivel/app/models/city.rb",
 		"/Users/Krasho/Documents/Balisoft/sistemas/ror/multinivel/app/models/state.rb",
 		"/Users/Krasho/Documents/Balisoft/sistemas/ror/multinivel/spec/factories/city.rb",
@@ -295,9 +312,10 @@
 	},
 	"find_in_files":
 	{
-		"height": 0.0,
+		"height": 93.0,
 		"where_history":
 		[
+			"/Users/joseluis/Documents/Balisoft/sistemas/ror/market_place_api",
 			"/Users/joseluis/Documents/Balisoft/sistemas/ror/workspace/sample_app"
 		]
 	},
@@ -306,6 +324,8 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"MarketPlaceApi",
+			"market_place_api",
 			"\")",
 			"\n			",
 			"\n               ",
@@ -333,28 +353,148 @@
 	"groups":
 	[
 		{
-			"selected": 0,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "spec/requests/cities_pages_spec.rb",
 					"settings":
 					{
-						"buffer_size": 707,
+						"buffer_size": 3737,
+						"regions":
+						{
+							"match":
+							{
+								"flags": 112,
+								"regions":
+								[
+									[
+										299,
+										315
+									],
+									[
+										419,
+										435
+									],
+									[
+										520,
+										536
+									],
+									[
+										830,
+										844
+									],
+									[
+										1194,
+										1208
+									],
+									[
+										1494,
+										1508
+									],
+									[
+										1651,
+										1665
+									],
+									[
+										1901,
+										1915
+									],
+									[
+										2145,
+										2159
+									],
+									[
+										2471,
+										2485
+									],
+									[
+										2765,
+										2779
+									],
+									[
+										3143,
+										3157
+									],
+									[
+										3380,
+										3394
+									],
+									[
+										3662,
+										3676
+									]
+								],
+								"scope": ""
+							}
+						},
+						"selection":
+						[
+							[
+								3154,
+								3154
+							]
+						],
+						"settings":
+						{
+							"detect_indentation": false,
+							"output_tag": 2,
+							"result_base_dir": "",
+							"result_file_regex": "^([A-Za-z\\\\/<].*):$",
+							"result_line_regex": "^ +([0-9]+):",
+							"scroll_past_end": true,
+							"syntax": "Packages/Default/Find Results.hidden-tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "/Users/joseluis/Documents/Balisoft/sistemas/ror/market_place_api/config/initializers/session_store.rb",
+					"settings":
+					{
+						"buffer_size": 158,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								684,
-								684
+								61,
+								61
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/RSpec/RSpec.tmLanguage",
+							"syntax": "Packages/Ruby/Ruby.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "/Users/joseluis/Documents/Balisoft/sistemas/ror/market_place_api/config/environments/development.rb",
+					"settings":
+					{
+						"buffer_size": 1122,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby/Ruby.tmLanguage",
 							"tab_size": 2,
 							"translate_tabs_to_spaces": true
 						},
@@ -365,76 +505,24 @@
 					"type": "text"
 				},
 				{
-					"buffer": 1,
-					"file": "app/controllers/cities_controller.rb",
-					"settings":
-					{
-						"buffer_size": 124,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								114,
-								114
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/RSpec/RSpec.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "app/controllers/banks_controller.rb",
-					"settings":
-					{
-						"buffer_size": 1657,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								105,
-								140
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/RSpec/RSpec.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
 					"buffer": 3,
-					"file": "app/views/cities/index.html.erb",
+					"file": "config/environments/development.rb",
 					"settings":
 					{
-						"buffer_size": 961,
+						"buffer_size": 1439,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								525,
-								525
+								0,
+								15
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Rails/HTML (Rails).tmLanguage",
+							"syntax": "Packages/Ruby/Ruby.tmLanguage",
 							"tab_size": 2,
 							"translate_tabs_to_spaces": true
 						},
@@ -446,10 +534,10 @@
 				},
 				{
 					"buffer": 4,
-					"file": "app/views/banks/index.html.erb",
+					"file": "config/environments/production.rb",
 					"settings":
 					{
-						"buffer_size": 917,
+						"buffer_size": 3367,
 						"regions":
 						{
 						},
@@ -457,12 +545,12 @@
 						[
 							[
 								0,
-								917
+								0
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Rails/HTML (Rails).tmLanguage",
+							"syntax": "Packages/Ruby/Ruby.tmLanguage",
 							"tab_size": 2,
 							"translate_tabs_to_spaces": true
 						},
@@ -474,23 +562,51 @@
 				},
 				{
 					"buffer": 5,
-					"file": "spec/requests/banks_pages_spec.rb",
+					"file": "config/environments/test.rb",
 					"settings":
 					{
-						"buffer_size": 2881,
+						"buffer_size": 1677,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								126,
-								227
+								0,
+								0
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/RSpec/RSpec.tmLanguage"
+							"syntax": "Packages/Ruby/Ruby.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "config/initializers/session_store.rb",
+					"settings":
+					{
+						"buffer_size": 159,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby/Ruby.tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,

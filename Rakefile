@@ -3,4 +3,4 @@
 
 require File.expand_path('../config/application', __FILE__)
 
-MultininivelApi::Rails.application.load_tasks
+MultinivelApi::Application.load_tasks
