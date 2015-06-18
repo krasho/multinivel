@@ -9,14 +9,14 @@ describe ApiConstraints do
     it "returns true when the version matches the 'Accept' header" do
       request = double(host: 'api.multinivel.dev', headers: {"Accept" => "application/vnd.multinivel.v1"})
       
-      expect(api_constraints_v1.matches?(request)).to be_true 
+      expect(api_constraints_v1.matches?(request)).to be true 
       #api_constraints_v1.matches?(request).should be_true
     end
 
     it "returns the default version when 'default' option is specified" do
       request = double(host: 'api.multinivel.dev')
 
-      expect(api_constraints_v2.matches?(request)).to be_true
+      expect(api_constraints_v2.matches?(request)).to be true
       #api_constraints_v2.matches?(request).should be_true
     end
   end
