@@ -92,42 +92,13 @@
 	"buffers":
 	[
 		{
-			"file": "lib/spec/api_constraints_spec.rb",
+			"contents": "class Api::V1::BanksController < ApplicationController\n	before_action :set_bank, only: [:edit, :update, :destroy]\n	#before_action :authenticate_user!\n\n    respond_to :html, :json\n	def index\n		@banks = Bank.all\n        respond_with(@banks)\n	end\n\n    def new\n    	@bank = Bank.new\n    end\n\n	def edit\n	end\n\n\n    def show\n    end\n \n    def create\n	    @bank = Bank.new(bank_params)\n\n	    respond_to do |format|\n	      if @bank.save\n	        format.html { redirect_to banks_path, notice: 'Registro Guardado Satisfactoriamente' }\n	        format.json { render :index, status: :created, location: @bank }\n	      else\n	        format.html { render :new }\n	        format.json { render json: @bank.errors, status: :unprocessable_entity }\n	      end\n	    end\n    end\n\n    def update \n      @bank = Bank.find(params[:id])\n\n      respond_to do |format|\n      \n	      if @bank.update(bank_params)\n	        format.html { redirect_to banks_path, notice: 'Registro Guardado Satisfactoriamente' }\n	        format.json { render :index, status: :ok, location: @bank }\n	      else\n	        format.html { render :edit}\n	        format.json { render json: @bank.errors, status: :unprocessable_entity }\n	      end\n	  end    \n\n    end\n\n\n	def destroy\n	   @bank = Bank.find(params[:id])\n	   @bank.destroy\n	   respond_to do |format|\n	      format.html { redirect_to banks_path, notice: 'El banco fue eliminado correctamente.' }\n	      format.json { head :no_content }\n	   end\n	end\n\n\n	private\n    def bank_params\n      params.require(:bank).permit(:name, :state_id)\n    end\n\n    def set_bank \n		@bank = Bank.find(params[:id])\n \n    rescue ActiveRecord::RecordNotFound\n		flash[:error] = \"El banco no existe\"\n		redirect_to banks_path		    	\n    end\n\nend\n",
+			"file": "app/controllers/api/vi/banks_controller.rb",
+			"file_size": 1724,
+			"file_write_time": 1434664044000000,
 			"settings":
 			{
-				"buffer_size": 802,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "/Users/joseluis/Documents/Balisoft/sistemas/ror/market_place_api/lib/spec/api_constraints_spec.rb",
-			"settings":
-			{
-				"buffer_size": 669,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "/Users/joseluis/Documents/Balisoft/sistemas/ror/market_place_api/lib/api_constraints.rb",
-			"settings":
-			{
-				"buffer_size": 241,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "lib/api_constraints.rb",
-			"settings":
-			{
-				"buffer_size": 241,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "config/environments/test.rb",
-			"settings":
-			{
-				"buffer_size": 1669,
+				"buffer_size": 1724,
 				"line_ending": "Unix"
 			}
 		}
@@ -177,12 +148,17 @@
 	"file_history":
 	[
 		"/Users/joseluis/Documents/Balisoft/sistemas/ror/multinivel/config/routes.rb",
+		"/Users/joseluis/Documents/Balisoft/sistemas/ror/multinivel/app/controllers/api/vi/banks_controller.rb",
+		"/Users/joseluis/Documents/Balisoft/sistemas/ror/multinivel/app/controllers/banks_controller.rb",
 		"/Users/joseluis/Documents/Balisoft/sistemas/ror/multinivel/lib/api_constraints.rb",
+		"/Users/joseluis/Documents/Balisoft/sistemas/ror/multinivel/lib/spec/api_constraints_spec.rb",
+		"/Users/joseluis/Documents/Balisoft/sistemas/ror/multinivel/spec/api_constraints_spec.rb",
+		"/Users/joseluis/Documents/Balisoft/sistemas/ror/multinivel/config/environments/test.rb",
 		"/Users/joseluis/Documents/Balisoft/sistemas/ror/market_place_api/lib/api_constraints.rb",
+		"/Users/joseluis/Documents/Balisoft/sistemas/ror/market_place_api/lib/spec/api_constraints_spec.rb",
 		"/Users/joseluis/Documents/Balisoft/sistemas/ror/multinivel/config/environments/development.rb",
 		"/Users/joseluis/Documents/Balisoft/sistemas/ror/multinivel/config/initializers/session_store.rb",
 		"/Users/joseluis/Documents/Balisoft/sistemas/ror/multinivel/Rakefile",
-		"/Users/joseluis/Documents/Balisoft/sistemas/ror/multinivel/config/environments/test.rb",
 		"/Users/joseluis/Documents/Balisoft/sistemas/ror/multinivel/config/environments/production.rb",
 		"/Users/joseluis/Documents/Balisoft/sistemas/ror/multinivel/Gemfile",
 		"/Users/joseluis/Documents/Balisoft/sistemas/ror/market_place_api/Gemfile",
@@ -202,7 +178,6 @@
 		"/Users/joseluis/Documents/Balisoft/sistemas/ror/multinivel/config/environment.rb",
 		"/Users/joseluis/Documents/Balisoft/sistemas/ror/multinivel/spec/requests/cities_pages_spec.rb",
 		"/Users/joseluis/Documents/Balisoft/sistemas/ror/multinivel/app/controllers/cities_controller.rb",
-		"/Users/joseluis/Documents/Balisoft/sistemas/ror/multinivel/app/controllers/banks_controller.rb",
 		"/Users/joseluis/Documents/Balisoft/sistemas/ror/multinivel/app/views/cities/index.html.erb",
 		"/Users/joseluis/Documents/Balisoft/sistemas/ror/multinivel/app/views/banks/index.html.erb",
 		"/Users/joseluis/Documents/Balisoft/sistemas/ror/multinivel/spec/requests/banks_pages_spec.rb",
@@ -299,11 +274,7 @@
 		"/Users/joseluis/Documents/Balisoft/sistemas/ror/workspace/sample_app/config/initializers/backtrace_silencers.rb",
 		"/Users/joseluis/Documents/Balisoft/sistemas/ror/workspace/sample_app/Guardfile",
 		"/private/var/folders/sb/1dmxpxsx1yz0rhlpt58rj45c0000gn/T/fz3temp-1/header_inicial.inc",
-		"/Users/joseluis/Documents/Balisoft/sistemas/ror/workspace/sample_app/app/controllers/application_controller.rb",
-		"/Users/joseluis/Documents/Balisoft/sistemas/ror/workspace/sample_app/app/views/static_pages/about.html.erb",
-		"/Users/joseluis/Documents/Balisoft/sistemas/ror/workspace/sample_app/app/helpers/static_pages_helper.rb",
-		"/Users/joseluis/Documents/Balisoft/sistemas/ror/workspace/sample_app/app/views/static_pages/help.html.erb",
-		"/Users/joseluis/Documents/Balisoft/sistemas/ror/workspace/sample_app/app/views/static_pages/contact.html.erb"
+		"/Users/joseluis/Documents/Balisoft/sistemas/ror/workspace/sample_app/app/controllers/application_controller.rb"
 	],
 	"find":
 	{
@@ -311,7 +282,7 @@
 	},
 	"find_in_files":
 	{
-		"height": 93.0,
+		"height": 0.0,
 		"where_history":
 		[
 			"/Users/joseluis/Documents/Balisoft/sistemas/ror/multinivel",
@@ -359,133 +330,23 @@
 			[
 				{
 					"buffer": 0,
-					"file": "lib/spec/api_constraints_spec.rb",
+					"file": "app/controllers/api/vi/banks_controller.rb",
 					"settings":
 					{
-						"buffer_size": 802,
+						"buffer_size": 1724,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								391,
-								391
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Ruby/Ruby.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "/Users/joseluis/Documents/Balisoft/sistemas/ror/market_place_api/lib/spec/api_constraints_spec.rb",
-					"settings":
-					{
-						"buffer_size": 669,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								669,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Ruby/Ruby.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "/Users/joseluis/Documents/Balisoft/sistemas/ror/market_place_api/lib/api_constraints.rb",
-					"settings":
-					{
-						"buffer_size": 241,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								241,
+								0,
 								0
 							]
 						],
 						"settings":
 						{
 							"syntax": "Packages/Ruby/Ruby.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "lib/api_constraints.rb",
-					"settings":
-					{
-						"buffer_size": 241,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								241,
-								241
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Ruby/Ruby.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "config/environments/test.rb",
-					"settings":
-					{
-						"buffer_size": 1669,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								7,
-								7
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Ruby/Ruby.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
