@@ -2,10 +2,15 @@ class Api::V1::BanksController < ApplicationController
 	before_action :set_bank, only: [:edit, :update, :destroy]
 	#before_action :authenticate_user!
 
-    respond_to :html, :json
+    #respond_to :html, :json
 	def index
 		@banks = Bank.all
-        respond_with(@banks)
+        #respond_with(@banks)
+
+       respond_to do |f|
+          f.html {}
+          f.json { render json: @banks }
+       end        
 	end
 
     def new

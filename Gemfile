@@ -5,7 +5,7 @@ ruby '2.2.0'
 gem 'rails', '4.2'
 gem 'pg'
 
-gem 'bootstrap-sass',       '3.2.0.0'
+#gem 'bootstrap-sass',       '3.2.0.0'
 
 gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
@@ -30,6 +30,11 @@ gem "responders"
 
 #Api gems
 gem 'active_model_serializers'
+
+gem 'sabisu_rails', github: "IcaliaLabs/sabisu-rails"
+gem 'compass-rails', '~> 2.0.2'
+gem 'furatto'
+gem 'font-awesome-rails'
 
 group :development, :test do
   gem 'annotate'
