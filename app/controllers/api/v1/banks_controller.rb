@@ -2,10 +2,8 @@ class Api::V1::BanksController < ApplicationController
 	before_action :set_bank, only: [:edit, :update, :destroy]
 	#before_action :authenticate_user!
 
-    #respond_to :html, :json
 	def index
 		@banks = Bank.all
-        #respond_with(@banks)
 
        respond_to do |f|
           f.html {}
@@ -22,6 +20,13 @@ class Api::V1::BanksController < ApplicationController
 
 
     def show
+		@banks = Bank.find(params[:id])
+
+       respond_to do |f|
+          f.html {}
+          f.json { render json: @banks }
+       end        
+
     end
  
     def create
@@ -44,10 +49,10 @@ class Api::V1::BanksController < ApplicationController
       respond_to do |format|
       
 	      if @bank.update(bank_params)
-	        format.html { redirect_to banks_path, notice: 'Registro Guardado Satisfactoriamente' }
+	        format.html {}
 	        format.json { render :index, status: :ok, location: @bank }
 	      else
-	        format.html { render :edit}
+	        format.html {}
 	        format.json { render json: @bank.errors, status: :unprocessable_entity }
 	      end
 	  end    
