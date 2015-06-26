@@ -1,0 +1,16 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
+
+development:
+  <<: *default
+  database: multinivel_dev
+
+test:
+  <<: *default
+  database: multinivel_test
+
+production:
+  <<: *default
+  database: multinivel
