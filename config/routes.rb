@@ -1,6 +1,7 @@
 require 'api_constraints'
 
 MultinivelApi::Application.routes.draw do
+  devise_for :users
   mount SabisuRails::Engine => "/sabisu_rails"
 # Api definition
   namespace :api, defaults: { format: :json },

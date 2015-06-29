@@ -35,10 +35,10 @@ class Api::V1::BanksController < ApplicationController
 
 	    respond_to do |format|
 	      if @bank.save
-	        format.html { redirect_to banks_path, notice: 'Registro Guardado Satisfactoriamente' }
-	        format.json { render :index, status: :created, location: @bank }
+  	         format.html {}	            
+             format.json { render json: @bank }
 	      else
-	        format.html { render :new }
+	        format.html {}
 	        format.json { render json: @bank.errors, status: :unprocessable_entity }
 	      end
 	    end
