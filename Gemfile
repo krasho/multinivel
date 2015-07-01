@@ -17,7 +17,7 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0',          group: :doc
 
 gem 'normalize-rails'
-gem 'devise'
+#gem 'devise'
 
 gem 'select2-rails'
 
@@ -35,7 +35,7 @@ gem 'sabisu_rails', github: "IcaliaLabs/sabisu-rails"
 gem 'compass-rails', '~> 2.0.2'
 gem 'furatto'
 gem 'font-awesome-rails'
-
+gem 'devise_token_auth'
 
 group :development, :test do
   gem 'annotate'

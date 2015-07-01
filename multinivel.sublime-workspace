@@ -92,18 +92,10 @@
 	"buffers":
 	[
 		{
-			"file": "/Users/joseluis/Documents/Balisoft/sistemas/web/multinivel-frontend/app/views/banks/index.html",
+			"file": "app/controllers/api/v1/banks_controller.rb",
 			"settings":
 			{
-				"buffer_size": 813,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "/Users/joseluis/Documents/Balisoft/sistemas/web/multinivel-frontend/app/scripts/controllers/bank.js",
-			"settings":
-			{
-				"buffer_size": 1031,
+				"buffer_size": 1775,
 				"line_ending": "Unix"
 			}
 		},
@@ -111,40 +103,26 @@
 			"file": "/Users/joseluis/Documents/Balisoft/sistemas/web/multinivel-frontend/app/scripts/services/bank_services.js",
 			"settings":
 			{
-				"buffer_size": 1654,
+				"buffer_size": 2155,
 				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "/Users/joseluis/Documents/Balisoft/sistemas/web/multinivel-frontend/app/scripts/services/transformRequestAsFormPost.js",
-			"settings":
-			{
-				"buffer_size": 2440,
-				"line_ending": "Unix",
-				"name": "// I provide a request-transformation method that"
 			}
 		},
 		{
 			"file": "/Users/joseluis/Documents/Balisoft/sistemas/web/multinivel-frontend/app/scripts/app.js",
 			"settings":
 			{
-				"buffer_size": 760,
+				"buffer_size": 1068,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "app/controllers/api/v1/banks_controller.rb",
+			"contents": "(function () {\n  'use strict';\n  angular.module('multinivel.BankController', [])\n    .controller('BankController',['$scope', '$location', 'bankService', function ($scope, $location, bankService) {\n\n      $scope.all = function() {\n         bankService.all().then(function(data){\n            $scope.banks = data.banks;\n         });\n\n      }\n\n      $scope.editBank = function (bankId) {\n         $location.path('/bank/edit/' + bankId);\n      };\n\n      $scope.createBank = function () {\n         $location.path('/banks/new');\n      };\n\n      $scope.deleteBank = function (bankId) {\n         $location.path('/banks/delete/'+bankId);\n      };\n\n\n    }])\n\n    .controller('BankDetailController', ['$scope', '$routeParams', '$location', 'bankService', function ($scope, $routeParams, $location, bankService) {\n        var id = $routeParams.id;\n        $scope.findById = function() {\n           bankService.findById(id).then(function(data){\n               $scope.bank = data;\n           });\n        };\n\n\n        $scope.updateBank = function() {\n           var id = $routeParams.id;\n           bankService.updateBank(id, $scope.bank.name).then(function(data){\n               $location.path('/banks');\n\n           });\n        }\n\n        $scope.createBank = function() {\n           bankService.createBank($scope.bank.name).then(function(data){\n               $location.path('/banks');\n\n           });\n        }\n\n        $scope.deleteBank = function() {\n           bankService.deleteBank($scope.bank.name).then(function(data){\n               $location.path('/banks');\n\n           });\n        }\n\n\n    }]);\n})();\n",
+			"file": "/Users/joseluis/Documents/Balisoft/sistemas/web/multinivel-frontend/app/scripts/controllers/bank.js",
+			"file_size": 1620,
+			"file_write_time": 1435352638000000,
 			"settings":
 			{
-				"buffer_size": 1829,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "/Users/joseluis/Documents/Balisoft/sistemas/web/multinivel-frontend/app/views/banks/update-bank.html",
-			"settings":
-			{
-				"buffer_size": 855,
+				"buffer_size": 1597,
 				"line_ending": "Unix"
 			}
 		},
@@ -152,7 +130,23 @@
 			"file": "/Users/joseluis/Documents/Balisoft/sistemas/web/multinivel-frontend/app/index.html",
 			"settings":
 			{
-				"buffer_size": 3728,
+				"buffer_size": 4002,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/joseluis/Documents/Balisoft/sistemas/web/multinivel-frontend/app/scripts/controllers/nav.js",
+			"settings":
+			{
+				"buffer_size": 352,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "Gemfile",
+			"settings":
+			{
+				"buffer_size": 1199,
 				"line_ending": "Unix"
 			}
 		}
@@ -201,8 +195,21 @@
 	},
 	"file_history":
 	[
-		"/Users/joseluis/Documents/Balisoft/sistemas/ror/multinivel/config/application.rb",
+		"/Users/joseluis/Documents/Balisoft/sistemas/web/multinivel-frontend/app/views/nav/_nav.html",
+		"/Users/joseluis/Documents/Balisoft/sistemas/web/multinivel-frontend/app/views/banks/index.html",
+		"/Users/joseluis/Documents/Balisoft/sistemas/web/multinivel-frontend/app/views/banks/create-bank.html",
+		"/Users/joseluis/Documents/Balisoft/sistemas/web/multinivel-frontend/app/views/banks/delete-bank.html",
+		"/Users/joseluis/Documents/Balisoft/sistemas/web/multinivel-frontend/app/views/banks/update-bank.html",
+		"/Users/joseluis/Documents/Balisoft/sistemas/web/multinivel-frontend/app/views/main.html",
+		"/Users/joseluis/Documents/Balisoft/sistemas/web/multinivel-frontend/app/index.html",
+		"/Users/joseluis/Documents/Balisoft/sistemas/ror/multinivel/config/database.yml",
+		"/Users/joseluis/Documents/Balisoft/sistemas/ror/multinivel/.gitignore",
+		"/Users/joseluis/Documents/Balisoft/sistemas/web/multinivel-frontend/app/scripts/controllers/bank.js",
+		"/Users/joseluis/Documents/Balisoft/sistemas/web/multinivel-frontend/app/scripts/services/bank_services.js",
+		"/Users/joseluis/Documents/Balisoft/sistemas/web/multinivel-frontend/app/scripts/services/transformRequestAsFormPost.js",
+		"/Users/joseluis/Documents/Balisoft/sistemas/web/multinivel-frontend/app/scripts/app.js",
 		"/Users/joseluis/Documents/Balisoft/sistemas/ror/multinivel/app/controllers/api/v1/banks_controller.rb",
+		"/Users/joseluis/Documents/Balisoft/sistemas/ror/multinivel/config/application.rb",
 		"/Users/Krasho/Documents/Balisoft/sistemas/web/multinivel-frontend/app/scripts/controllers/bank.js",
 		"/Users/joseluis/Documents/Balisoft/sistemas/ror/multinivel/Gemfile",
 		"/Users/joseluis/Documents/Balisoft/sistemas/ror/multinivel/config/initializers/sabisu_rails.rb",
@@ -293,7 +300,6 @@
 		"/Users/joseluis/Documents/Balisoft/sistemas/ror/workspace/sample_app/app/assets/stylesheets/custom.css.scss",
 		"/Users/joseluis/Documents/Balisoft/sistemas/ror/workspace/sample_app/app/views/users/new.html.erb",
 		"/Users/joseluis/Documents/Balisoft/sistemas/ror/workspace/sample_app/config/routes.rb",
-		"/Users/joseluis/Documents/Balisoft/sistemas/ror/multinivel/config/database.yml",
 		"/Users/joseluis/Documents/Balisoft/sistemas/ror/workspace/sample_app/config/database.yml",
 		"/Users/joseluis/Documents/Balisoft/sistemas/ror/workspace/sample_app/Gemfile",
 		"/Users/joseluis/Documents/Balisoft/sistemas/ror/workspace/sample_app/test/helpers/application_helper_test.rb",
@@ -316,13 +322,7 @@
 		"/Users/joseluis/Documents/Balisoft/sistemas/ror/workspace/sample_app/app/controllers/application_controller.rb",
 		"/Users/joseluis/Documents/Balisoft/sistemas/ror/workspace/sample_app/app/views/static_pages/about.html.erb",
 		"/Users/joseluis/Documents/Balisoft/sistemas/ror/workspace/sample_app/app/helpers/static_pages_helper.rb",
-		"/Users/joseluis/Documents/Balisoft/sistemas/ror/workspace/sample_app/app/views/static_pages/help.html.erb",
-		"/Users/joseluis/Documents/Balisoft/sistemas/ror/workspace/sample_app/app/views/static_pages/contact.html.erb",
-		"/Users/joseluis/Documents/Balisoft/sistemas/ror/workspace/sample_app/app/views/static_pages/untitled",
-		"/Users/joseluis/Documents/Balisoft/sistemas/ror/workspace/sample_app/README.md",
-		"/Users/joseluis/Documents/Balisoft/sistemas/ror/workspace/hello_app/config/routes.rb",
-		"/Users/joseluis/Documents/Balisoft/sistemas/ror/workspace/hello_app/app/controllers/application_controller.rb",
-		"/Users/joseluis/Documents/Balisoft/sistemas/ror/workspace/hello_app/Gemfile"
+		"/Users/joseluis/Documents/Balisoft/sistemas/ror/workspace/sample_app/app/views/static_pages/help.html.erb"
 	],
 	"find":
 	{
@@ -374,30 +374,118 @@
 	"groups":
 	[
 		{
-			"selected": 2,
+			"selected": 6,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "/Users/joseluis/Documents/Balisoft/sistemas/web/multinivel-frontend/app/views/banks/index.html",
+					"file": "app/controllers/api/v1/banks_controller.rb",
 					"settings":
 					{
-						"buffer_size": 813,
+						"buffer_size": 1775,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								484,
-								492
+								117,
+								149
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby/Ruby.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "/Users/joseluis/Documents/Balisoft/sistemas/web/multinivel-frontend/app/scripts/services/bank_services.js",
+					"settings":
+					{
+						"buffer_size": 2155,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1972,
+								1972
 							]
 						],
 						"settings":
 						{
 							"editorconfig": true,
 							"ensure_newline_at_eof_on_save": true,
-							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true,
+							"trim_trailing_white_space_on_save": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 681.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "/Users/joseluis/Documents/Balisoft/sistemas/web/multinivel-frontend/app/scripts/app.js",
+					"settings":
+					{
+						"buffer_size": 1068,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								311,
+								311
+							]
+						],
+						"settings":
+						{
+							"editorconfig": true,
+							"ensure_newline_at_eof_on_save": true,
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true,
+							"trim_trailing_white_space_on_save": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "/Users/joseluis/Documents/Balisoft/sistemas/web/multinivel-frontend/app/scripts/controllers/bank.js",
+					"settings":
+					{
+						"buffer_size": 1597,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								1597
+							]
+						],
+						"settings":
+						{
+							"editorconfig": true,
+							"ensure_newline_at_eof_on_save": true,
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
 							"tab_size": 2,
 							"translate_tabs_to_spaces": true,
 							"trim_trailing_white_space_on_save": true
@@ -409,177 +497,57 @@
 					"type": "text"
 				},
 				{
-					"buffer": 1,
-					"file": "/Users/joseluis/Documents/Balisoft/sistemas/web/multinivel-frontend/app/scripts/controllers/bank.js",
-					"settings":
-					{
-						"buffer_size": 1031,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								871,
-								871
-							]
-						],
-						"settings":
-						{
-							"editorconfig": true,
-							"ensure_newline_at_eof_on_save": true,
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"tab_size": 3,
-							"translate_tabs_to_spaces": true,
-							"trim_trailing_white_space_on_save": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "/Users/joseluis/Documents/Balisoft/sistemas/web/multinivel-frontend/app/scripts/services/bank_services.js",
-					"settings":
-					{
-						"buffer_size": 1654,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1358,
-								1358
-							]
-						],
-						"settings":
-						{
-							"editorconfig": true,
-							"ensure_newline_at_eof_on_save": true,
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"tab_size": 3,
-							"translate_tabs_to_spaces": true,
-							"trim_trailing_white_space_on_save": true
-						},
-						"translation.x": 11.0,
-						"translation.y": 226.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "/Users/joseluis/Documents/Balisoft/sistemas/web/multinivel-frontend/app/scripts/services/transformRequestAsFormPost.js",
-					"settings":
-					{
-						"buffer_size": 2440,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								49,
-								86
-							]
-						],
-						"settings":
-						{
-							"auto_name": "// I provide a request-transformation method that",
-							"editorconfig": true,
-							"ensure_newline_at_eof_on_save": true,
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"tab_size": 3,
-							"translate_tabs_to_spaces": true,
-							"trim_trailing_white_space_on_save": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
 					"buffer": 4,
-					"file": "/Users/joseluis/Documents/Balisoft/sistemas/web/multinivel-frontend/app/scripts/app.js",
+					"file": "/Users/joseluis/Documents/Balisoft/sistemas/web/multinivel-frontend/app/index.html",
 					"settings":
 					{
-						"buffer_size": 760,
+						"buffer_size": 4002,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								184,
-								184
+								1499,
+								1499
 							]
 						],
 						"settings":
 						{
 							"editorconfig": true,
 							"ensure_newline_at_eof_on_save": true,
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"syntax": "Packages/HTML/HTML.tmLanguage",
 							"tab_size": 3,
 							"translate_tabs_to_spaces": true,
 							"trim_trailing_white_space_on_save": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 984.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 5,
-					"file": "app/controllers/api/v1/banks_controller.rb",
+					"file": "/Users/joseluis/Documents/Balisoft/sistemas/web/multinivel-frontend/app/scripts/controllers/nav.js",
 					"settings":
 					{
-						"buffer_size": 1829,
+						"buffer_size": 352,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1261,
-								1261
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Ruby/Ruby.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 413.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 6,
-					"file": "/Users/joseluis/Documents/Balisoft/sistemas/web/multinivel-frontend/app/views/banks/update-bank.html",
-					"settings":
-					{
-						"buffer_size": 855,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
+								150,
+								150
 							]
 						],
 						"settings":
 						{
 							"editorconfig": true,
 							"ensure_newline_at_eof_on_save": true,
-							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
 							"tab_size": 3,
 							"translate_tabs_to_spaces": true,
 							"trim_trailing_white_space_on_save": true
@@ -591,32 +559,29 @@
 					"type": "text"
 				},
 				{
-					"buffer": 7,
-					"file": "/Users/joseluis/Documents/Balisoft/sistemas/web/multinivel-frontend/app/index.html",
+					"buffer": 6,
+					"file": "Gemfile",
 					"settings":
 					{
-						"buffer_size": 3728,
+						"buffer_size": 1199,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								3674,
-								3674
+								663,
+								663
 							]
 						],
 						"settings":
 						{
-							"editorconfig": true,
-							"ensure_newline_at_eof_on_save": true,
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"tab_size": 3,
-							"translate_tabs_to_spaces": true,
-							"trim_trailing_white_space_on_save": true
+							"syntax": "Packages/Ruby/Ruby.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 964.0,
+						"translation.y": 211.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
