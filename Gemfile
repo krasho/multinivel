@@ -36,6 +36,7 @@ gem 'compass-rails', '~> 2.0.2'
 gem 'furatto'
 gem 'font-awesome-rails'
 gem 'devise_token_auth'
+gem  'omniauth'
 
 group :development, :test do
   gem 'annotate'

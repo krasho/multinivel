@@ -151,6 +151,7 @@ GEM
       guard (~> 2.1)
       guard-compat (~> 1.1)
       rspec (>= 2.99.0, < 4.0)
+    hashie (3.4.2)
     hike (1.2.3)
     httparty (0.13.5)
       json (~> 1.8)
@@ -193,6 +194,9 @@ GEM
     notiffany (0.0.6)
       nenv (~> 0.1)
       shellany (~> 0.0)
+    omniauth (1.2.2)
+      hashie (>= 1.2, < 4)
+      rack (~> 1.0)
     orm_adapter (0.5.0)
     pg (0.18.2)
     pry (0.10.1)
@@ -352,6 +356,7 @@ DEPENDENCIES
   launchy
   meta_request
   normalize-rails
+  omniauth
   pg
   pry-rails
   quiet_assets
