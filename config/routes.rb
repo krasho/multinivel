@@ -10,6 +10,9 @@ MultinivelApi::Application.routes.draw do
               constraints: ApiConstraints.new(version: 1, default: true) do
       # We are going to list our resources here
       resources :banks
+
+      resources :users, :only => [:show, :create, :update, :destroy]
+      resources :sessions, :only => [:create, :destroy]
     end
   end
 end
