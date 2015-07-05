@@ -1,7 +1,6 @@
 class Api::V1::BanksController < ApplicationController
 	before_action :set_bank, only: [:edit, :update, :destroy]
-	#before_action :authenticate_user!
-    protect_from_forgery with: :null_session
+	before_action :authenticate_with_token!
 
 	def index
 		@banks = Bank.all
