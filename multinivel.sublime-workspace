@@ -95,6 +95,25 @@
 	},
 	"buffers":
 	[
+		{
+			"contents": "(function(){\n'use strict';\nvar app = angular.module('multinivel', [\n   'ngRoute',\n   'satellizer',\n   'multinivel.BankController',\n   'multinivel.BankService',\n   'multinivel.UserSessionsController',\n   'multinivel.userSessionService',\n   'multinivel.CookieHandlerService',\n   ]);\n\n   app.config(['$routeProvider', function ($routeProvider) {\n     $routeProvider\n        .when('/', {\n            //templateUrl: 'views/index.html',\n            //controller : 'BankController',\n        })\n\n        .when('/banks', {\n            templateUrl: 'views/banks/index.html',\n            controller : 'BankController',\n        })\n\n        .when('/banks/new', {\n            templateUrl: 'views/banks/create-bank.html',\n            controller : 'BankDetailController',\n        })\n\n        .when('/bank/edit/:id', {\n            templateUrl: 'views/banks/update-bank.html',\n            controller : 'BankDetailController',\n        })\n\n\n        .when('/bank/delete/:id', {\n            templateUrl: 'views/banks/delete-bank.html',\n            controller : 'BankDetailController',\n        })\n\n        .when('/sign_in', {\n                templateUrl: 'views/user_sessions/new.html',\n                controller: 'UserSessionsController'\n        })\n\n\n        .otherwise({\n            redirectTo: '/'\n        });\n\n\n   }]);\n\n  app.config(function($authProvider) {\n        // Parametros de configuración\n        $authProvider.loginUrl = \"http://api.multinivel.dev/sessions\";\n        $authProvider.signupUrl = \"http://api.multinivel.dev/signup\";\n        $authProvider.tokenName = \"token\";\n        $authProvider.tokenPrefix = \"multinivel\";\n  });\n\n   app.run(\n      // Funnción para mandar a la página de loggeo si no hay sessión\n     function($rootScope, $location, Autenticacion){\n         // Si se refresca la página, se checa la autenticación\n         Autenticacion.check();\n\n         // Verificamos si puede acceder a la siguiente ruta\n         $rootScope.$on(\"$routeChangeStart\", function(event, nextRoute, currentRoute) {\n             // Verificamos que este loggeado, si no, lo mandamos a loggearse\n             if(nextRoute.access.requiredLogin && !Autenticacion.isLogged) {\n                 $location.path('/signin');\n             }\n\n             // Verificamos que este en el perfil adecuado para entrar\n             if(nextRoute.access.userShouldBeAdmin && !Autenticacion.isAdmin) {\n                 $location.path('/');\n             }\n         });\n     }\n    );\n\n})();\n",
+			"file": "/Users/joseluis/Documents/Balisoft/sistemas/web/multinivel-frontend/app/scripts/app.js",
+			"file_size": 2458,
+			"file_write_time": 1436304756000000,
+			"settings":
+			{
+				"buffer_size": 2455,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/joseluis/Documents/Balisoft/sistemas/web/multinivel-frontend/app/scripts/controllers/user_sessions.js",
+			"settings":
+			{
+				"buffer_size": 893,
+				"line_ending": "Unix"
+			}
+		}
 	],
 	"build_system": "",
 	"command_palette":
@@ -140,6 +159,11 @@
 	},
 	"file_history":
 	[
+		"/Users/joseluis/Documents/Balisoft/sistemas/ror/multinivel/config/initializers/ostgresql_database_tasks.rb",
+		"/Users/joseluis/Documents/Balisoft/sistemas/web/multinivel-frontend/app/scripts/services/user_session_service.js",
+		"/Users/joseluis/Documents/Balisoft/sistemas/web/multinivel-frontend/app/scripts/services/bank_services.js",
+		"/Users/joseluis/Documents/Balisoft/sistemas/web/multinivel-frontend/app/scripts/controllers/bank.js",
+		"/Users/joseluis/Documents/Balisoft/sistemas/web/multinivel-frontend/bower.json",
 		"/Users/Krasho/Documents/Balisoft/sistemas/web/multinivel-frontend/app/scripts/services/user_session_service.js",
 		"/Users/Krasho/Documents/Balisoft/sistemas/ror/multinivel/app/controllers/users/sessions_controller.rb",
 		"/Users/Krasho/Documents/Balisoft/sistemas/ror/multinivel/Gemfile",
@@ -151,10 +175,7 @@
 		"/Users/Krasho/Documents/Balisoft/sistemas/ror/multinivel/app/models/user.rb",
 		"/Users/joseluis/Documents/Balisoft/sistemas/web/multinivel-frontend/app/views/user_sessions/new.html",
 		"/Users/joseluis/Documents/Balisoft/sistemas/web/multinivel-frontend/app/scripts/controllers/user_sessions.js",
-		"/Users/joseluis/Documents/Balisoft/sistemas/web/multinivel-frontend/app/scripts/controllers/bank.js",
-		"/Users/joseluis/Documents/Balisoft/sistemas/web/multinivel-frontend/app/scripts/services/user_session_service.js",
 		"/Users/joseluis/Documents/Balisoft/sistemas/web/multinivel-frontend/app/scripts/services/CookieHandlerService.js",
-		"/Users/joseluis/Documents/Balisoft/sistemas/web/multinivel-frontend/app/scripts/services/bank_services.js",
 		"/Users/joseluis/Documents/Balisoft/sistemas/web/multinivel-frontend/app/index.html",
 		"/Users/joseluis/Documents/Balisoft/sistemas/web/multinivel-frontend/app/scripts/app.js",
 		"/Users/joseluis/Documents/Balisoft/sistemas/ror/multinivel/app/controllers/api/v1/banks_controller.rb",
@@ -265,9 +286,7 @@
 		"/Users/joseluis/Documents/Balisoft/sistemas/ror/workspace/sample_app/test/helpers/application_helper_test.rb",
 		"/Users/joseluis/Documents/Balisoft/sistemas/ror/workspace/sample_app/.gitignore",
 		"/Users/joseluis/Documents/Balisoft/sistemas/ror/workspace/sample_app/test/integration/site_layout_test.rb",
-		"/Users/joseluis/Documents/Balisoft/sistemas/ror/workspace/sample_app/test/test_helper.rb",
-		"/Users/joseluis/Documents/Balisoft/sistemas/ror/workspace/sample_app/app/views/layouts/_footer.html.erb",
-		"/Users/joseluis/Documents/Balisoft/sistemas/ror/workspace/sample_app/app/views/static_pages/home.html.erb"
+		"/Users/joseluis/Documents/Balisoft/sistemas/ror/workspace/sample_app/test/test_helper.rb"
 	],
 	"find":
 	{
@@ -321,8 +340,71 @@
 	"groups":
 	[
 		{
+			"selected": 0,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "/Users/joseluis/Documents/Balisoft/sistemas/web/multinivel-frontend/app/scripts/app.js",
+					"settings":
+					{
+						"buffer_size": 2455,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1829,
+								1851
+							]
+						],
+						"settings":
+						{
+							"editorconfig": true,
+							"ensure_newline_at_eof_on_save": true,
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 3,
+							"translate_tabs_to_spaces": true,
+							"trim_trailing_white_space_on_save": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 712.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "/Users/joseluis/Documents/Balisoft/sistemas/web/multinivel-frontend/app/scripts/controllers/user_sessions.js",
+					"settings":
+					{
+						"buffer_size": 893,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								344,
+								344
+							]
+						],
+						"settings":
+						{
+							"editorconfig": true,
+							"ensure_newline_at_eof_on_save": true,
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 3,
+							"translate_tabs_to_spaces": true,
+							"trim_trailing_white_space_on_save": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
 			]
 		}
 	],
