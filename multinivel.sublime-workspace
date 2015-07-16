@@ -4,6 +4,26 @@
 		"selected_items":
 		[
 			[
+				"error",
+				"errors"
+			],
+			[
+				"co",
+				"console"
+			],
+			[
+				"toke",
+				"tokenName"
+			],
+			[
+				"tok",
+				"tokenName"
+			],
+			[
+				"ne",
+				"nextRoute"
+			],
+			[
 				"ri",
 				"routeProvider"
 			],
@@ -99,15 +119,23 @@
 			"file": "/Users/joseluis/Documents/Balisoft/sistemas/web/multinivel-frontend/app/scripts/app.js",
 			"settings":
 			{
-				"buffer_size": 3245,
+				"buffer_size": 4226,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "/Users/joseluis/Documents/Balisoft/sistemas/web/multinivel-frontend/app/scripts/services/authentication_service.js",
+			"file": "/Users/joseluis/Documents/Balisoft/sistemas/web/multinivel-frontend/app/scripts/services/user_session_service.js",
 			"settings":
 			{
-				"buffer_size": 727,
+				"buffer_size": 624,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/joseluis/Documents/Balisoft/sistemas/web/multinivel-frontend/app/scripts/controllers/user_sessions.js",
+			"settings":
+			{
+				"buffer_size": 926,
 				"line_ending": "Unix"
 			}
 		},
@@ -115,15 +143,15 @@
 			"file": "/Users/joseluis/Documents/Balisoft/sistemas/web/multinivel-frontend/app/index.html",
 			"settings":
 			{
-				"buffer_size": 4204,
+				"buffer_size": 4336,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "/Users/joseluis/Documents/Balisoft/sistemas/web/multinivel-frontend/app/scripts/services/bank_services.js",
+			"file": "/Users/joseluis/Documents/Balisoft/sistemas/web/multinivel-frontend/app/scripts/controllers/main.js",
 			"settings":
 			{
-				"buffer_size": 2155,
+				"buffer_size": 242,
 				"line_ending": "Unix"
 			}
 		},
@@ -136,10 +164,10 @@
 			}
 		},
 		{
-			"file": "app/controllers/api/v1/sessions_controller.rb",
+			"file": "/Users/joseluis/Documents/Balisoft/sistemas/web/multinivel-frontend/app/scripts/services/authentication_service.js",
 			"settings":
 			{
-				"buffer_size": 899,
+				"buffer_size": 729,
 				"line_ending": "Unix"
 			}
 		}
@@ -188,12 +216,19 @@
 	},
 	"file_history":
 	[
+		"/Users/joseluis/Documents/Balisoft/sistemas/web/multinivel-frontend/app/views/private/index.html",
+		"/Users/joseluis/Documents/Balisoft/sistemas/web/multinivel-frontend/app/scripts/controllers/bank.js",
+		"/Users/joseluis/Documents/Balisoft/sistemas/web/multinivel-frontend/app/views/user_sessions/new.html",
+		"/Users/joseluis/Documents/Balisoft/sistemas/ror/multinivel/app/controllers/concerns/authenticable.rb",
+		"/Users/joseluis/Documents/Balisoft/sistemas/ror/multinivel/app/controllers/api/v1/sessions_controller.rb",
+		"/Users/joseluis/Documents/Balisoft/sistemas/web/multinivel-frontend/app/scripts/services/bank_services.js",
+		"/Users/joseluis/Documents/Balisoft/sistemas/web/multinivel-frontend/app/index.html",
+		"/Users/joseluis/Documents/Balisoft/sistemas/web/multinivel-frontend/app/scripts/services/authentication_service.js",
+		"/Users/joseluis/Documents/Balisoft/sistemas/web/multinivel-frontend/app/scripts/app.js",
 		"/Users/joseluis/Documents/Balisoft/sistemas/ror/multinivel/app/controllers/api/v1/banks_controller.rb",
 		"/Users/joseluis/Documents/Balisoft/sistemas/web/multinivel-frontend/app/scripts/controllers/user_sessions.js",
 		"/Users/joseluis/Documents/Balisoft/sistemas/ror/multinivel/config/initializers/ostgresql_database_tasks.rb",
 		"/Users/joseluis/Documents/Balisoft/sistemas/web/multinivel-frontend/app/scripts/services/user_session_service.js",
-		"/Users/joseluis/Documents/Balisoft/sistemas/web/multinivel-frontend/app/scripts/services/bank_services.js",
-		"/Users/joseluis/Documents/Balisoft/sistemas/web/multinivel-frontend/app/scripts/controllers/bank.js",
 		"/Users/joseluis/Documents/Balisoft/sistemas/web/multinivel-frontend/bower.json",
 		"/Users/Krasho/Documents/Balisoft/sistemas/web/multinivel-frontend/app/scripts/services/user_session_service.js",
 		"/Users/Krasho/Documents/Balisoft/sistemas/ror/multinivel/app/controllers/users/sessions_controller.rb",
@@ -204,10 +239,7 @@
 		"/Users/Krasho/Documents/Balisoft/sistemas/ror/multinivel/config/initializers/sabisu_rails.rb",
 		"/Users/Krasho/Documents/Balisoft/sistemas/ror/multinivel/db/migrate/20150704235607_add_authentication_token_to_users.rb",
 		"/Users/Krasho/Documents/Balisoft/sistemas/ror/multinivel/app/models/user.rb",
-		"/Users/joseluis/Documents/Balisoft/sistemas/web/multinivel-frontend/app/views/user_sessions/new.html",
 		"/Users/joseluis/Documents/Balisoft/sistemas/web/multinivel-frontend/app/scripts/services/CookieHandlerService.js",
-		"/Users/joseluis/Documents/Balisoft/sistemas/web/multinivel-frontend/app/index.html",
-		"/Users/joseluis/Documents/Balisoft/sistemas/web/multinivel-frontend/app/scripts/app.js",
 		"/Users/joseluis/Documents/Balisoft/sistemas/ror/multinivel/config/routes.rb",
 		"/Users/joseluis/Documents/Balisoft/sistemas/ror/multinivel/app/controllers/application_controller.rb",
 		"/Users/joseluis/Documents/Balisoft/sistemas/ror/multinivel/config/initializers/devise_token_auth.rb",
@@ -311,11 +343,7 @@
 		"/Users/joseluis/Documents/Balisoft/sistemas/ror/workspace/sample_app/app/views/users/new.html.erb",
 		"/Users/joseluis/Documents/Balisoft/sistemas/ror/workspace/sample_app/config/routes.rb",
 		"/Users/joseluis/Documents/Balisoft/sistemas/ror/workspace/sample_app/config/database.yml",
-		"/Users/joseluis/Documents/Balisoft/sistemas/ror/workspace/sample_app/Gemfile",
-		"/Users/joseluis/Documents/Balisoft/sistemas/ror/workspace/sample_app/test/helpers/application_helper_test.rb",
-		"/Users/joseluis/Documents/Balisoft/sistemas/ror/workspace/sample_app/.gitignore",
-		"/Users/joseluis/Documents/Balisoft/sistemas/ror/workspace/sample_app/test/integration/site_layout_test.rb",
-		"/Users/joseluis/Documents/Balisoft/sistemas/ror/workspace/sample_app/test/test_helper.rb"
+		"/Users/joseluis/Documents/Balisoft/sistemas/ror/workspace/sample_app/Gemfile"
 	],
 	"find":
 	{
@@ -369,7 +397,7 @@
 	"groups":
 	[
 		{
-			"selected": 1,
+			"selected": 3,
 			"sheets":
 			[
 				{
@@ -377,15 +405,15 @@
 					"file": "/Users/joseluis/Documents/Balisoft/sistemas/web/multinivel-frontend/app/scripts/app.js",
 					"settings":
 					{
-						"buffer_size": 3245,
+						"buffer_size": 4226,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2343,
-								2343
+								3827,
+								3827
 							]
 						],
 						"settings":
@@ -397,26 +425,26 @@
 							"translate_tabs_to_spaces": true,
 							"trim_trailing_white_space_on_save": true
 						},
-						"translation.x": 2.0,
-						"translation.y": 1191.0,
+						"translation.x": 3.0,
+						"translation.y": 1690.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 1,
-					"file": "/Users/joseluis/Documents/Balisoft/sistemas/web/multinivel-frontend/app/scripts/services/authentication_service.js",
+					"file": "/Users/joseluis/Documents/Balisoft/sistemas/web/multinivel-frontend/app/scripts/services/user_session_service.js",
 					"settings":
 					{
-						"buffer_size": 727,
+						"buffer_size": 624,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								497,
-								510
+								306,
+								306
 							]
 						],
 						"settings":
@@ -436,18 +464,49 @@
 				},
 				{
 					"buffer": 2,
-					"file": "/Users/joseluis/Documents/Balisoft/sistemas/web/multinivel-frontend/app/index.html",
+					"file": "/Users/joseluis/Documents/Balisoft/sistemas/web/multinivel-frontend/app/scripts/controllers/user_sessions.js",
 					"settings":
 					{
-						"buffer_size": 4204,
+						"buffer_size": 926,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								4136,
-								4136
+								218,
+								218
+							]
+						],
+						"settings":
+						{
+							"editorconfig": true,
+							"ensure_newline_at_eof_on_save": true,
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true,
+							"trim_trailing_white_space_on_save": true
+						},
+						"translation.x": 436.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "/Users/joseluis/Documents/Balisoft/sistemas/web/multinivel-frontend/app/index.html",
+					"settings":
+					{
+						"buffer_size": 4336,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1411,
+								1411
 							]
 						],
 						"settings":
@@ -455,30 +514,30 @@
 							"editorconfig": true,
 							"ensure_newline_at_eof_on_save": true,
 							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"tab_size": 2,
+							"tab_size": 3,
 							"translate_tabs_to_spaces": true,
 							"trim_trailing_white_space_on_save": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 1052.0,
+						"translation.y": 282.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
-					"buffer": 3,
-					"file": "/Users/joseluis/Documents/Balisoft/sistemas/web/multinivel-frontend/app/scripts/services/bank_services.js",
+					"buffer": 4,
+					"file": "/Users/joseluis/Documents/Balisoft/sistemas/web/multinivel-frontend/app/scripts/controllers/main.js",
 					"settings":
 					{
-						"buffer_size": 2155,
+						"buffer_size": 242,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								248,
-								292
+								170,
+								170
 							]
 						],
 						"settings":
@@ -497,7 +556,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 4,
+					"buffer": 5,
 					"file": "/Users/joseluis/Documents/Balisoft/sistemas/web/multinivel-frontend/app/scripts/controllers/bank.js",
 					"settings":
 					{
@@ -508,8 +567,8 @@
 						"selection":
 						[
 							[
-								1163,
-								1190
+								204,
+								338
 							]
 						],
 						"settings":
@@ -522,32 +581,35 @@
 							"trim_trailing_white_space_on_save": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 338.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
-					"buffer": 5,
-					"file": "app/controllers/api/v1/sessions_controller.rb",
+					"buffer": 6,
+					"file": "/Users/joseluis/Documents/Balisoft/sistemas/web/multinivel-frontend/app/scripts/services/authentication_service.js",
 					"settings":
 					{
-						"buffer_size": 899,
+						"buffer_size": 729,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								500,
-								500
+								257,
+								257
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Ruby/Ruby.tmLanguage",
+							"editorconfig": true,
+							"ensure_newline_at_eof_on_save": true,
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
 							"tab_size": 3,
-							"translate_tabs_to_spaces": true
+							"translate_tabs_to_spaces": true,
+							"trim_trailing_white_space_on_save": true
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
