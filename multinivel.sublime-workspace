@@ -4,24 +4,8 @@
 		"selected_items":
 		[
 			[
-				"error",
-				"errors"
-			],
-			[
-				"co",
-				"console"
-			],
-			[
-				"toke",
-				"tokenName"
-			],
-			[
-				"tok",
-				"tokenName"
-			],
-			[
-				"ne",
-				"nextRoute"
+				"au",
+				"authInfo"
 			],
 			[
 				"ri",
@@ -116,15 +100,7 @@
 	"buffers":
 	[
 		{
-			"file": "/Users/joseluis/Documents/Balisoft/sistemas/web/multinivel-frontend/app/scripts/app.js",
-			"settings":
-			{
-				"buffer_size": 4226,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "/Users/joseluis/Documents/Balisoft/sistemas/web/multinivel-frontend/app/scripts/services/user_session_service.js",
+			"file": "/Users/Krasho/Documents/Balisoft/sistemas/web/multinivel-frontend/app/scripts/services/user_session_service.js",
 			"settings":
 			{
 				"buffer_size": 624,
@@ -132,43 +108,63 @@
 			}
 		},
 		{
-			"file": "/Users/joseluis/Documents/Balisoft/sistemas/web/multinivel-frontend/app/scripts/controllers/user_sessions.js",
+			"file": "app/controllers/api/v1/sessions_controller.rb",
 			"settings":
 			{
-				"buffer_size": 926,
+				"buffer_size": 890,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "/Users/joseluis/Documents/Balisoft/sistemas/web/multinivel-frontend/app/index.html",
+			"file": "/Users/Krasho/Documents/Balisoft/sistemas/web/multinivel-frontend/app/views/user_sessions/new.html",
 			"settings":
 			{
-				"buffer_size": 4336,
+				"buffer_size": 794,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "/Users/joseluis/Documents/Balisoft/sistemas/web/multinivel-frontend/app/scripts/controllers/main.js",
+			"contents": "(function () {\n  'use strict';\n  angular.module('multinivel.UserSessionsController', [])\n    .controller('UserSessionsController',['$scope','userSessionService', function ($scope, userSessionService) {\n\n      $scope.handleRegBtnClick = function(authInfo) {\n          userSessionService.authentication(authInfo);\n      }\n\n    }])\n})();\n",
+			"file": "/Users/Krasho/Documents/Balisoft/sistemas/web/multinivel-frontend/app/scripts/controllers/user_sessions.js",
+			"file_size": 491,
+			"file_write_time": 1436106156000000,
 			"settings":
 			{
-				"buffer_size": 242,
+				"buffer_size": 335,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "/Users/joseluis/Documents/Balisoft/sistemas/web/multinivel-frontend/app/scripts/controllers/bank.js",
+			"file": "app/models/user.rb",
 			"settings":
 			{
-				"buffer_size": 1597,
+				"buffer_size": 527,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "/Users/joseluis/Documents/Balisoft/sistemas/web/multinivel-frontend/app/scripts/services/authentication_service.js",
+			"file": "/Users/Krasho/Documents/Balisoft/sistemas/web/multinivel-frontend/.gitignore",
 			"settings":
 			{
-				"buffer_size": 729,
+				"buffer_size": 1396,
 				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "Gemfile",
+			"settings":
+			{
+				"buffer_size": 1222,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "config/initializers/omniauth.rb",
+			"settings":
+			{
+				"buffer_size": 127,
+				"line_ending": "Unix",
+				"name": "Rails.application.config.middleware.use OmniAuth::"
 			}
 		}
 	],
@@ -216,30 +212,34 @@
 	},
 	"file_history":
 	[
-		"/Users/joseluis/Documents/Balisoft/sistemas/web/multinivel-frontend/app/views/private/index.html",
-		"/Users/joseluis/Documents/Balisoft/sistemas/web/multinivel-frontend/app/scripts/controllers/bank.js",
-		"/Users/joseluis/Documents/Balisoft/sistemas/web/multinivel-frontend/app/views/user_sessions/new.html",
-		"/Users/joseluis/Documents/Balisoft/sistemas/ror/multinivel/app/controllers/concerns/authenticable.rb",
-		"/Users/joseluis/Documents/Balisoft/sistemas/ror/multinivel/app/controllers/api/v1/sessions_controller.rb",
-		"/Users/joseluis/Documents/Balisoft/sistemas/web/multinivel-frontend/app/scripts/services/bank_services.js",
-		"/Users/joseluis/Documents/Balisoft/sistemas/web/multinivel-frontend/app/index.html",
-		"/Users/joseluis/Documents/Balisoft/sistemas/web/multinivel-frontend/app/scripts/services/authentication_service.js",
-		"/Users/joseluis/Documents/Balisoft/sistemas/web/multinivel-frontend/app/scripts/app.js",
-		"/Users/joseluis/Documents/Balisoft/sistemas/ror/multinivel/app/controllers/api/v1/banks_controller.rb",
-		"/Users/joseluis/Documents/Balisoft/sistemas/web/multinivel-frontend/app/scripts/controllers/user_sessions.js",
-		"/Users/joseluis/Documents/Balisoft/sistemas/ror/multinivel/config/initializers/ostgresql_database_tasks.rb",
-		"/Users/joseluis/Documents/Balisoft/sistemas/web/multinivel-frontend/app/scripts/services/user_session_service.js",
-		"/Users/joseluis/Documents/Balisoft/sistemas/web/multinivel-frontend/bower.json",
+		"/Users/Krasho/Documents/Balisoft/sistemas/ror/market_place_api/app/controllers/api/v1/sessions_controller.rb",
+		"/Users/Krasho/Documents/Balisoft/sistemas/ror/multinivel/app/controllers/api/v1/users_controllers.rb",
+		"/Users/Krasho/Documents/Balisoft/sistemas/ror/multinivel/app/controllers/concerns/authenticable.rb",
+		"/Users/Krasho/Documents/Balisoft/sistemas/ror/multinivel/app/controllers/api/v1/banks_controller.rb",
+		"/Users/Krasho/Documents/Balisoft/sistemas/ror/multinivel/app/controllers/sessions_controller.rb",
+		"/Users/Krasho/Documents/Balisoft/sistemas/ror/multinivel/app/spec/support/request_helpers.rb",
+		"/Users/Krasho/Documents/Balisoft/sistemas/ror/multinivel/app/models/user.rb",
+		"/Users/Krasho/Documents/Balisoft/sistemas/ror/multinivel/app/spec/controllers/concerns/autheticable_spec.rb",
+		"/Users/Krasho/Documents/Balisoft/sistemas/ror/multinivel/app/spec/controllers/api/v1/sessions_controller_spec.rb",
+		"/Users/Krasho/Documents/Balisoft/sistemas/ror/multinivel/config/routes.rb",
+		"/Users/Krasho/Documents/Balisoft/sistemas/ror/multinivel/spec/spec_helper.rb",
+		"/Users/Krasho/Documents/Balisoft/sistemas/ror/multinivel/app/controllers/application_controller.rb",
+		"/Users/Krasho/Documents/Balisoft/sistemas/ror/multinivel/app/controllers/api/v1/sessions_controller.rb",
 		"/Users/Krasho/Documents/Balisoft/sistemas/web/multinivel-frontend/app/scripts/services/user_session_service.js",
 		"/Users/Krasho/Documents/Balisoft/sistemas/ror/multinivel/app/controllers/users/sessions_controller.rb",
 		"/Users/Krasho/Documents/Balisoft/sistemas/ror/multinivel/Gemfile",
 		"/Users/Krasho/Documents/Balisoft/sistemas/ror/multinivel/.gitignore",
-		"/Users/Krasho/Documents/Balisoft/sistemas/ror/multinivel/app/controllers/application_controller.rb",
-		"/Users/Krasho/Documents/Balisoft/sistemas/ror/multinivel/config/routes.rb",
 		"/Users/Krasho/Documents/Balisoft/sistemas/ror/multinivel/config/initializers/sabisu_rails.rb",
 		"/Users/Krasho/Documents/Balisoft/sistemas/ror/multinivel/db/migrate/20150704235607_add_authentication_token_to_users.rb",
-		"/Users/Krasho/Documents/Balisoft/sistemas/ror/multinivel/app/models/user.rb",
+		"/Users/joseluis/Documents/Balisoft/sistemas/web/multinivel-frontend/app/views/user_sessions/new.html",
+		"/Users/joseluis/Documents/Balisoft/sistemas/web/multinivel-frontend/app/scripts/controllers/user_sessions.js",
+		"/Users/joseluis/Documents/Balisoft/sistemas/web/multinivel-frontend/app/scripts/controllers/bank.js",
+		"/Users/joseluis/Documents/Balisoft/sistemas/web/multinivel-frontend/app/scripts/services/user_session_service.js",
 		"/Users/joseluis/Documents/Balisoft/sistemas/web/multinivel-frontend/app/scripts/services/CookieHandlerService.js",
+		"/Users/joseluis/Documents/Balisoft/sistemas/web/multinivel-frontend/app/scripts/services/bank_services.js",
+		"/Users/joseluis/Documents/Balisoft/sistemas/web/multinivel-frontend/app/index.html",
+		"/Users/joseluis/Documents/Balisoft/sistemas/web/multinivel-frontend/app/scripts/app.js",
+		"/Users/joseluis/Documents/Balisoft/sistemas/ror/multinivel/app/controllers/api/v1/banks_controller.rb",
 		"/Users/joseluis/Documents/Balisoft/sistemas/ror/multinivel/config/routes.rb",
 		"/Users/joseluis/Documents/Balisoft/sistemas/ror/multinivel/app/controllers/application_controller.rb",
 		"/Users/joseluis/Documents/Balisoft/sistemas/ror/multinivel/config/initializers/devise_token_auth.rb",
@@ -261,7 +261,6 @@
 		"/Users/Krasho/Documents/Balisoft/sistemas/web/multinivel-frontend/app/views/banks/index.html",
 		"/Users/Krasho/Documents/Balisoft/sistemas/web/multinivel-frontend/app/scripts/app.js",
 		"/Users/Krasho/Documents/Balisoft/sistemas/ror/multinivel/app/controllers/banks_controller.rb",
-		"/Users/Krasho/Documents/Balisoft/sistemas/ror/multinivel/app/controllers/api/v1/banks_controller.rb",
 		"/Users/Krasho/Documents/Balisoft/sistemas/web/multinivel-frontend/app/scripts/directives/bank_directives.js",
 		"/Users/Krasho/Documents/Balisoft/sistemas/web/multinivel-frontend/app/scripts/services/bank_services.js",
 		"/Users/Krasho/Documents/Balisoft/sistemas/ror/market_place_api/config/routes.rb",
@@ -296,7 +295,6 @@
 		"/Users/Krasho/Documents/Balisoft/sistemas/ror/multinivel/app/views/banks/edit.html.erb",
 		"/Users/Krasho/Documents/Balisoft/sistemas/ror/multinivel/app/views/layouts/application.html.erb",
 		"/Users/Krasho/Documents/Balisoft/sistemas/ror/multinivel_test/config/routes.rb",
-		"/Users/Krasho/Documents/Balisoft/sistemas/ror/multinivel/spec/spec_helper.rb",
 		"/Users/Krasho/Documents/Balisoft/sistemas/ror/multinivel/spec/requests/associate_pages_spec.rb",
 		"/Users/Krasho/Documents/Balisoft/sistemas/ror/multinivel_test/Gemfile",
 		"/Users/Krasho/Documents/Balisoft/sistemas/ror/multinivel_test/spec/requests/banks_pages_spec.rb",
@@ -341,9 +339,7 @@
 		"/Users/joseluis/Documents/Balisoft/sistemas/ror/workspace/sample_app/app/views/shared/_error_messages.html.erb",
 		"/Users/joseluis/Documents/Balisoft/sistemas/ror/workspace/sample_app/app/assets/stylesheets/custom.css.scss",
 		"/Users/joseluis/Documents/Balisoft/sistemas/ror/workspace/sample_app/app/views/users/new.html.erb",
-		"/Users/joseluis/Documents/Balisoft/sistemas/ror/workspace/sample_app/config/routes.rb",
-		"/Users/joseluis/Documents/Balisoft/sistemas/ror/workspace/sample_app/config/database.yml",
-		"/Users/joseluis/Documents/Balisoft/sistemas/ror/workspace/sample_app/Gemfile"
+		"/Users/joseluis/Documents/Balisoft/sistemas/ror/workspace/sample_app/config/routes.rb"
 	],
 	"find":
 	{
@@ -397,43 +393,12 @@
 	"groups":
 	[
 		{
-			"selected": 3,
+			"selected": 7,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "/Users/joseluis/Documents/Balisoft/sistemas/web/multinivel-frontend/app/scripts/app.js",
-					"settings":
-					{
-						"buffer_size": 4226,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								3827,
-								3827
-							]
-						],
-						"settings":
-						{
-							"editorconfig": true,
-							"ensure_newline_at_eof_on_save": true,
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true,
-							"trim_trailing_white_space_on_save": true
-						},
-						"translation.x": 3.0,
-						"translation.y": 1690.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "/Users/joseluis/Documents/Balisoft/sistemas/web/multinivel-frontend/app/scripts/services/user_session_service.js",
+					"file": "/Users/Krasho/Documents/Balisoft/sistemas/web/multinivel-frontend/app/scripts/services/user_session_service.js",
 					"settings":
 					{
 						"buffer_size": 624,
@@ -443,8 +408,8 @@
 						"selection":
 						[
 							[
-								306,
-								306
+								0,
+								0
 							]
 						],
 						"settings":
@@ -455,6 +420,34 @@
 							"tab_size": 3,
 							"translate_tabs_to_spaces": true,
 							"trim_trailing_white_space_on_save": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "app/controllers/api/v1/sessions_controller.rb",
+					"settings":
+					{
+						"buffer_size": 890,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								694,
+								694
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/RSpec/RSpec.tmLanguage",
+							"tab_size": 3,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -464,49 +457,18 @@
 				},
 				{
 					"buffer": 2,
-					"file": "/Users/joseluis/Documents/Balisoft/sistemas/web/multinivel-frontend/app/scripts/controllers/user_sessions.js",
+					"file": "/Users/Krasho/Documents/Balisoft/sistemas/web/multinivel-frontend/app/views/user_sessions/new.html",
 					"settings":
 					{
-						"buffer_size": 926,
+						"buffer_size": 794,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								218,
-								218
-							]
-						],
-						"settings":
-						{
-							"editorconfig": true,
-							"ensure_newline_at_eof_on_save": true,
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true,
-							"trim_trailing_white_space_on_save": true
-						},
-						"translation.x": 436.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "/Users/joseluis/Documents/Balisoft/sistemas/web/multinivel-frontend/app/index.html",
-					"settings":
-					{
-						"buffer_size": 4336,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1411,
-								1411
+								0,
+								0
 							]
 						],
 						"settings":
@@ -514,30 +476,30 @@
 							"editorconfig": true,
 							"ensure_newline_at_eof_on_save": true,
 							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"tab_size": 3,
+							"tab_size": 2,
 							"translate_tabs_to_spaces": true,
 							"trim_trailing_white_space_on_save": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 282.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
-					"buffer": 4,
-					"file": "/Users/joseluis/Documents/Balisoft/sistemas/web/multinivel-frontend/app/scripts/controllers/main.js",
+					"buffer": 3,
+					"file": "/Users/Krasho/Documents/Balisoft/sistemas/web/multinivel-frontend/app/scripts/controllers/user_sessions.js",
 					"settings":
 					{
-						"buffer_size": 242,
+						"buffer_size": 335,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								170,
-								170
+								311,
+								311
 							]
 						],
 						"settings":
@@ -548,6 +510,34 @@
 							"tab_size": 3,
 							"translate_tabs_to_spaces": true,
 							"trim_trailing_white_space_on_save": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "app/models/user.rb",
+					"settings":
+					{
+						"buffer_size": 527,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								527,
+								527
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/RSpec/RSpec.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -557,59 +547,83 @@
 				},
 				{
 					"buffer": 5,
-					"file": "/Users/joseluis/Documents/Balisoft/sistemas/web/multinivel-frontend/app/scripts/controllers/bank.js",
+					"file": "/Users/Krasho/Documents/Balisoft/sistemas/web/multinivel-frontend/.gitignore",
 					"settings":
 					{
-						"buffer_size": 1597,
+						"buffer_size": 1396,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								204,
-								338
+								1396,
+								1396
 							]
 						],
 						"settings":
 						{
 							"editorconfig": true,
 							"ensure_newline_at_eof_on_save": true,
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"syntax": "Packages/Text/Plain text.tmLanguage",
 							"tab_size": 3,
 							"translate_tabs_to_spaces": true,
 							"trim_trailing_white_space_on_save": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 683.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 6,
-					"file": "/Users/joseluis/Documents/Balisoft/sistemas/web/multinivel-frontend/app/scripts/services/authentication_service.js",
+					"file": "Gemfile",
 					"settings":
 					{
-						"buffer_size": 729,
+						"buffer_size": 1222,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								257,
-								257
+								686,
+								686
 							]
 						],
 						"settings":
 						{
-							"editorconfig": true,
-							"ensure_newline_at_eof_on_save": true,
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"tab_size": 3,
-							"translate_tabs_to_spaces": true,
-							"trim_trailing_white_space_on_save": true
+							"syntax": "Packages/Ruby/Ruby.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 131.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "config/initializers/omniauth.rb",
+					"settings":
+					{
+						"buffer_size": 127,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								127,
+								127
+							]
+						],
+						"settings":
+						{
+							"auto_name": "Rails.application.config.middleware.use OmniAuth::",
+							"syntax": "Packages/RSpec/RSpec.tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
