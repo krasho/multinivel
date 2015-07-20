@@ -4,8 +4,8 @@ class Api::V1::BanksController < ApplicationController
 
 	def index
 		@banks = Bank.all
-
-       respond_to do |f|
+        authorize @banks
+        respond_to do |f|
           f.html {}
           f.json { render json: @banks }
        end        
