@@ -37,6 +37,7 @@ gem 'furatto'
 gem 'font-awesome-rails'
 
 gem 'pundit'
+gem 'rolify'
 
 group :development, :test do
   gem 'annotate'
