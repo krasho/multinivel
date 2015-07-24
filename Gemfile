@@ -36,8 +36,9 @@ gem 'compass-rails', '~> 2.0.2'
 gem 'furatto'
 gem 'font-awesome-rails'
 
-gem 'pundit'
+#gem 'pundit'
 gem 'rolify'
+
 
 group :development, :test do
   gem 'annotate'

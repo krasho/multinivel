@@ -5,8 +5,8 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :null_session
 
   before_action :configure_permitted_parameters, if: :devise_controller? 
-  after_action :verify_authorized, :except => :index
-  after_action :verify_policy_scoped, :only => :index
+  #after_action :verify_authorized, :except => :index
+  #after_action :verify_policy_scoped, :only => :index
 
   include Authenticable
   include Pundit
