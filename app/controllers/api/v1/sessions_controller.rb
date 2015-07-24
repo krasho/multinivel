@@ -1,4 +1,7 @@
 class Api::V1::SessionsController < ApplicationController
+  before_action :authenticate, except: [:create]
+  after_action :verify_authorized, only: [:destroy]
+   
   respond_to :json	
   def create
    	   user_password = params[:session][:password]

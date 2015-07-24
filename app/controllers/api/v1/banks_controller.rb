@@ -1,6 +1,6 @@
 class Api::V1::BanksController < ApplicationController
-	before_action :set_bank, only: [:edit, :update, :destroy]
-	before_action :authenticate_with_token!
+    after_action :verify_authorized, except: [:index, :show]	
+    before_action :authenticate_with_token!
 
 	def index
 		@banks = Bank.all
@@ -44,7 +44,7 @@ class Api::V1::BanksController < ApplicationController
 
     def update 
       @bank = Bank.find(params[:id])
-
+      authorize @bank
       respond_to do |format|
       
 	      if @bank.update(bank_params)
