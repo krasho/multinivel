@@ -13,6 +13,8 @@ MultinivelApi::Application.routes.draw do
 
       resources :users, :only => [:show, :create, :update, :destroy]
       resources :sessions, :only => [:create, :destroy]
+
+      get '/auth/:provider/callback', to: 'sessions#create'
     end
   end
 end

@@ -2,10 +2,13 @@
 	"folders":
 	[
 		{
-			"path": "/Users/Krasho/Documents/Balisoft/sistemas/ror/multinivel"
+			"path": "/Users/joseluis/Documents/Balisoft/sistemas/ror/multinivel"
 		},
 		{
-			"path": "/Users/Krasho/Documents/Balisoft/sistemas/web/multinivel-frontend"
+			"path": "/Users/joseluis/Documents/Balisoft/sistemas/web/multinivel-frontend"
+		},
+		{
+			"path": "/Users/joseluis/Documents/Balisoft/sistemas/ror/example-rails-senior"
 		}
 	]
 }
