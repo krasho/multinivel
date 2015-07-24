@@ -19,5 +19,14 @@ class User < ActiveRecord::Base
 
   def set_default_role(role)
       #self.role ||= :client
+  end
+
+  def getRolesByUser()
+    roles_names = ''
+    self.roles.each do |role|
+      roles_names += "#{role.name} "
     end
+    roles_names.strip()
+  end
+
 end
