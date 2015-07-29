@@ -1,5 +1,11 @@
 require 'rails_helper'
 
 RSpec.describe City, type: :model do
-  pending "add some examples to (or delete) #{__FILE__}"
+  #describe "Factory" do
+  #	let(:city) {FactoryGirl.build(:city)}
+
+  #	it "factory should be valid" do
+  #    expect(city).to be_valid
+  #  end
+  #end
 end
