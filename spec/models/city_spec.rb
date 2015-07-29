@@ -8,4 +8,9 @@ RSpec.describe City, type: :model do
       expect(city).to be_valid
     end
   end
+
+  describe "validations" do
+    it { is_expected.to validate_presence_of(:name) }
+  end
+ 
 end

@@ -38,6 +38,7 @@ gem 'font-awesome-rails'
 
 gem 'pundit'
 gem 'rolify'
+gem 'test-unit'
 
 
 group :development, :test do
