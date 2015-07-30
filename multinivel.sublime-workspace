@@ -119,30 +119,6 @@
 	},
 	"buffers":
 	[
-		{
-			"file": "spec/models/city_spec.rb",
-			"settings":
-			{
-				"buffer_size": 211,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "/Users/joseluis/Documents/Balisoft/sistemas/ror/example-rails-senior/spec/models/talent_profile_spec.rb",
-			"settings":
-			{
-				"buffer_size": 4531,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "spec/requests/banks_pages_spec.rb",
-			"settings":
-			{
-				"buffer_size": 2881,
-				"line_ending": "Unix"
-			}
-		}
 	],
 	"build_system": "",
 	"command_palette":
@@ -188,11 +164,23 @@
 	},
 	"file_history":
 	[
+		"/Users/joseluis/Documents/Balisoft/sistemas/ror/multinivel/spec/models/city_spec.rb",
+		"/Users/joseluis/Documents/Balisoft/sistemas/ror/multinivel/app/models/city.rb",
+		"/Users/joseluis/Documents/Balisoft/sistemas/ror/example-rails-senior/spec/models/talent_profile_spec.rb",
+		"/Users/joseluis/Documents/Balisoft/sistemas/ror/example-rails-senior/app/models/talent_profile.rb",
+		"/Users/joseluis/Documents/Balisoft/sistemas/ror/multinivel/app/spec/controllers/api/v1/sessions_controller_spec.rb",
+		"/Users/joseluis/Documents/Balisoft/sistemas/ror/multinivel/Gemfile",
+		"/Users/joseluis/Documents/Balisoft/sistemas/ror/example-rails-senior/spec/spec_helper.rb",
+		"/Users/joseluis/Documents/Balisoft/sistemas/ror/example-rails-senior/spec/rails_helper.rb",
+		"/Users/joseluis/Documents/Balisoft/sistemas/ror/multinivel/spec/rails_helper.rb",
+		"/Users/joseluis/Documents/Balisoft/sistemas/ror/multinivel/spec/requests/banks_pages_spec.rb",
+		"/Users/joseluis/Documents/Balisoft/sistemas/ror/example-rails-senior/config/application.rb",
+		"/Users/joseluis/Documents/Balisoft/sistemas/ror/multinivel/config/application.rb",
+		"/Users/joseluis/Documents/Balisoft/sistemas/ror/example-rails-senior/config/environment.rb",
 		"/Users/joseluis/Documents/Balisoft/sistemas/ror/multinivel/app/controllers/api/v1/banks_controller.rb",
 		"/Users/joseluis/Documents/Balisoft/sistemas/ror/multinivel/app/controllers/application_controller.rb",
 		"/Users/joseluis/Documents/Balisoft/sistemas/ror/example-rails-senior/app/controllers/v1/accounts_controller.rb",
 		"/Users/joseluis/Documents/Balisoft/sistemas/ror/multinivel/app/policies/bank_policy.rb",
-		"/Users/joseluis/Documents/Balisoft/sistemas/ror/multinivel/Gemfile",
 		"/Users/joseluis/Documents/Balisoft/sistemas/ror/multinivel/app/policies/application_policy.rb",
 		"/Users/joseluis/Documents/Balisoft/sistemas/ror/multinivel/app/controllers/api/v1/sessions_controller.rb",
 		"/Users/joseluis/Documents/Balisoft/sistemas/web/multinivel-frontend/app/scripts/app.js",
@@ -240,7 +228,6 @@
 		"/Users/joseluis/Documents/Balisoft/sistemas/web/multinivel-frontend/app/views/main.html",
 		"/Users/joseluis/Documents/Balisoft/sistemas/ror/multinivel/config/database.yml",
 		"/Users/joseluis/Documents/Balisoft/sistemas/web/multinivel-frontend/app/scripts/services/transformRequestAsFormPost.js",
-		"/Users/joseluis/Documents/Balisoft/sistemas/ror/multinivel/config/application.rb",
 		"/Users/Krasho/Documents/Balisoft/sistemas/web/multinivel-frontend/app/scripts/controllers/bank.js",
 		"/Users/joseluis/Documents/Balisoft/sistemas/ror/multinivel/config/initializers/sabisu_rails.rb",
 		"/Users/Krasho/Documents/Balisoft/sistemas/web/multinivel-frontend/app/views/banks/index.html",
@@ -304,18 +291,7 @@
 		"/Users/Krasho/Documents/Balisoft/sistemas/ror/multinivel/test/models/associate_test.rb",
 		"/Users/Krasho/Documents/Balisoft/sistemas/ror/multinivel/.rspec",
 		"/Users/joseluis/Documents/Balisoft/sistemas/ror/rails-4-1-rspec-3-0/spec/models/contact_spec.rb",
-		"/Users/joseluis/Documents/Balisoft/sistemas/ror/rspec-example/Gemfile",
-		"/Users/joseluis/Documents/Balisoft/sistemas/ror/rspec.sublime-project",
-		"/Users/joseluis/Documents/Balisoft/sistemas/ror/rspec-example/spec/requests/posts_pages_spec.rb",
-		"/Users/joseluis/Documents/Balisoft/sistemas/ror/rspec-example/config/routes.rb",
-		"/Users/joseluis/Documents/Balisoft/sistemas/ror/rspec-example/spec/rails_helper.rb",
-		"/Users/joseluis/Documents/Balisoft/sistemas/ror/rspec-example/app/controllers/posts_controller.rb",
-		"/Users/joseluis/Documents/Balisoft/sistemas/php/atencion/src/protected/views/adscripcion/archivosUnidad.php",
-		"/Users/joseluis/Documents/Balisoft/sistemas/php/atencion/src/protected/views/adscripcion/archivos_x_unidad.php",
-		"/Users/joseluis/Documents/Balisoft/sistemas/php/atencion/src/protected/controllers/AdscripcionController.php",
-		"/Users/joseluis/Documents/Balisoft/sistemas/php/atencion/src/protected/controllers/adscripcion/ArchivosunidadAction.php",
-		"/Users/joseluis/Documents/Balisoft/sistemas/php/atencion/src/protected/views/notasAdscripcion/_notas.php",
-		"/Users/joseluis/Documents/Balisoft/sistemas/php/atencion/src/protected/controllers/notasAdscripcion/GuardarAction.php"
+		"/Users/joseluis/Documents/Balisoft/sistemas/ror/rspec-example/Gemfile"
 	],
 	"find":
 	{
@@ -369,89 +345,8 @@
 	"groups":
 	[
 		{
-			"selected": 0,
 			"sheets":
 			[
-				{
-					"buffer": 0,
-					"file": "spec/models/city_spec.rb",
-					"settings":
-					{
-						"buffer_size": 211,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								179,
-								179
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Ruby/Ruby.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "/Users/joseluis/Documents/Balisoft/sistemas/ror/example-rails-senior/spec/models/talent_profile_spec.rb",
-					"settings":
-					{
-						"buffer_size": 4531,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1706,
-								1741
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Ruby/Ruby.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 4.0,
-						"translation.y": 246.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "spec/requests/banks_pages_spec.rb",
-					"settings":
-					{
-						"buffer_size": 2881,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Ruby/Ruby.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 803.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				}
 			]
 		}
 	],
