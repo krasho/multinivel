@@ -119,6 +119,62 @@
 	},
 	"buffers":
 	[
+		{
+			"file": "spec/models/city_spec.rb",
+			"settings":
+			{
+				"buffer_size": 382,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/joseluis/Documents/Balisoft/sistemas/ror/example-rails-senior/spec/models/talent_profile_spec.rb",
+			"settings":
+			{
+				"buffer_size": 4531,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/joseluis/Documents/Balisoft/sistemas/ror/example-rails-senior/spec/models/talent_spec.rb",
+			"settings":
+			{
+				"buffer_size": 590,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/joseluis/Documents/Balisoft/sistemas/ror/example-rails-senior/spec/factories/talent_profiles.rb",
+			"settings":
+			{
+				"buffer_size": 3685,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "spec/factories/state.rb",
+			"settings":
+			{
+				"buffer_size": 310,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/joseluis/Documents/Balisoft/sistemas/ror/example-rails-senior/app/models/talent_profile.rb",
+			"settings":
+			{
+				"buffer_size": 2587,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "spec/factories/city.rb",
+			"settings":
+			{
+				"buffer_size": 86,
+				"line_ending": "Unix"
+			}
+		}
 	],
 	"build_system": "",
 	"command_palette":
@@ -345,8 +401,199 @@
 	"groups":
 	[
 		{
+			"selected": 6,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "spec/models/city_spec.rb",
+					"settings":
+					{
+						"buffer_size": 382,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby/Ruby.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "/Users/joseluis/Documents/Balisoft/sistemas/ror/example-rails-senior/spec/models/talent_profile_spec.rb",
+					"settings":
+					{
+						"buffer_size": 4531,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2392,
+								2921
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby/Ruby.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 752.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "/Users/joseluis/Documents/Balisoft/sistemas/ror/example-rails-senior/spec/models/talent_spec.rb",
+					"settings":
+					{
+						"buffer_size": 590,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby/Ruby.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "/Users/joseluis/Documents/Balisoft/sistemas/ror/example-rails-senior/spec/factories/talent_profiles.rb",
+					"settings":
+					{
+						"buffer_size": 3685,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1959,
+								2211
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby/Ruby.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 375.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "spec/factories/state.rb",
+					"settings":
+					{
+						"buffer_size": 310,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								156,
+								156
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby/Ruby.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "/Users/joseluis/Documents/Balisoft/sistemas/ror/example-rails-senior/app/models/talent_profile.rb",
+					"settings":
+					{
+						"buffer_size": 2587,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby/Ruby.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 286.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "spec/factories/city.rb",
+					"settings":
+					{
+						"buffer_size": 86,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								48,
+								48
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby/Ruby.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
 			]
 		}
 	],
